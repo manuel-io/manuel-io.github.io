@@ -1,0 +1,24 @@
+---
+layout: post
+title: "The Matrix Revolutions (2003)"
+date: 2014-04-02 21:21
+comments: true
+categories:
+  - 2014
+  - meta
+  - film
+---
+[The Oracle][oracle]: What about the others?
+
+[The Architect][architect]: ...What others?
+
+*The Oracle*: The ones that want out.
+
+*The Architect*: Obviously they will be freed.
+
+*The Oracle*: I have your word?
+
+*The Architect*: What do you think I am? Human?
+
+[oracle]: https://en.wikipedia.org/wiki/Oracle_%28The_Matrix%29
+[architect]: https://en.wikipedia.org/wiki/Architect_%28The_Matrix%29

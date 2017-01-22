@@ -1,0 +1,67 @@
+$max-width: 710px !default;
+
+$color0: #ffffff !default;
+$color1: #000000 !default;
+$color2: #222222 !default;
+$color3: #829a21 !default;
+$color4: #333333 !default;
+$color5: #cccccc !default;
+$color6: #990000 !default;
+$color7: #f7f8f9 !default;
+
+$h1: 1.5em !default;
+$h2: 1.2em !default;
+$h3: 1.0em !default;
+$h4: 1.0em !default;
+$h5: 0.9em !default;
+$h6: 0.8em !default;
+
+$site-bg: $color0 !default;
+$site-border: $color5 !default;
+$extra-color: $color1 !default;
+$extra-border: $color1 !default;
+$padding: 20px !default;
+$margin: 10px !default;
+
+$text-color: $color1 !default;
+$text-color-light: $color4 !default;
+
+$link-color: $color6 !default;
+$link-color-hover: $link-color !default;
+$link-color-visited: $link-color !default;
+
+$link-color2: $color5 !default;
+$link-color2-hover: $link-color2 !default;
+$link-color2-visited: $link-color2 !default;
+
+$title-color: $color0;
+
+$header-color: $color0 !default;
+$header-link-color: $header-color !default;
+$header-link-color-hover: $link-color-hover !default;
+$header-link-color-visited: $header-link-color !default;
+
+$header-color2: $color3 !default;
+$header-link-color2: $header-color2 !default;
+$header-link-color2-hover: $header-link-color2 !default;
+$header-link-color2-visited: $header-link-color2 !default;
+
+$nav-bg: transparent !default;
+$nav-border: $color2 !default;
+$nav-color: $link-color !default;
+$nav-link-color: $nav-color !default;
+$nav-link-color-hover: $nav-link-color !default;
+$nav-link-color-visited: $nav-link-color !default;
+
+$footer-bg: transparent !default;
+$footer-border: $nav-border !default;
+$footer-color: $text-color !default;
+$footer-link-color: $text-color !default;
+$footer-link-color-hover: $footer-link-color !default;
+$footer-link-color-visited: $footer-link-color !default;
+
+$img-bg: transparent !default;
+
+$pre-bg: $color7 !default;
+$pre-border: $color5 !default;
+$pre-color: $text-color !default;

@@ -1,0 +1,31 @@
+---
+layout: post
+title: "29C3"
+date: 2012-12-31 20:20
+comments: true
+categories:
+  - 2012
+  - ccc
+  - event
+---
+Hier sind wieder die Vorträge des [29C3][29c3], die
+ich gesehen habe und weiterempfehlen möchte:
+
+* [FactHacks][facthacks]
+* [Hash-flooding DoS reloaded: attacks and defenses][hashflooding]
+* [Safecast: DIY and citizen-sensing of radiation][safecast]
+
+Dann gibt es noch eine neue Sache. Ich kann die
+Server-Infrastruktur hinter diesem Blog nicht mehr finanzieren
+und archiviere erstmal alles unter dieser URL:
+
+<pre><a href='https://manuel-io.github.io/'>https://manuel-io.github.io/</a></pre>
+
+[So Long, and Thanks for All the Fish][wikipedia]
+
+[29c3]: https://events.ccc.de/congress/2012/wiki/Main_Page
+[facthacks]: https://media.ccc.de/browse/congress/2012/29c3-5275-en-facthacks_h264.html#video
+[hashflooding]: https://media.ccc.de/browse/congress/2012/29c3-5152-en-hashflooding_dos_reloaded_h264.html#video
+[safecast]: https://media.ccc.de/browse/congress/2012/29c3-5140-en-safecast_h264.html#video
+[github]: https://github.com/manuel-io/manuel-io.github.io
+[wikipedia]: https://en.wikipedia.org/wiki/So_Long,_and_Thanks_for_All_the_Fish

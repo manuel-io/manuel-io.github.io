@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Eh?"
+date: 2013-11-19 20:57
+comments: true
+categories:
+  - 2013
+  - medulloblastoma
+---
+Recently I noticed the blood type on my donor-card and the one on the last
+[discharge letter][letter] [differ][differ]. I guess the letter is wrong.
+Pretty smart.
+
+[differ]: /data/images/eh.jpg
+[letter]: /data/mirror/arztbrief_chemo.pdf

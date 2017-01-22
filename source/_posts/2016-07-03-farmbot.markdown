@@ -1,0 +1,18 @@
+---
+layout: post
+title: "FarmBot"
+date: 2016-07-03 10:59:58 +0200
+comments: true
+categories:
+  - 2016
+  - electronics
+  - programming
+  - gardening
+---
+{% youtube 8r0CiLBM1o8 %}
+
+* Order at [farmbot.io](https://farmbot.io/)
+* [Github for developers](https://github.com/FarmBot)
+* [Open-source automated precision farming][ted]
+
+[ted]: https://www.youtube.com/watch?v=9CJt4MFn22M

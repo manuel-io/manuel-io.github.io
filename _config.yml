@@ -1,0 +1,33 @@
+url: http://manuel-io.github.io
+title: A personal Blog
+subtitle: A blogging framework for hackers
+author: Manuel
+description: This is a personal Blog about my life
+keywords: blog, personal, coding, foot, math, physics, life
+date_format: "%b, %F | "
+time_format: "%a, %H:%M %Z"
+subscribe_rss: /atom.xml
+subscribe_email:
+email: m.a.n.u.e.l@posteo.net
+root: /
+permalink: /blog/:year/:month/:day/:title/
+source: source
+destination: public
+plugins: plugins
+code_dir: downloads/code
+category_dir: blog/categories
+category_feeds: false
+markdown: rdiscount
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+highlighter: pygment
+paginate: 1
+paginate_path: "blog/posts/:num"
+recent_posts: 5
+excerpt_link: "Read on &rarr;"
+excerpt_separator: "<!--more-->"
+titlecase: false
+default_asides: []

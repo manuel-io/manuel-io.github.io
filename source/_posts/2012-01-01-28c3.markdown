@@ -1,0 +1,41 @@
+---
+layout: post
+title: "28C3"
+date: 2012-01-01 10:29
+comments: true
+categories:
+  - 2012
+  - ccc
+  - event
+---
+Diese Stunden geht der [28C3-Kongress][28c3] in Berlin zu Ende.  Ich
+habe mir via Video-Stream einige Vorträge angesehen, werde dazu hier
+ein paar Worte schreiben und die Links setzen. Hauptsächlich sind das
+Vorträge von denen ich mir mehr Unterhaltung als abgefahrene, üble
+Hackz versprochen habe.
+
+* Der [Staatstrojaner][staat]:
+    Der Vortrag gibt einen Überblick der technischen Details des
+    Staatstrojaners _0zapftis_ und der damit verbundenen Reaktionen in
+    der Öffentlichkeit.
+* [Apple vs. Google Client Platforms][client]:
+    Ein Vortrag, der irgendwo versucht die Sorgfalt im Bezug auf
+    Datenschutz und Integrität von Produkten namenhafter IT-Hersteller
+    zu betrachten. Zur Illustration werden auch einige konkrete
+    Probleme/Bugs angesprochen.
+* [Effective Denial of Service attacks against web application platforms][dos]:
+    Ein schöner Vortrag über _hash tables_, _hash functions_ und damit
+    verbundene Kollisionen. Für mich überhaupt der Einstig in diese
+    Thematik. Problemfälle im Bezug auf den Titel sind hier zur Zeit
+    insbesondere _PHP_, _ASP_, _Java_ und manche die noch gefunden
+    werden wollen.
+* [Can trains be hacked?][trains]:
+    Ein Vortrag mit hohem Unterhaltungswert—nicht nur wegen einer, an
+    ein Stellwerk angeschlossenen, Modelleisenbahn. Es geht allgemein
+    um die Technik von Eisenbahnsicherungsanlagen.
+
+[28c3]: https://events.ccc.de/congress/2011/wiki/Main_Page
+[staat]: https://media.ccc.de/browse/congress/2011/28c3-4901-de-der_staatstrojaner_aus_sicht_der_technik.html#video
+[client]: https://media.ccc.de/browse/congress/2011/28c3-4676-en-apple_vs_google_client_platforms.html#video
+[dos]: https://media.ccc.de/browse/congress/2011/28c3-4680-en-effective_dos_attacks_against_web_application_platforms.html#video
+[trains]: https://media.ccc.de/browse/congress/2011/28c3-4799-de-can_trains_be_hacked.html#video

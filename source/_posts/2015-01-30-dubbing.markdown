@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Dubbing"
+date: 2015-01-30 19:48
+comments: true
+categories:
+  - 2015
+  - causa
+  - film
+  - podcasts
+---
+Die _taz_ beschäftigt sich heute (30.01.15) mit der
+[Filmsynchronisation in deutschen Kinos][taz]. Dieses  zweifelhafte
+Privileg hat zunächst wirtschaftliche Gründe. Nach dem Motto: „Mehr
+Besucher, mehr Geld“. Menschen mit Handicap sind nicht die Zielgruppe.
+Aber auch ich verstehe nicht alle Sprachen und freue mich oft über
+synchronisierte Filme--zum Nachteil des Verständnisses.
+
+Ein Negativbeispiel: Der Spielfilm München (Munich, 2005) von Steven
+Spielberg. Sprachen sind in diesem Film sehr wichtig. Im Original zum
+großen Teil englisch, aber auch hebräisch, arabisch, französisch,
+deutsch und italienisch. Was macht nun die deutsche Fassung, wenn sie
+auf Deutsch im Original trifft. Der Film hat eine merkwürdige Lösung:
+In einem italienischen Straßenkaffee wird im Original deutsch
+gesprochen und in der Übersetzung englisch. Und damit die Stimmen auch
+weiterhin bekannt sind, muss das Deutsche ins Englische synchronisiert
+werden, obwohl der Filmregisseur hier die Sprache der Figuren bewusst
+einsetzt. Nur eine Merkwürdigkeit.
+
+Noch ein Beispiel: Im Film Casino Royale (Casino Royale, 2006) tritt
+ein Schweizer Bankier auf--gespielt von einem deutschen Schauspieler
+([Ludger Pistor][pistor]). Ich vermute, dass dem Regisseur hier der
+Akzent wichtig war. Im Deutschen geht alles verloren.
+
+Gravierender ist vielleicht, dass bei der Übersetzung nicht auf die
+geeignete Wortwahl zurückgegriffen wird, sondern auf Worte die zur
+Lippenbewegung passen.
+
+In der _taz_ wird argumentiert, dass der Film durch die Übersetzung
+zugänglicher wird. Mithin wird versucht auf kulturelle Eigenheiten und
+Metaphern Rücksicht zu nehmen und ohnehin sei der Film ein
+artifizielles Produkt. Das mag die Kurzweil befördern, aber das
+Verständnis?
+
+Verstehen ist halt nicht nur eine Sache der Synchronisation--im
+Gegenteil.
+
+Es gibt auch einen [CRE][podcast] (Podcast) zu dem Thema.
+
+[pistor]: https://de.wikipedia.org/wiki/Ludger_Pistor
+[podcast]: http://cre.fm/cre150-filmsynchronisation
+[taz]: http://www.taz.de/1/archiv/digitaz/artikel/?ressort=tz&dig=2015%2F01%2F30%2Fa0114

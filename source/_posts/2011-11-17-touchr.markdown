@@ -1,0 +1,27 @@
+---
+layout: post
+title: "touchr"
+date: 2011-11-17 00:32
+comments: true
+categories:
+  - 2011
+  - programming
+  - unix
+---
+Ist ein Bash-Script das im Prinzip die gleiche Funktion hat, wie der
+Unix-Befehl _touch_. Es werden die Zeitstempel der Dateien in einem gesammten
+Verzeichnis mit denen eines Referenz-Verzeichnises verglichen und angepasst.
+
+Ich brauche den Befehl öffter mal um die vom Dateisystem abhängigen Einträge
+für dieses Blog anzupassen. Hat sich, in seiner kleinen Aufgabe, als sehr
+nützlich erwiesen:
+
+Für einen Testlauf sieht der Befehl etwa so aus:
+
+    touchr -dr /your/reference/directory /your/modification/directory
+
+Und wenn alles gut ist, geht es los:
+
+    touchr -vr /your/reference/directory /your/modification/directory
+
+**Update:** [Quelltext](https://gist.github.com/manuel-io/933da1e8fb1f00bd2d06)

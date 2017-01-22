@@ -1,0 +1,128 @@
+html {
+  background-image: url(/style/site.png);
+  background-repeat: repeat;
+}
+
+body {
+  position: absolute;
+  width: $max-width;
+  background-color: $site-bg; 
+  border-right: 3px solid $site-border;
+  border-bottom: 3px solid $site-border;
+  padding: $padding;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+
+  @extend .defaultSans;
+
+  header > h1 {
+    @extend .defaultMono;
+    a { color: $title-color; text-decoration: none; }
+    a:hover { color: $title-color; text-decoration: none; }
+    p {
+      text-shadow: 1px 0px 0px rgba(0, 0, 0, 1);
+      padding: 8px;
+      padding-left: 4px;
+      float: left;
+      width: 16px;
+      height: 16px;
+      line-height: 1.2em;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1em;
+      background-color: #fff;
+      background-image: url(/style/cal.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  a { color: $link-color; text-decoration: none; }
+  a:hover { color: $link-color-hover; text-decoration: none; }
+
+  article { @include clearfix; padding-left: $padding; }
+  footer { @include clearfix; padding-left: $padding; }
+
+  #tagcloud { margin-bottom: 5px; }
+  
+  #pagination {
+    margin-left: $padding;
+    text-align: center;
+    border-top: 0px;
+    margin-bottom: 5px;
+
+     table {
+       width: 100%;
+
+       td {
+         width: 33%;
+         &.next { text-align: left; }
+         &.arch { text-align: center; width: auto; }
+         &.prev { text-align: right; }
+       }
+    }
+
+    a {
+      @include link-colors($color6, $color6, $visited: $color6);
+
+      @media screen and (min-width: 450px + 40px) {
+        &.next::before { content: "← "; }
+        &.prev::after { content: " →"; }
+      }
+
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    width: 280px;
+    header > h1 {
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+  .basic-alignment {
+    &.left, &.right, &.center {
+      display: block;
+      margin: 1.5em auto 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 450px + 40px) {
+  body {
+    width: 450px;
+    header > h1 {
+      margin-left: 12px;
+      text-align: left;
+    }
+  }
+
+  .basic-alignment {
+    &.left { float: left; margin-right: 1.5em; }
+    &.right { float: right; margin-left: 1.5em; }
+    &.center { display: block; margin: 0 auto 1.5em; }
+    &.left, &.right { margin-bottom: .8em; }
+  }
+}
+
+@media screen and (min-width: $max-width + 40px) {
+  body { width: $max-width; }
+
+  .basic-alignment {
+    &.left { float: left; margin-right: 1.5em; }
+    &.right { float: right; margin-left: 1.5em; }
+    &.center { display: block; margin: 0 auto 1.5em; }
+    &.left, &.right { margin-bottom: .8em; }
+  }
+//  .basic-alignment {
+//    &.left { float: left; margin-right: 1.5em; width: 49%; }
+//    &.right { float: right; margin-left: 1.5em; width: 49%; }
+//  }
+}
+
+

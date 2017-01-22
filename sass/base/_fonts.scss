@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'DefaultLobster';
+  src: url('/style/Lobster.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'DefaultSans';
+  src: url('/style/DroidSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  src: url('/style/DroidSerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DefaultMono';
+  src: url('/style/Hermit.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.defaultLobster {
+  font-family: 'DefaultLobster';
+  font-size: 1.2em;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+  color: $text-color;
+}
+
+.defaultSans {
+  font-family: 'DefaultSans', 'Droid Sans';
+  font-size: 1.2em;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+  color: $text-color;
+}
+
+.defaultSerif {
+  font-family: 'DefaultSerif', 'Droid Serif';
+  font-size: 1.0em;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+  color: $text-color;
+}
+
+.defaultMono {
+  font-family: 'DefaultMono', 'Hermit';
+  font-size: .85em;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  color: $text-color;
+}
+
+.defaultTitle {
+  @extend .defaultSans;
+  font-family: 'DefaultLobster';
+  font-weight: bold;
+  font-size: $h1;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+  color: $title-color;
+  text-shadow: -1px 0 $color0, 0 1px $color0, 1px 0 $color0, 0 -1px $color0;
+  > a, > a:hover { color: $title-color; text-decoration: none; }
+}
+
+.defaultHeader {
+  @extend .defaultSans;
+  font-size: $h1;
+  font-weight: bold;
+  color: $header-color2;
+}
+
+.smallSans {
+  @extend .defaultSans;
+  font-size: .8em;
+  line-height: 1.6em;
+}

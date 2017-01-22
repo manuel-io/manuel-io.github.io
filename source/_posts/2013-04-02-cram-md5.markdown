@@ -1,0 +1,74 @@
+---
+layout: post
+title: "CRAM-MD5"
+date: 2013-04-02 13:20
+comments: true
+categories:
+  - 2013
+  - ruby
+  - programming
+  - md5
+  - listing
+  - administration
+---
+Zum Testen der Konfiguration eines Mailservers via
+<a href='https://de.wikipedia.org/wiki/Mail_Submission_Agent'>Submission</a>,
+kann _openssl_ verwendet werden:
+
+    openssl s_client -starttls smtp -connect example.com:587
+
+Bietet der Server die Authentifizierung per _CRAM-MD5_-Challenge-Response an,
+kann eine Challenge mit dem _AUTH_-Befehl angefordert werden.
+Eine Base64-Dekodierung des empfangenen Strings gibt weitere Informationen.
+
+    AUTH CRAM-MD5
+    334 PDQ4Njg0NDM3NDAxNjc2NTguMTM2NDg0NzkxM0BleGFtcGxlLmNvbT4=
+
+Basierend auf der Challenge und dem gemeinsamen Geheimnis—dem Passwort—wird
+eine Prüfsumme gebildet und über das Netz gesendet:
+
+    MD5(('secret' XOR omask), MD5(('secret' XOR imask), challenge))
+
+Die Implementierung in _Ruby_ sieht dann etwa so aus:
+
+    #!/usr/bin/env ruby
+    require 'base64'
+    require 'openssl'
+    require 'io/console'
+
+    IMASK = 0x36
+    OMASK = 0x5c
+    CRAM_BUFFERSIZE = 64
+
+    print 'Username: '
+    username = gets.chomp
+    print 'Password: '
+    secret = STDIN.noecho(&:gets).chomp
+    print "\n" + 'Challenge: '
+    base64_challenge = gets.chomp
+
+    if base64_challenge =~ /^[a-zA-Z0-9\+\/\=]+$/
+      challenge = Base64.decode64 base64_challenge
+    else raise ArgumentError, 'Challenge is not a valid base64 string.'
+    end
+
+    def cram_md5_response(secret, challenge)
+      tmp = Digest::MD5.digest(cram_secret(secret, IMASK) + challenge)
+      Digest::MD5.hexdigest(cram_secret(secret, OMASK) + tmp)
+    end
+
+    def cram_secret(secret, mask)
+      secret = Digest::MD5.digest(secret) if secret.size > CRAM_BUFFERSIZE
+      buffer = secret.ljust CRAM_BUFFERSIZE, "\0"
+      0.upto(buffer.size - 1) do |i|
+        buffer[i] = (buffer[i].ord ^ mask).chr
+      end
+      buffer
+    end
+
+    digest = cram_md5_response secret, challenge 
+
+    puts 'Method: CRAM-MD5'
+    puts 'Username: ' + username
+    puts 'Challenge: ' + challenge
+    puts 'Response: ' + Base64.encode64("#{username} #{digest}")

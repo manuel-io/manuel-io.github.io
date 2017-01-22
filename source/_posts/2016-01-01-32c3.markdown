@@ -1,0 +1,65 @@
+---
+layout: post
+title: "32C3"
+date: 2016-01-01 10:30
+comments: true
+categories:
+  - 2016
+  - ccc
+  - event
+  - perl
+---
+Diese Stunden geht der [32C3-Kongress][32c3] in Hamburg zu Ende und ich
+habe mir via Video-Stream einige Vorträge angesehen. Also wie üblich
+hier eine kurze Zusammenfassung:
+
+* [The exhaust emissions scandal][dieselgate]:
+> Analysis of the emission scandal shaking the German automotive
+> industry from a procedural, organizational and technical level.
+> Includes insight into cheating for advanced managers and code
+> extraction from ECUs from Ebay. And from Volkswagen. Initially.
+
+  LWN: [Inside the Volkswagen emissions cheating][lwn].
+
+* [Shopshifting][shopshifting]:
+> Payment systems are old and have – unlike card protocols – seen
+> little scrutiny so far. This talk enumerates design and
+> implementation flaws in payment processing systems, which can
+> defraud consumers and merchants.
+
+* [The Perl Jam 2][perl2]:
+  Last year there was a talk called [The Perl Jam: Exploiting a 20
+  Year-old Vulnerability][perl1]: Now, _The Camel Strikes Back_.
+
+* [Neither Snow Nor Rain Nor MITM… The State of Email Security in 2015][email]:
+> Is your email being sent in the clear? While PGP and S/MIME provide
+> end-to-end encrypted mail, most users have yet to adopt these
+> practices, and for users who have, these tools leave metadata ...
+
+  See a talk or read this [paper][paper].
+
+* [Let's Encrypt -- What launching a free CA looks like][letsencrypt]:
+  A talk about the new CA. Everyone can now operate his own encrypted
+  Website. It's free. Free as in free beer. Here you can find an
+  example for the [Let's Encrypt][myacme] workflow.
+
+* [Ten years after ‚We Lost The War‘][lostthewar2]:
+  Ten years ago, Rob & Frank gave a [talk][wltw] _We lost the war_.
+  That was 2005. Now, they give additional explanations and make some
+  conclusions.
+
+... [more][more]
+
+[lwn]: https://lwn.net/SubscriberLink/670488/4350e3873e2fa15c/
+[paper]: https://zakird.com/papers/mail.pdf
+[more]: https://media.ccc.de/b/congress/2015
+[wltw]: https://media.ccc.de/v/22C3-920-en-we_lost_the_war
+[lostthewar2]: https://media.ccc.de/v/32c3-7501-ten_years_after_we_lost_the_war
+[letsencrypt]: https://media.ccc.de/v/32c3-7528-let_s_encrypt_--_what_launching_a_free_ca_looks_like
+[email]: https://media.ccc.de/v/32c3-7255-neither_snow_nor_rain_nor_mitm_the_state_of_email_security_in_2015
+[dieselgate]: https://media.ccc.de/v/32c3-7331-the_exhaust_emissions_scandal_dieselgate
+[shopshifting]: https://media.ccc.de/v/32c3-7368-shopshifting
+[perl1]: /blog/2015/01/03/31c3/
+[perl2]: https://media.ccc.de/v/32c3-7130-the_perl_jam_2
+[32c3]: https://events.ccc.de/congress/2015/wiki/Main_Page
+[myacme]: https://gist.github.com/manuel-io/5a57432ee7860526ded7

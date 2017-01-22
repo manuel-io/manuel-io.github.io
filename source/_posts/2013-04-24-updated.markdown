@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Updated"
+date: 2013-04-24 02:18
+comments: true
+categories:
+  - 2013
+  - pdf
+  - mathematics
+  - physics
+  - links
+---
+Inspiriert von einer [englischsprachigen Seite][overapi] auf der
+verschiedene _cheat sheets_ gesammelt werden,
+habe ich hier die Links geupdated. Neu dazu gekommen sind:
+
+* [Mathematische Parallelität: Zerfallsgesetz, Kondensatorentladung][zerfall]:
+  Sind zwei Beispiele für die einfachste, denkbare Differentialgleichung.
+  „Das was man hat, ist proportional zur Veränderung.“
+* [Koaxialleiter: E-Feldstärke, H-Feldstärke][koaxialleiter]: Ist eine kurze Abhandlung eines Koaxialleiters.
+
+[zerfall]: /data/docs/zerfall_entladung.pdf
+[koaxialleiter]: /data/docs/koaxialleiter.pdf
+[overapi]: http://overapi.com/

@@ -1,0 +1,39 @@
+---
+layout: post
+title: "575 Gramm"
+date: 2013-07-16 23:25
+comments: true
+categories:
+  - 2013
+  - cooking
+  - vegetarian
+---
+<del>
+  <ul>
+  <li>250g Nudeln</li>
+  <del><li>150g Würfelschinken</li></del>
+  <li>100g Vegetarischer Würfelschinken</li>
+  <li>200g Schmand</li>
+  <li>Rapsöl</li>
+  <li>Heinz Curry Ketchup</li>
+  <li>Wasser</li>
+  </ul>
+</del>
+
+---
+
+{% img left /data/images/vegetarian-pasta.jpg 430 Vegetarische Pasta %}
+
+<del>
+So funktioniert es: Erstmal das Wasser, für die Nudeln, zum Kochen
+bringen. Sobald das Wasser kocht, müssen die Nudeln hinein gegeben
+werden. Die Kochzeit sollte auf der Verpackung stehen. Öl in der
+Pfanne erwärmen und Würfelschinken goldbraun braten. Die Herdplatte
+abstellen und den Schmand in die Pfanne mit dem Schinken geben. Die
+Restwärme der Herdplatte benutzen um den Schmand mit dem Schinken
+gleichmäßig zu vermengen. Das Ganze mit dem Curry Ketchup des
+Vertrauens abschmecken. Die Fertigen Nudeln auch noch in die Pfanne
+geben und fertig.
+</del>
+
+**Update:** [Tofu zum Angeben](http://fotografiona.wordpress.com/2012/09/27/tofu-zum-angeben/).

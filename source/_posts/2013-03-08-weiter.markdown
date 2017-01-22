@@ -1,0 +1,53 @@
+---
+layout: post
+title: "Weiter"
+date: 2013-03-08 22:59
+comments: true
+categories:
+  - 2013
+  - programming
+  - haskell
+  - listing
+---
+    insertionsort :: (Ord a) => [a] -> [a]
+    insertionsort [] = []
+    insertionsort (x:xs) = insert x (insertionsort xs)
+      where  
+        insert x [] = [x]
+        insert x (y:ys)
+          | x < y = x : y : ys
+          | otherwise = y : (insert x ys)
+
+    bubblesort :: (Ord a) => [a] -> [a]
+    bubblesort [] = []
+    bubblesort (x:xs) = (\(x,xs) -> x : bubblesort xs) $ foldl f (x,[]) xs
+      where f (x,acc) y = (min x y, max x y : acc)
+
+    mergesort :: (Ord a) => [a] -> [a]
+    mergesort [] = []
+    mergesort [a] = [a]
+    mergesort xs = merge (mergesort xs1) (mergesort xs2)
+      where
+        (xs1,xs2) = split xs xs
+          where
+            split (x:xs) (_:_:zs) = (x:us,vs) where (us,vs) = split xs zs
+            split xs _ = ([],xs)
+        merge xs [] = xs
+        merge [] ys = ys
+        merge (x:xs) (y:ys)
+          | x < y = x : merge xs (y:ys)
+          | otherwise = y : merge (x:xs) ys
+
+    quicksort :: (Ord a) => [a] -> [a]
+    quicksort [] = []
+    quicksort (x:xs) = smaller ++ [x] ++ bigger
+      where
+        smaller = quicksort [a | a <- xs, a <= x]
+        bigger = quicksort [a | a <- xs, a > x]
+
+    main = do
+      putStrLn("insertionsort: " ++ show (insertionsort list))
+      putStrLn("bubblesort: " ++ show (bubblesort list))
+      putStrLn("mergesort: " ++ show (mergesort list))
+      putStrLn("quicksort: " ++ show (quicksort list))
+        where list = [2, 8, 6, 5, 1, 3, 9, 4, 7, 0]

@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Booyah!"
+date: 2013-01-12 12:56
+comments: true
+categories:
+  - 2013
+  - programming
+  - haskell
+  - listing
+---
+    quicksort :: (Ord a) => [a] -> [a]
+    quicksort [] = []
+    quicksort (x:xs) = smallerSorted ++ [x] ++ biggerSorted
+      where
+        smallerSorted = quicksort [ a | a <- xs, a <= x ]
+        biggerSorted = quicksort [ a | a <- xs, a > x ]
+
+    main = do
+      putStr (show list ++ " using quicksort: ")
+      putStrLn (show (quicksort list))
+        where list = [ 5, 3, 2, 4, 1, 0 ]
+
+[http://learnyouahaskell.com/][haskell]
+
+[haskell]: http://learnyouahaskell.com/

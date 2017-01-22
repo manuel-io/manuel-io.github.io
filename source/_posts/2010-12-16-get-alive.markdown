@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Get Alive"
+date: 2010-12-16 01:06
+comments: true
+categories:
+  - 2010 
+---
+A web log! An online diary!
+A way to connect with millions and millions of
+Internet users and share my life! [Dork Tower][img].
+
+[img]: http://www.dorktower.com/files/2002/11/DorkTower219.jpg
+[dorktower]: https://web.archive.org/web/20140825210329/http://www.dorktower.com/files/2002/11/DorkTower219.jpg

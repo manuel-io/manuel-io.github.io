@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+div.marbles {
+  left: 0;
+  text-align: left;
+}
+
+html, body {
+  padding: 10px;
+  width: 420px;
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+div#navigation span {
+  font-size: 60px;
+  line-height: 1em;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+div#navigation {
+  text-align: center;
+  margin-top: -43px;
+  margin-left: 70px;
+  margin-bottom: 5px;
+}
+
+#leftarrow { background-image: url(left.png); }
+#toparrow { background-image: url(top.png); }
+#bottomarrow { background-image: url(bottom.png); }
+#rightarrow { background-image: url(right.png); }

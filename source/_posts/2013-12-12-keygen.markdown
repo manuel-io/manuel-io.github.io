@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Keygen"
+date: 2013-12-12 22:05
+comments: true
+categories:
+  - 2013
+  - keygen
+  - programming
+  - ruby
+  - disassembly
+---
+Maybe you remember the old software distribution models. People had
+obtained a trail version and bought a software key afterwards which
+means they received a combination of alphabetic and numeric characters
+and activated the full version. Other folks usually found a way how to
+circumvent that procedure plus developed software to let others do so
+again. I just took a deeper look into one of those tools and it was
+really disappointing:
+
+    $ objdump -Dj .text keygen | grep '<.*>:'
+    08048410 <_start>:
+    08048434 <call_gmon_start>:
+    08048460 <__do_global_dtors_aux>:
+    080484a0 <frame_dummy>:
+    080484d4 <_Z5crc32mPhj>:
+    0804864c <_Z9getserialPc>:
+    080486cc <main>:
+    080487f0 <__libc_csu_init>:
+    08048850 <__libc_csu_fini>:
+    080488a0 <__i686.get_pc_thunk.bx>:
+    080488b0 <__do_global_ctors_aux>:
+
+Apparently the program does nothing else then
+using a simple [cyclic redundancy check][wiki] which is equal to the
+following ruby code:
+
+    #!/usr/bin/env ruby
+    require 'zlib'
+    print 'Name: '
+    puts "Serial: %X" %
+      Zlib::crc32('StudioEnterprise' + gets.strip + '12182039') + '12182039'
+
+I had to [reverse engineer][source] the whole program to make sure
+there is no magic in it. There isn't. Check out the [Wikipedia][math]
+if you want to know more about the division in the ring of polynomials
+over the finite field $ (Z_2,+,\cdot) $.
+
+[wiki]: https://en.wikipedia.org/wiki/Crc32
+[source]: https://gist.github.com/elektret/7887702
+[math]: https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks

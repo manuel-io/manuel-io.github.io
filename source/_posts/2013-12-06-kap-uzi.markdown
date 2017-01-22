@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Kap Uzi"
+date: 2013-12-06 18:24
+comments: true
+categories:
+  - 2013
+  - music
+---
+<iframe width="100%" height="166" scrolling="no" frameborder="no"
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123332044&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>

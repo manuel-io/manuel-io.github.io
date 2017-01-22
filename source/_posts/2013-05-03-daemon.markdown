@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Daemon"
+date: 2013-05-03 20:28
+comments: true
+categories:
+  - 2013
+  - books
+  - links
+  - audio
+---
+Der WDR hat das Buch _Daemon_, 2004 von Daniel Suarez als Hörspiel produziert.
+Aufgrund der Zielgruppe des Buches ist auch nicht weiter verwunderlich, dass das
+Hörspiel, in drei Teilen, wieder auf Youtube aufgetaucht ist:
+[Teil 1][teil1], [Teil 2][teil2], [Teil 3][teil3].
+
+[teil1]: https://www.youtube.com/watch?v=JrmIcl76S-k
+[teil2]: https://www.youtube.com/watch?v=msHVt59FQHw
+[teil3]: https://www.youtube.com/watch?v=YFVhCjqYVcI

@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Winter"
+date: 2016-01-12 16:31:22 +0100
+comments: true
+categories:
+  - 2016
+  - photography
+  - winter
+  - creativecommons
+---
+{% img center /data/images/winter.jpg Winter? %}
+
+Attribution-ShareAlike 4.0 International ([CC BY-SA 4.0][cc])
+
+[cc]: https://creativecommons.org/licenses/by-sa/4.0/

@@ -1,0 +1,21 @@
+---
+layout: post
+title: "2048"
+date: 2014-03-21 19:34
+comments: true
+categories:
+  - 2014
+  - games
+  - links
+---
+* [2048](http://gabrielecirulli.github.io/2048/)
+* [2048-AI](http://ov3y.github.io/2048-AI/)
+* [2048 Numberwang!](http://louhuang.com/2048-numberwang/)
+* [Logarithmic Flappy 2048](http://hczhcz.github.io/Flappy-2048/)
+* [2048 for physicists](http://milrivel.github.io/LHC/)
+* [2048 - Multiplayer](http://emils.github.io/2048-multiplayer/)
+* [HN Plays 2048](https://hnplays2048.herokuapp.com/)
+* [Speed 2048](http://balderdash.github.io/2048/)
+* [2048-Tetris](http://prat0318.github.io/2048-tetris/)
+* [Fibonacci](http://mike199515.free3v.com/1597/2.htm)
+

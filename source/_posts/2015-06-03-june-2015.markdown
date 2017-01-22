@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Phacelia"
+date: 2015-06-03 23:00:19 +0200
+comments: true
+categories:
+  - 2015
+  - meta
+  - photography
+  - gardening
+---
+{% img /data/images/bee.jpg Flower & Bee %}

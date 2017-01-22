@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Robo Car"
+date: 2016-12-10 00:00:47 +0100
+comments: true
+categories:
+  - 2016
+  - atmega
+  - electronics
+  - diy
+---
+{% img /data/images/robo-car.jpg Robo-Car %}

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Cat-Content"
+date: 2014-08-13 19:15
+comments: true
+categories:
+  - 2014
+  - cats
+  - photography
+---
+{% img /data/images/cat.jpg %}

@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Cahoots"
+date: 2014-09-24 15:11
+comments: true
+categories:
+  - 2014 
+---
+[Cahoots][web] ist eine Datenbank und ein Browser-Plug-in. Es listet
+die Verbindungen von Journalisten auf:
+
+* Jochen Bittner
+* Josef Joffe
+* Matthias Naß
+* Michael Thumann
+* Kai Diekmann
+* Klaus-Dieter Frankenberger
+* Stefan Kornelius
+* Werner Mussler
+* Irmgard Bayer
+* Claus Kleber
+* Wolfgang Büchner
+* Richard Kiessler
+* Heribert Prantl
+* Michael Stürmer
+* Peter Frey
+* Winfried Wolf
+
+[Datenbank][db], [Extension][ext], [Website][web]
+
+[web]: https://cahoots-extension.github.io/
+[ext]: https://cahoots-extension.github.io/
+[db]: https://github.com/wuwi/cahoots/blob/master/db.json

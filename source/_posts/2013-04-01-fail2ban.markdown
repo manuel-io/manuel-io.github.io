@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Fail2ban"
+date: 2013-04-01 01:40
+comments: true
+categories:
+  - 2013
+  - administration
+  - centos
+---
+[Fail2ban][fail2ban] ist ein wirklich nützliches Tool,
+aber mit CentOS kein Vergnügen. Da gibt es verschiedene Probleme mit
+[Logrotate][logrotate] und [SELinux][selinux].
+
+Es ist also wichtig das Verhalten von Fail2ban genau zu beobachten
+und die Konfiguration anzupassen. Als Beispiel dient hier CentOS 6.4 und SSH.
+
+Erstmal ist es wichtig die Fail2ban-Logdatei zu beobachten.
+Wird _logtarget = /var/log/fail2ban_ in _/etc/fail2ban/fail2ban.local_ gesetzt,
+muss auch _/etc/logrotate.d/fail2ban_ angepasst werden.
+
+Den Status des _fail2ban-server_ erfährt man mit den Befehlen:
+
+    service fail2ban status
+    /etc/init.d/fail2ban status
+    fail2ban-client status
+
+Die Regeln zum Filtern einer Logdatei können mit dem Befehl
+_fail2ban-regex_ getestet werden:
+
+    fail2ban-regex /var/log/secure /etc/fail2ban/filter.d/sshd.conf
+
+Das Sperren von Internetadressen kann mit dem _logger_-Befehl getriggert werden.
+Wichtig ist zu verstehen, dass auch CGI/PHP Skripte Logdateien manipulieren können.
+Eigentlich können alle Programme in Logdateien schreiben.
+Per _/etc/rsyslog.conf_ können Informationen auch verteilt und empfangen werden.
+
+    logger -p authpriv.warning -t 'sshd[123]' 'Invalid user admin from 10.2.11.1'
+
+Und
+
+    logger -p authpriv.warning -t 'sshd[123]' \
+      'User root from 10.2.11.1 not allowed because not listed in AllowUsers'
+
+Etwas unübersichtlich ist _fail2ban-client -d_.
+Es wird die gesamte Konfiguration angezeigt.
+Interessant ist z.B. welcher Befehl zum Sperren einer IP-Adresse verwendet wird.
+
+Welche Adressen gerade gesperrt sind, sollte in der Logdatei von _fail2ban_ stehen
+und mit _iptables -L_ übereinstimmen.
+
+Gesperrte IP-Adressen wieder freigegeben:
+
+    iptables -D fail2ban-SSH -s 192.168.1.1 -j DROP
+
+Und dann gibt es noch die Manpages:
+
+* [fail2ban-client][fail2ban-client]
+* [fail2ban-server][fail2ban-server]
+* [fail2ban-regex][fail2ban-regex].
+
+Nützliche Infos gibt es auch auf dieser [Seite][list].
+
+[fail2ban]: http://www.fail2ban.org
+[fail2ban-client]: http://linux.die.net/man/1/fail2ban-client
+[fail2ban-server]: http://linux.die.net/man/1/fail2ban-server
+[fail2ban-regex]: http://linux.die.net/man/1/fail2ban-regex
+[logrotate]: https://github.com/fail2ban/fail2ban/issues/44
+[selinux]: https://bugzilla.redhat.com/show_bug.cgi?id=697223
+[list]: http://lists.centos.org/pipermail/centos/2012-June/126860.html

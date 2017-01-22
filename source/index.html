@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+  {% assign content = post.content %}
+    <article>
+      {% include article.html %}
+    </article>
+  {% endfor %}
+  <div id="pagination">
+    <table><tr>
+    {% if paginator.next_page %}
+      <td class='next'><a class="next" href="{{paginator.next_page_path}}">Older</a></td>
+    {% else %}
+      <td class='next'></td>
+    {% endif %}
+      <td class='arch'><a class='arch' href="/blog/archives">Blog Archives</a></td>
+    {% if paginator.previous_page %} 
+      <td class='prev'><a class="prev" href="{{paginator.previous_page_path}}">Newer</a></td>
+    {% else %}
+      <td class='prev'></td>
+    {% endif %}
+    </tr></table>
+  </div>
+</div>

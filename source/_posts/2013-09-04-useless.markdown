@@ -1,0 +1,66 @@
+---
+layout: post
+title: "Useless?"
+date: 2013-09-04 06:29
+comments: true
+categories:
+  - 2013
+  - ruby
+  - programming
+  - listing
+---
+    #!/usr/bin/env ruby -w
+    function, list, f = {}, [], nil
+
+    def function.method_missing(meth, *args, &block)
+      return self[meth.to_s] if has_key? meth.to_s
+      raise NoMethodError
+    end
+
+    class Function
+      @@global = String.new
+
+      def self.header(line)
+        @@global << line.lstrip 
+      end
+
+      def initialize(name)
+        @local = String.new
+      end
+
+      def to_s
+        @@global + @local
+      end
+
+      def exec
+        %x| #{to_s} |
+      end
+
+      def <<(line)
+        @local << line.lstrip
+      end
+    end
+
+    DATA.each do |line|
+      case line
+        when /\Afunction (\w+)/ then function[$1] = f = Function.new $1 
+        else if f.is_a?(Function) then f << (line =~ /\A}/ ? '' : line)
+          else Function.header line
+        end
+      end
+    end
+
+    puts function.hello.exec
+    puts function.bye.exec
+
+    __END__
+    #!/bin/bash
+    GREETING='Hello World'
+
+    function hello() {
+      echo "${GREETING}"
+    }
+
+    function bye() {
+      echo 'Bye Bye'
+    }

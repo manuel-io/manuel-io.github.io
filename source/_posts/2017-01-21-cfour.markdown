@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Playing Field"
+date: 2017-01-21 00:00:00 +0100
+comments: true
+categories:
+  - 2017
+  - atmega
+  - electronics
+  - handson
+---
+
+{% img /data/images/cfour.jpg Playing Field %}
+
+This is another LED-Matrix with some extra features. You see the
+LCD-Display in the picture on top and a wireless touch controller on
+the lower left side.
+
+{% figure left /data/images/bi.png Dual-Color LED, 2 Pins %}
+
+The main body is a matrix of 36 LEDs, however each single LED can
+light up in red or green. Thus we have 72 lights in total. There're
+12 cathodes and 12 anodes.
+
+On the logical side we have 24 discrete tranistors, a 24 bit shift
+unit and a ATmega8 micocontroller. There is absolutley no magick in
+it.
+
+Eveyhing is made for interaction and can be used as a playing field.
+The default app is a Connect 4 Game, but even some another games (like
+Snake etc.) could be possible.
+
+More information is summarized on the related [GitHub][github] page.
+
+[github]: https://github.com/manuel-io/playing-field
+

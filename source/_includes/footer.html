@@ -1,0 +1,12 @@
+<section>
+  <ul>
+  {% for post in site.posts limit: site.recent_posts %}
+  <li><a href="{{ root_url }}{{ post.url }}">{{ forloop.index }}. {% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+<section>
+  <p>
+    Copyright &copy; {{ site.time | date: "2010-%Y" }} | {{site.author}} | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</section>

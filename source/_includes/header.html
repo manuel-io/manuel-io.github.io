@@ -1,0 +1,9 @@
+<h1>
+  <a href="{{ root_url }}/">
+    {% assign chars = site.title | split: '' %}
+    {% for i in chars %}
+    <p>{{ i }}</p>
+    {% endfor %}
+  </a>
+</h1>
+<div style='margin-bottom:-8px;clear:both;'></div>

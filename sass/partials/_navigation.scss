@@ -1,0 +1,26 @@
+body > nav {
+  background-color: $nav-bg;
+  border-top: 2px solid $color2;
+  border-bottom: 2px solid $color2;
+  margin-bottom: 5px;
+
+  div {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    span {
+      margin: 5px;
+      padding: 2px;
+      text-transform: uppercase;
+      line-height: 1em;
+      font-size: 1.2em;
+      color: $nav-color;
+
+      a {
+        @include link-colors($nav-link-color,
+          $nav-link-color-hover, $visited: $nav-link-color-visited)       
+      }
+    }
+  }
+}

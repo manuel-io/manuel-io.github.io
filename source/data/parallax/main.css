@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Route;
+  src: url('/style/Hermit.ttf');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Route;
+}
+
+img { border: 0px solid #000000; }
+
+html, body {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #000000
+}
+
+.bcg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	height: 100%;
+}
+
+.hsBcgContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hsBcgContainer h6.next {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  color: #f2ead6;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(0,0,0,0.6); 
+  font-size: 1.2em;
+}
+
+.loading {
+  background: url('/data/parallax/loading.gif') no-repeat center center;
+}
+
+#preload {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
