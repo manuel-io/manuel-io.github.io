@@ -14,27 +14,32 @@ habe mir via Video-Stream einige Vorträge angesehen. Also wie üblich
 hier eine kurze Zusammenfassung:
 
 * [The exhaust emissions scandal][dieselgate]:
-> Analysis of the emission scandal shaking the German automotive
-> industry from a procedural, organizational and technical level.
-> Includes insight into cheating for advanced managers and code
-> extraction from ECUs from Ebay. And from Volkswagen. Initially.
-
+  {% quotation %}
+  Analysis of the emission scandal shaking the German automotive
+  industry from a procedural, organizational and technical level.
+  Includes insight into cheating for advanced managers and code
+  extraction from ECUs from Ebay. And from Volkswagen. Initially.
+  {% endquotation %}
   LWN: [Inside the Volkswagen emissions cheating][lwn].
 
 * [Shopshifting][shopshifting]:
-> Payment systems are old and have – unlike card protocols – seen
-> little scrutiny so far. This talk enumerates design and
-> implementation flaws in payment processing systems, which can
-> defraud consumers and merchants.
+  {% quotation %}
+  Payment systems are old and have – unlike card protocols – seen
+  little scrutiny so far. This talk enumerates design and
+  implementation flaws in payment processing systems, which can
+  defraud consumers and merchants.
+  {% endquotation %}
 
 * [The Perl Jam 2][perl2]:
   Last year there was a talk called [The Perl Jam: Exploiting a 20
   Year-old Vulnerability][perl1]: Now, _The Camel Strikes Back_.
 
 * [Neither Snow Nor Rain Nor MITM… The State of Email Security in 2015][email]:
-> Is your email being sent in the clear? While PGP and S/MIME provide
-> end-to-end encrypted mail, most users have yet to adopt these
-> practices, and for users who have, these tools leave metadata ...
+  {% quotation %}
+  Is your email being sent in the clear? While PGP and S/MIME provide
+  end-to-end encrypted mail, most users have yet to adopt these
+  practices, and for users who have, these tools leave metadata ...
+  {% endquotation %}
 
   See a talk or read this [paper][paper].
 

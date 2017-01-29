@@ -7,6 +7,7 @@ categories:
   - 2013
   - equation
   - election
+  - mathematics
 ---
 Wer weiß wie das [neue Wahlrecht][netzpolitik] funktioniert?
 Angenommen es ergibt sich eine Verteilung nach Zweitstimmen für drei Parteien

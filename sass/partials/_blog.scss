@@ -1,166 +1,181 @@
-article {
-  header {
-    h1 {
-      @extend .defaultHeader;
-      margin-left: -$padding;
-      margin-bottom: 5px;
-      padding-left: 25px;
-      padding-top: 8px;
-      padding-bottom: 6px;
-      background-color: $color2;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    
-      a { @include link-colors($header-link-color2,
-        $header-link-color2-hover, $visited: $header-link-color2-visited)
+body {
+  article {
+    margin-top: $margin/10;
+
+    header {
+
+      h1 {
+        @extend .defaultTitle;
+        @include links($color3, $color3);
+        padding-top: $padding/2;
+        padding-bottom: $padding/2;
+        padding-right: $padding/2;
+        background-color: $color1;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
-    }
-  }
 
-  h1 { font-weight: bold; font-size: $h1; }
-  h2 { font-weight: bold; font-size: $h2; } 
-  h3 { font-weight: bold; font-size: $h3; }
-  h4 { font-weight: bold; font-size: $h4; }
-  h5 { font-weight: bold; font-size: $h5; }
-  h6 { font-weight: bold; font-size: $h6; }
-
-  p.meta { margin-top: -5px; }
-  p > a:hover, li > a:hover { text-decoration: underline; }
-  p, blockquote, ul, ol, section, pre, figure, iframe {
-    margin-bottom: 1.4em;
-  }
-
-  ul { list-style-type: circle;
-    ul { list-style-type: disc; margin-bottom: 0px;
-      ul { list-style-type: square; margin-bottom: 0px; }}}
-
-  ol { list-style-type: decimal;
-    ol { list-style-type: lower-alpha; margin-bottom: 0px;
-      ol { list-style-type: lower-roman; margin-bottom: 0px; }}}
-
-  ul, ol { &, ul, ol { margin-left: 1.3em; }}
-
-  img, video, .flash-video {
-    @extend .flex-content;
-    @extend .basic-alignment;
-    background-color: $img-bg;
-  }
-
-  figure {
-    border: 1px solid #ccc;
-    @extend .basic-alignment;
-    text-align: center;
-
-    img {
-      margin: 2px;
-    }
-
-    figcaption {
-      border-top: 1px solid #ccc;
-      font-size: $h6;
-      box-shadow: inset 0px 1px 0px 0px #ffffff;
-      background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-        text-align: center;
+      p {
+        @extend .defaultSans;
+        padding: $padding/2;
+        border-bottom: 2px solid #000;
+        background-color: #fff;
       }
     }
 
-  figure.equation { @extend .pre-box; }
-
-  @media screen and (min-width: 0px) {
-    figure.equation {
-      font-size: 50%;
-    }
-  }
-
-  @media screen and (min-width: 450px + 40px) {
-    figure.equation {
-      font-size: 75%;
-    }
-  }
-
-  @media screen and (min-width: $max-width + 40) {
-    figure.equation {
-      font-size: 100%;
-    }
-  }
-
-  iframe { 
-    @extend .flex-content;
-    @extend .basic-alignment;
-  }
-
-  strong { font-weight: bold; }
-  em { font-style: italic; }
-
-  sup, sub { position: relative;  display: inline-block; }
-  sup { bottom: .5em; }
-  sub { top: .5em; }
-
-  q {
-    font-style: italic;
-    &:before { content: "\201C"; }
-    &:after { content: "\201D"; }
-  }
-
-  em, dfn { font-style: italic; }
-  b, strong, dfn { font-weight: bold; }
-  del, s { text-decoration: line-through; }
-
-  abbr, acronym { border-bottom: 1px dotted; cursor: help; }
-  sub, sup { line-height: 0; }
-  hr { margin-bottom: 0.2em; }
-  small { font-size: .8em; }
-  big { font-size: 1.2em; }
-
-  code { @extend .pre-code; }
-  pre {
-    @extend .pre-box;
-    a { @extend .pre-code }
-  }
-
-  blockquote {
-    position: relative;
-    padding-left: 1em;
-    border-left: 4px solid $color5;
-    @extend .defaultSerif;
-    font-style: italic;
-  }
-
-  footer {
-    padding-left: 0px;
-    color: $color4;
-    
-    p.meta {
-      @extend .smallSans;
-    }
-
-    table {
-      margin-bottom: 5px;
-      background-color: $color2;
-      width: 100%;
-      border: 0px;
-
-      th {
-        width: 5px;
-        vertical-align: middle;
-         p { margin: 0px; }
+    section {
+      h1, h2, h3, h4, h5, h6 {
+        @extend .defaultSans;
+        margin-top: $margin/2;
+        margin-left: $margin/2;
+        margin-right: $margin/2;
       }
 
-      td {
-        vertical-align: middle;
-        p {
-          margin: 5px;
-          text-overflow: ellipsis;
-          overflow: hidden;
+      p, ul {
+        @extend .defaultSans;
+        margin-top: $margin/2;
+        margin-left: $margin/2;
+        margin-right: $margin/2;
+        margin-bottom: 0px;
+        padding-bottom: $padding/2;
+      }
+
+      ul {
+        @extend .defaultSans;
+        display: block;
+        list-style-type: disc;
+        margin: $margin;
+        margin-bottom: 0px;
+        padding-bottom: $padding/2;
+        margin-left: (2 * $margin);
+      }
+
+      figure.img, img, video {
+        @extend .basic-alignment;
+        display: block;
+        background-color: $img-bg;
+        line-height: 0px;
+        font-size: 0px;
+      }
+
+      figure.img {
+        figcaption {
+          text-align: center;
+          border-top: 1px solid #ccc;
+          background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+          text-align: center;
         }
       }
 
-      .left { padding: 5px; text-align: left; }
-      .right { padding: 5px; text-align: right; }
-    
-      a {
-        @include link-colors($link-color2,
-          $link-color2-hover, $visited: $link-color2-visited)
+      figure.equation {
+        display: block;
+        border: 1px solid $color1;
+        border-left: 0px;
+        border-right: 0px;
+        padding: $padding/2;
+        background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+      }
+
+      pre {
+        display: block;
+        padding: $padding/2;
+        border: 1px solid $color1;
+        border-left: 0px;
+        border-right: 0px;
+        background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+        overflow-y: scroll;
+      }
+
+      hr {
+        clear: both;
+        margin-top: $margin/2;
+        padding-bottom: $padding/2;
+        color: $color0;
+        height: 3px;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      blockquote {
+        @extend .defaultSans;
+        background-color: #fcfcfc;
+        font-style: italic;
+
+        &::before {
+          float: left;
+          content: "„";
+          font-size: 800%;
+          font-family: "Liberation Serif";
+          color: #cecece;
+          margin: $margin;
+          margin-top: -(1.5 * $margin);
+          margin-bottom: (2.8 * $margin);
+        }
+
+        address {
+          display: inline;
+          &::before { content: "— "; }
+          margin-top: -5px;
+          margin-left: $margin/2;
+          margin-right: $margin/2;
+          text-align: right;
+        }
+      }
+
+      iframe {
+        display: block;
+      }
+    }
+
+    footer {
+      border-top: 2px solid $color1;
+      border-bottom: 2px solid $color1;
+      background-color: $color0;
+
+      section.meta {
+        margin: 0px;
+        padding: 0px;
+        background-color: $color1;
+        text-align: center;
+
+        p {
+          @include links($color3, $color3);
+          @extend .smallSans;
+          color: $color0;
+          margin: 0px;
+          padding: 0px;
+        }
+      }
+
+      section.pagination {
+        p {
+          @extend .defaultSans;
+          margin-top: $margin/2;
+          margin-bottom: $margin/2;
+        }
+
+        table {
+          @include links($color3, $color3);
+          width: 100%;
+          background-color: $color1;
+
+          th.left, th.right {
+            width: 5%;
+            padding-top: $padding/2;
+          }
+
+          td.left, td.right {
+            @include links($color6, $color6);
+            background-color: $color0;
+            width: 40%;
+            padding-top: $padding/2;
+          }
+
+          td.left { text-align: left; }
+          td.right { text-align: right; }
+        }
       }
     }
   }

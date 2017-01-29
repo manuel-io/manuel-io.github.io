@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
 html {
   background-image: url(/style/site.png);
   background-repeat: repeat;
@@ -7,19 +13,14 @@ body {
   position: absolute;
   width: $max-width;
   background-color: $site-bg; 
-  border-right: 3px solid $site-border;
-  border-bottom: 3px solid $site-border;
-  padding: $padding;
-  padding-top: 10px;
-  padding-left: 0px;
-  padding-bottom: 0px;
+  border: 5px solid $site-border;
+  margin-top: $margin;
+  margin-left: $margin;
 
-  @extend .defaultSans;
-
-  header > h1 {
+  header.site > h1 {
     @extend .defaultMono;
-    a { color: $title-color; text-decoration: none; }
-    a:hover { color: $title-color; text-decoration: none; }
+    @include links($title-color, $title-color);
+
     p {
       text-shadow: 1px 0px 0px rgba(0, 0, 0, 1);
       padding: 8px;
@@ -27,7 +28,7 @@ body {
       float: left;
       width: 16px;
       height: 16px;
-      line-height: 1.2em;
+      line-height: 1.4em;
       text-align: center;
       vertical-align: middle;
       font-size: 1em;
@@ -38,19 +39,25 @@ body {
     }
   }
 
-  a { color: $link-color; text-decoration: none; }
-  a:hover { color: $link-color-hover; text-decoration: none; }
+  @include links($link-color, $link-color-hover);
 
-  article { @include clearfix; padding-left: $padding; }
-  footer { @include clearfix; padding-left: $padding; }
+  #tagcloud {
+    @extend .defaultSans;
+    text-align: center;
+    text-justify: inter-word;
+    padding: $padding/2;
+  }
 
-  #tagcloud { margin-bottom: 5px; }
-  
   #pagination {
-    margin-left: $padding;
+    @extend .defaultSans;
+    display: none;
     text-align: center;
     border-top: 0px;
-    margin-bottom: 5px;
+    padding: $padding/2;
+    border: 1px solid $color1;
+    border-left: 0px;
+    border-right: 0px;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 
      table {
        width: 100%;
@@ -64,65 +71,67 @@ body {
     }
 
     a {
-      @include link-colors($color6, $color6, $visited: $color6);
-
-      @media screen and (min-width: 450px + 40px) {
+      @media screen and (min-width: ($max-width/1.6) + 2 * $margin) {
         &.next::before { content: "← "; }
         &.prev::after { content: " →"; }
       }
-
-      margin-left: 5px;
-      margin-right: 5px;
     }
   }
 }
 
 @media screen and (min-width: 0px) {
+  .defaultTitle { font-size: $h2; }
+  .defaultSans { font-size: $h4; }
+  .smallSans { font-size: $h5; }
+
   body {
-    width: 280px;
-    header > h1 {
-      margin-left: 0px;
-      text-align: center;
+    width: ($max-width/4);
+    margin-left: 0px;
+    margin-top: 0px;
+    article {
+      p { margin-left: 0px;}
+      border-left: 5px solid $color1;
+      section {
+        figure.equation {
+          overflow-x: auto;
+        }
+      }
     }
   }
+
   .basic-alignment {
-    &.left, &.right, &.center {
-      display: block;
-      margin: 1.5em auto 1.5em;
-    }
+    max-width: (($max-width/4) - 5px);
+    display: block;
+    margin: auto;
+    margin-bottom: $margin/2;
+  }
+
+  .basic-alignment:first-child {
+    margin-bottom: 0px;
   }
 }
 
-@media screen and (min-width: 450px + 40px) {
+@media screen and (min-width: ($max-width/1.6) + 2 * $margin) {
+  .defaultTitle { font-size: $h1; }
+  .defaultSans { font-size: $h3; }
+  .smallSans { font-size: $h4; }
+
   body {
-    width: 450px;
-    header > h1 {
-      margin-left: 12px;
-      text-align: left;
+    margin-left: $margin;
+    margin-top: $margin;
+    width: ($max-width/1.6);
+    article {
+      p { margin-left: -50px; }
+      border-left: 100px solid $color1;
     }
   }
 
   .basic-alignment {
-    &.left { float: left; margin-right: 1.5em; }
-    &.right { float: right; margin-left: 1.5em; }
-    &.center { display: block; margin: 0 auto 1.5em; }
-    &.left, &.right { margin-bottom: .8em; }
+    max-width: (($max-width/1.6) - 100px);
+    &.left { float: left; margin-left: $margin/2; margin-right: $margin/2; }
+    &.left:first-child { float: left; margin-left: $margin; margin-right: $margin/2; }
+    &.right { float: right; margin-left: $margin/2; margin-right: $margin/2; }
+    &.center { display: block; margin: auto; }
+    margin-bottom: 0px;
   }
 }
-
-@media screen and (min-width: $max-width + 40px) {
-  body { width: $max-width; }
-
-  .basic-alignment {
-    &.left { float: left; margin-right: 1.5em; }
-    &.right { float: right; margin-left: 1.5em; }
-    &.center { display: block; margin: 0 auto 1.5em; }
-    &.left, &.right { margin-bottom: .8em; }
-  }
-//  .basic-alignment {
-//    &.left { float: left; margin-right: 1.5em; width: 49%; }
-//    &.right { float: right; margin-left: 1.5em; width: 49%; }
-//  }
-}
-
-

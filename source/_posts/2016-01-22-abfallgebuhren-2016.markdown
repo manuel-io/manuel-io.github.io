@@ -40,7 +40,7 @@ macht, wenn diese konsequent genutzt wird und jedesmal zur Leerung an
 die Straße gestellt wird. Wird die Tonne über 6 mal zurückgehalten
 lohnt sich definitiv eine 60 L Tonne.
 
-{% img 50% center /data/images/abfall16.png Abfallgebühren 2016 %}
+{% img center /data/images/abfall16.png Abfallgebühren 2016 %}
     
     #!/usr/bin/env gnuplot
     set key left

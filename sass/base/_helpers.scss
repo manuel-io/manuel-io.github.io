@@ -1,5 +1,8 @@
-.group { @include pie-clearfix; }
-
+@mixin links($color, $hover) {
+  a { color: $color; }
+  a:hover { color: $hover; }
+}
+/*
 .force-wrap {
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
@@ -60,3 +63,4 @@
   $text-color: if($text-color >= 150, $dark, $light);
   @return $text-color;
 }
+*/

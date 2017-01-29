@@ -9,6 +9,7 @@ categories:
   - programming
   - ruby
   - disassembly
+  - mathematics
 ---
 Maybe you remember the old software distribution models. People had
 obtained a trail version and bought a software key afterwards which

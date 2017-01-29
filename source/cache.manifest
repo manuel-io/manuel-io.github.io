@@ -1,0 +1,25 @@
+CACHE MANIFEST
+
+CACHE:
+/favicon.ico
+/favicon.png
+/style/cal.png
+/style/DroidSans.ttf
+/style/DroidSerif.ttf
+/style/Hermit.ttf
+/javascripts/libs/imagesloaded.js
+/javascripts/libs/jquery-1.11.2.min.js
+/javascripts/libs/skrollr.js
+/stylesheets/screen.css
+/blog/2010/*
+/blog/2011/*
+/blog/2012/*
+/blog/2013/*
+/blog/2014/*
+/blog/2015/*
+/blog/2016/*
+/data/images/*
+/data/docs/*
+
+NETWORK:
+*

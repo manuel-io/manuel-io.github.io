@@ -16,7 +16,7 @@ the learning curve is high. In the meantime you can try the [native
 version][native].
 
 <iframe
-  style='width:100%;height:465px;'
+  style='width:100%;height:470px;'
   src='/data/marbles/index.html'
   frameborder='0'>
 </iframe>

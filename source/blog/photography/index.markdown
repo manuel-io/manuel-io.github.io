@@ -6,7 +6,7 @@ comments: true
 sharing: true
 footer: true
 ---
-{% img clear center /data/images/cards.jpg Winter? %}
+{% img /data/images/cards.jpg Cards %}
 
 <p style='text-align:center;'>
 Pictures made by myself are licensed under Creative Commons

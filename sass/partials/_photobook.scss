@@ -1,0 +1,15 @@
+div.thumbnails {
+  clear: both;
+  width: calc(100%);
+  background-color: #000;
+  padding-top: $padding/2;
+  margin: auto;
+
+  .thumbnail {
+    float: left;
+    margin: 5px;
+    width: calc((100% - 40px) / 4);
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+}

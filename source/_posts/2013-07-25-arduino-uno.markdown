@@ -7,5 +7,6 @@ categories:
   - 2013
   - photography
   - electronics
+  - atmega
 ---
 {% img center /data/images/arduino_uno.jpg %}

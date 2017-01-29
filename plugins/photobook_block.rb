@@ -39,7 +39,7 @@ module Jekyll
       @web = Pathname.new(@config['root']) + data_dir + 'photobook' + @name
 
       set = <<-BLOCK
-        <section class="thumbnails">
+        <div class="thumbnails">
       BLOCK
         .strip
 
@@ -66,7 +66,7 @@ module Jekyll
       end
 
       set += <<-BLOCK
-        </section>
+        </div>
       BLOCK
         .strip
 

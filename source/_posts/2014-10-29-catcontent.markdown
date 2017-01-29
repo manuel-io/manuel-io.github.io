@@ -9,7 +9,7 @@ categories:
   - photography
 ---
 <iframe
-  style='width:100%;height:500px;'
+  style='width:100%;height:600px;'
   src='/data/parallax/2014-10-29/index.html'
   frameborder='0'>
 </iframe>

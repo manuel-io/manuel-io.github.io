@@ -1,41 +1,43 @@
 #blog-archives {
+  margin-left: $margin/2;
+  margin-right: $margin/2;
+
   article {
+    border: 0px;
     padding: 1em 0em 1em;
     position: relative;
-  }
 
-  h1 {
-    @extend .defaultSans;
-    color: $text-color;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    a {
-      display: inline-block;
-      @include link-colors($color2, $color6, $visited: $color2);
-      font-weight: normal;
+    footer {
+      border: 0px;
+      @include links($color6, $color1);
+      @extend .smallSans;
     }
   }
 
-  h2 { display: none; }
+  h1 {
+    @extend .defaultTitle;
+    color: $text-color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include links($color1, $color6);
+  }
 
-  a.category, time {
-    @extend .smallSans;
+  h2 {
+    @extend .defaultSans;
+    color: $color1;
+    display: none;
   }
 
   time {
-     @extend .smallSans;
+    @extend .smallSans;
     .month, .day { display: inline-block; }
     .month { text-transform: uppercase; }
   }
 
-  p { margin-bottom: 1em; }
-
-  @media only screen and (min-width: 800px) {
+  @media screen and (min-width: ($max-width/1.6) + 2 * $margin) {
     article { margin-left: 5em; }
 
     h2 {
-      margin-bottom: .3em;
-      font-weight: normal;
       display: inline-block;
       position: relative;
       top: -1px;

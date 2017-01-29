@@ -29,14 +29,14 @@ wenn ich mich nicht halten kann.
 Um meine persönlich Meinung nochmal zu nennen möchte
 ich die [Wikipedia][wikipedia] zitieren:
 
->Bis heute existiert weder ein formaler,
->reproduzierbarer Nachweis noch eine akzeptable naturwissenschaftliche Begründung
->für eine Wirksamkeit homöopathischer Arzneimittel,
->die über den Placebo-Effekt hinausgeht.
->Die Homöopathie wird von Teilen der wissenschaftlichen Medizin auch als wirkungslose,
->in einigen Fällen sogar gefährliche Behandlung abgelehnt.
->
->Wikipedia
+{% quotation Wikipedia %}
+Bis heute existiert weder ein formaler, reproduzierbarer Nachweis noch
+eine akzeptable naturwissenschaftliche Begründung für eine Wirksamkeit
+homöopathischer Arzneimittel, die über den Placebo-Effekt hinausgeht.
+Die Homöopathie wird von Teilen der wissenschaftlichen Medizin auch
+als wirkungslose, in einigen Fällen sogar gefährliche Behandlung
+abgelehnt.
+{% endquotation %}
 
 [holger]: https://twitter.com/holgi
 [wikipedia]: https://de.wikipedia.org

@@ -9,6 +9,6 @@ categories:
   - electronics
   - diy
 ---
-{% img left /data/images/led-matrix.jpg LED-Matrix 4x5 %}
+{% img /data/images/led-matrix.jpg LED-Matrix 4x5 %}
 
 [Source & Documentation](https://github.com/manuel-io/led-matrix)

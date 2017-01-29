@@ -8,17 +8,13 @@ categories:
   - cooking
   - vegetarian
 ---
-<del>
-  <ul>
-  <li>250g Nudeln</li>
-  <del><li>150g Würfelschinken</li></del>
-  <li>100g Vegetarischer Würfelschinken</li>
-  <li>200g Schmand</li>
-  <li>Rapsöl</li>
-  <li>Heinz Curry Ketchup</li>
-  <li>Wasser</li>
-  </ul>
-</del>
+
+* 250g Nudeln
+* 100g Vegetarischer Würfelschinken
+* 200g Schmand
+* Rapsöl
+* Heinz Curry Ketchup
+* Wasser
 
 ---
 

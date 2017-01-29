@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]-->
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %}>
-  <header>{% include header.html %}</header>
+  <header class='site'>{% include header.html %}</header>
+  <div style='clear:both;'></div>
   <nav>{% include navigation.html %}</nav>
-  <div id="main">
-    {{ content | expand_urls: root_url }}
-  </div>
+  {{ content | expand_urls: root_url }}
   <footer>{% include footer.html %}</footer>
 </body>
 </html>

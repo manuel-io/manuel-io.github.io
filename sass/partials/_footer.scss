@@ -1,24 +1,36 @@
-body > footer {
-  @extend .smallSans;
-  background-color: $footer-bg;
-  color: $footer-color;
+body {
+  footer {
+    background-color: $footer-bg;
 
-  section { border-top: 4px solid $footer-border; }
+    section.posts {
+      border-top: 2px solid $color1;
+      border-bottom: 2px solid $color1;
+      margin-left: -5px;
+      margin-right: -5px;
+      background-color: $color0;
+      padding-top: $padding/2;
+      padding-bottom: $padding/2;
 
-  p { margin-top: 10px; margin-bottom: 10px; }
+      ul {
+        @extend .defaultSans;
+        list-style: none;
+        margin-left: 0;
 
-  a {
-    @include link-colors($footer-link-color, $footer-link-color-hover,
-      $visited: $footer-link-color-visited);
-  }
+        li {
+          @include links($color2, $color6);
+          text-transform: uppercase;
+          border-bottom: 1px solid $extra-border;
+        }
 
-  ul {
-    list-style: none;
-    margin-left: 0;
-    li {
-      text-transform: uppercase;
-      border-bottom: 1px solid $extra-border;
+        li:last-child { border-bottom: none; }
+      }
     }
-    li:last-child { border-bottom: none; }
+
+    section.copyright {
+      @extend .smallSans;
+      @include links($color3, $color3);
+      color: $color0;
+      background-color: $color1;
+    }
   }
 }

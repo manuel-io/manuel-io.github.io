@@ -23,7 +23,7 @@ light up in red or green. Thus we have 72 lights in total. There're
 12 cathodes and 12 anodes.
 
 On the logical side we have 24 discrete tranistors, a 24 bit shift
-unit and a ATmega8 micocontroller. There is absolutley no magick in
+unit and an ATmega8 micocontroller. There is absolutley no magick in
 it.
 
 Eveyhing is made for interaction and can be used as a playing field.
