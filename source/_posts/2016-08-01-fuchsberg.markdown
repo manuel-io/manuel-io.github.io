@@ -55,7 +55,7 @@ hier, dass die Gravitationskraft nur auf die y-Komponente wirkt.
 
 Die Kurve ist mit $0 \le t\le 700$:
 {% equation %}
-\binom{x}{y} = \binom{t\cdot\cos(\varphi'(t))}{t\cdot\sin(\varphi'(t))} = \
+\binom{x}{y} = \binom{t\cdot\cos(\varphi(t))}{t\cdot\sin(\varphi(t))} = \
 \binom{c_x(t)}{c_y(t)} = c(t)
 {% endequation %}
 
@@ -85,6 +85,6 @@ Ergebnis: Δh = 146m.
 [konservativ]: https://de.wikipedia.org/wiki/Konservative_Kraft
 [kurvenintegral]: https://de.wikipedia.org/wiki/Kurvenintegral#Kurvenintegral_zweiter_Art
 [bogenmaß]: https://de.wikipedia.org/wiki/Radiant_(Einheit)
-[pendel]: data/images/fuchsberg-pendulum.jpg
+[pendel]: /data/images/fuchsberg-pendulum.jpg
 [lagrange]: https://de.wikipedia.org/wiki/Polynominterpolation#Lagrangesche_Interpolationsformel
 [gnuplot]: http://pastebin.com/0W7q6V1P

@@ -12,10 +12,10 @@ categories:
 
 ### Was sind Veganer?
 
-Veganer verzichten auf den Konsum von tierischen Lebensmitteln.
-Konkret essen Veganer z.B. keine Hunde, Katzen, Schweine,
-Meerschweinchen. Essen keine Eier, Joghurt, Quark, Käse und trinken
-keine Kuhmilch.
+Veganer haben die bewusste Entscheidung getroffen auf den Konsum von
+tierische Lebensmittel zu verzichten. Konkret essen Veganer z.B. keine
+Hunde, Katzen, Schweine, Meerschweinchen. Essen keine Eier, Joghurt,
+Quark, Käse und trinken keine Kuhmilch.
 
 ### Dann bleiben nur noch pflanzliche Lebensmittel?
 
@@ -40,7 +40,7 @@ den Begriff Fleisch auch gar nicht.
 
 Wenn Nicht-Veganer für Veganer kochen dann hilft ihnen i.d.r. einfach
 nur ihr gewöhnlicher Sprachgebrauch weiter um eine alternative zu
-kreieren. Aber die vegane Esskultur ist halt oft keine 1:1 Übersetzung
+kreieren. Aber die vegane Esskultur ist oft keine 1:1 Übersetzung
 des Gewohnten und wie jede Umstellung auch nicht einfach.
 
 Davon abgesehen sind wir meistens nicht als veganer geboren und in
@@ -56,7 +56,7 @@ Eine sehr gute [Erklärung hat auch Michael][tgc] zu „Meat Imitations“.
 Zunächst werden wir in eine Gesellschaft hineingeboren die uns gewisse
 Normen und Grenzen aufzeigt. Und innerhalb dieser Grenzen wird es als
 natürlich betrachtet Tiere zum Zwecke des Konsums zu erschaffen,
-mästen und anschließend zu töten*. Interessant ist, das dieser Prozess
+mästen und anschließend zu töten*. Interessant ist, dass dieser Prozess
 im Verborgenen abläuft und mit dem Fleisch auf dem Teller nicht mehr
 verbunden wird
 
