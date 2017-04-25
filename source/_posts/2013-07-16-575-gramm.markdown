@@ -7,6 +7,7 @@ categories:
   - 2013
   - cooking
   - vegetarian
+  - vegan
 ---
 
 * 250g Nudeln
@@ -33,3 +34,8 @@ geben und fertig.
 </del>
 
 **Update:** [Tofu zum Angeben](http://fotografiona.wordpress.com/2012/09/27/tofu-zum-angeben/).
+Ich habe es geschafft. Zum ersten mal habe ich dieses Rezept
+[veganisiert][image] :-). Grundlage ist dieser [vegane Schinken][bacon] von Michael.
+
+[bacon]: http://freefromharm.org/vegan-recipes/vegan-bacon/
+[image]: /data/images/bacon.jpg
