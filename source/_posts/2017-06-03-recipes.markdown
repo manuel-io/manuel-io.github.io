@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Rezepte"
+date: 2017-06-03 18:09:22 +0200
+comments: true
+categories:
+  - 2017
+  - kitchen
+  - vegan
+---
+{% img left /data/images/recipes.png Rezepte %}
+
+Ich habe in den letzten Monaten eine Datenbank für Rezepte erstellt
+und mit Rezepten gefüllt, die ich in letzter Zeit gefunden und
+zubereitet habe. Ich habe die Rezepte zum Teil abgewandelt, dennoch
+betrachte ich diese nicht als eigene Kreation und veröffentliche diese
+hier nicht. Was ich aber mache, ist eine Liste mit Veweisen zu
+erstellen. Dazu gibt es am Ende des Artikels ein kleine Vorschau.
+
+Die Software basiert auf einer Ruby on Rails Applikation und bietet
+ein graphisches webbasiertes Frontend sowie Zugang zur Datenbankmanipulation.
+
+Im Wesentlichen können Rezepte eingegeben und in der Datenbank
+gespeichert oder formatiert ausgedruckt werden. Damit sind meine
+Grundanforderungen erstmal erfüllt. Ich kann mir zwar noch vorstellen
+eine Produktdatenbank oder ein Ernährungstagebuch einzubauen, dafür
+fehlt mir aber momentan die Zeit.
+
+Die Software ist demnächst auf GitHub zu finden und kann
+beliebig nach persönlichem Bedarf eingestzt werden. Geplant ist auch
+eine Vorschau auf Heroku.
+
+* Kidneybohnen á la Afrika: [Eat This](https://www.eat-this.org/kidneybohnen-a-la-afrika/)
+* Nudelsalat: [Vegan Taste Week](https://vegan-taste-week.de/rezepte/salate-dressings/traditioneller-nudelsalat)
+* Jalfrezi: [Vegan Taste Week](https://vegan-taste-week.de/rezepte/hauptspeisen/veg-jalfrezi), [IndiaCurry.com](http://www.indiacurry.com/vegcurry/vegetablejalfrezi.htm)
+* Soja Frikassee: [Vegan Taste Week](https://vegan-taste-week.de/rezepte/hauptspeisen/frikassee)
+* Königsberger Klopse: [Mehr als Rohkost](http://www.mehr-als-rohkost.de/rezepte/vegane-konigsberger-klopse/)
+* Rostbratwurst: [Die Umsteiger](https://dieumsteiger.blogspot.de/2012/07/meine-beste-selbstgemachte_19.html), [Mehr als Rohkost](http://www.mehr-als-rohkost.de/rezepte/vegane-rostbratwurst-aus-seitan-und-tofu/)
+* Schinken: [The Gentle Chef](https://thegentlechef.com/chefs-premium-vegan-bacun/), [Free From Harm](http://freefromharm.org/vegan-recipes/vegan-bacon/)
+* Gulasch: [Netto](https://www.netto-online.de/Veganes-Gulasch.chtm), [Vegan Taste Week](https://vegan-taste-week.de/rezepte/suppen-eintoepfe/gulaschsuppe)
+* Chili con Bulgur: [Simply Vegan](http://www.simply-vegan.org/rezepte/chili-con-bulgur)
+* Zwiebelmett: [Laubfresser](http://www.laubfresser.de/2013/01/veganes-zwiebelmett.html), [Mehr als Rohkost](http://www.mehr-als-rohkost.de/rezepte/veganes-zwiebelmett/), [Vegan Guerilla](http://www.veganguerilla.de/mett-mett-mett/)
+* Spaghetti Bolognese: [Attila Hildmann](https://www.attilahildmann.de/de/rezepte/spaghetti-tofu-bolognese.html)
