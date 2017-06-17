@@ -58,10 +58,13 @@ body {
 
       figure.img {
         figcaption {
-          text-align: center;
-          border-top: 1px solid #ccc;
+          @extend .defaultSans;
+          margin-top: 5px;
+          border: 1px solid #ccc;
           background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
           text-align: center;
+          line-height: 1.5em;
+          font-size: 13px;
         }
       }
 
