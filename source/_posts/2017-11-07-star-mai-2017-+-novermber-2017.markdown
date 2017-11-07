@@ -1,0 +1,26 @@
+---
+layout: post
+title: "* Mai 2017 - † Novermber 2017"
+date: 2017-11-07 19:16:06 +0100
+comments: true
+categories: 
+  - 2017
+  - fall
+---
+
+{% img /data/images/jerry.jpg Jerry %}
+
+-> Vielen Dank, dass du mir in dieser kurzen Zeit so viel Freude
+geschenkt hast. Du wird immer in jenen Herzen bleiben, die du mit so
+viel Glück und Liebe gefüllt hast. <-
+
+{% quotation Barbara Janelle %}
+Wenn Tiere in unser Leben kommen, treten wir eine Reise voller
+Abenteuer, Lernprozesse und Liebe an. Die Tiere erreichen unser tiefes
+Inneres und verändern uns auf eine kaum beschreibbare Weise. Unsere
+Liebe wächst. Und wenn sie dann von uns gehen, sind wir verloren und
+verzweifelt. Mit der Zeit untersuchen wir, was geschehen ist, und
+erkennen die Bedeutung. Dann staunen wir über diese bewundernswerten
+Wesen. Was für eine Ehre erteilen sie uns, wenn sie eine Strecke
+unseres Lebensweges mit uns teilen.
+{% endquotation %}
