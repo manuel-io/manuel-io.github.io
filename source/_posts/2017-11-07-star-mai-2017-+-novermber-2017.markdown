@@ -11,7 +11,7 @@ categories:
 {% img /data/images/jerry.jpg Jerry %}
 
 -> Vielen Dank, dass du mir in dieser kurzen Zeit so viel Freude
-geschenkt hast. Du wird immer in jenen Herzen bleiben, die du mit so
+geschenkt hast. Du wirst immer in jenen Herzen bleiben, die du mit so
 viel Glück und Liebe gefüllt hast. <-
 
 {% quotation Barbara Janelle %}
