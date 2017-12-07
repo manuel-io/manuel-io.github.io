@@ -11,11 +11,13 @@ title: "Links"
 
 ### Physics
 * [The Feynman Lectures on Physics][feynman]
+* [Circuit Simulator](http://www.falstad.com/circuit/)
 
 ### Programming
 * [Learn You a Haskell for Great Good!][lyah]
 * [Ruby Hacking Guide][rhg]
 * [crontab.guru](https://crontab.guru/)
+* [PostgreSQL Exercises](https://pgexercises.com/)
 
 [tofu]: http://fotografiona.wordpress.com/2012/09/27/tofu-zum-angeben/
 [ga]: http://www.mathematik.uni-dortmund.de/lsi/schweizer/PartielleDGL/guteAntworten.html
