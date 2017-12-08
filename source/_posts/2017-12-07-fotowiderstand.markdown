@@ -101,8 +101,8 @@ R_1 = \sqrt{R_x \cdot \frac{R_i \cdot R_x - R_i^2}{R_x – R_i}}
 Für meinen Fall beträgt der Widerstand bei maximalen Lichteinfall $
 3,5k\Omega $ und bei Dunkelheit $ 180k\Omega $. Damit ist für $ R_1 =
 25k\Omega $ gegeben. Die Differenzspannung beträgt $ \Delta U = 3,78 V
-$, die minimale Spannung beträgt $ U_i = 0.61 V $ und die maximale
-Spannung beträgt $ U_x = 4.39 V $.
+$, die minimale Spannung beträgt $ U_i = 0,61 V $ und die maximale
+Spannung beträgt $ U_x = 4,39 V $.
 
 Im Analog-Digital-Wandler des Mikrocontrollers werden die analogen
 Werte nummerisch abgebildet:

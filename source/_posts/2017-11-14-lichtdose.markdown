@@ -13,7 +13,7 @@ categories:
 {% img left /data/images/lightcan.jpg 200 Lichtdose %}
 
 Wieder einmal eine kleine Spielerei mit Leuchtdioden. Dieses mal ganz
-ohne Microcontroller, eine kleine Fingerübung um mit den Bausteinen
+ohne Mikrocontroller, eine kleine Fingerübung um mit den Bausteinen
 `74HC4017` und `NE555` warm zu werden.
 
 In eine leere Blechdose werden Löcher gebohrt und Leuchtdioden in
