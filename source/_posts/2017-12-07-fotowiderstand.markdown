@@ -43,7 +43,7 @@ U = R_1 \cdot I + R_2 \cdot I
 \Leftrightarrow I = \frac{U}{R_1 + R_2}
 {% endequation %}
 
-$ U_2 $ ist hier unserer licht-abhängigen Widerstand:
+$ U_2 $ ist hier die Spannung am licht-abhängigen Widerstand:
 
 $ U_2 = R_2 \cdot I \quad\hbox{mit}\quad I = \frac{U}{R_1 + R_2} \quad\hbox{aus (\ref{eq:ohm})} $
 
@@ -72,7 +72,7 @@ Jetzt wird die erste Ableitung gebildet  und gleich Null gesetzt, um
 die maximale Differenzspannung ermitteln zu können:
 
 {% equation %}
-\frac{d\Delta U(R_1)}{dR_1} = U \cdot (\frac{R_i}{R_i + R_1^2} - \frac{R_x}{R_x + R_1^2})
+\frac{d\Delta U(R_1)}{dR_1} = U \cdot \frac{R_i}{(R_i + R_1)^2} - \frac{R_x}{(R_x + R_1)^2}
 {% endequation %}
 
 Weiter wird die Ableitung gleich Null gesetzt: $ \frac{d\Delta

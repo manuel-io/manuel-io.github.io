@@ -4,6 +4,11 @@ title: "Links"
 ---
 ### Cooking
 * [Tofu zum Angeben][tofu]
+* [Manuels Rezepte][vkitchen]
+
+### Games
+* [Marbloes][marbles]
+* [Resistor Color-Code Challenge][rccc]
 
 ### Mathematics
 * [Gute Antworten][ga]
@@ -26,3 +31,6 @@ title: "Links"
 [lyah]: http://learnyouahaskell.com/
 [rhg]: https://ruby-hacking-guide.github.io/
 [pdu]: http://pastebin.com/p9Nmh7Es/
+[marbles]: /data/marbles/
+[rccc]: /data/resistor/
+[vkitchen]: https://vkitchen.herokuapp.com/
