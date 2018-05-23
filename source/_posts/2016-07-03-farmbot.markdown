@@ -8,6 +8,7 @@ categories:
   - electronics
   - programming
   - gardening
+  - video
 ---
 {% youtube 8r0CiLBM1o8 %}
 

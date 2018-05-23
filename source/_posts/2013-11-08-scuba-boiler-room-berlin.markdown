@@ -7,10 +7,9 @@ categories:
   - 2013
   - music
 ---
-<iframe width='100%' height='166'
-  scrolling='no' frameborder='no'
-  src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116998293'>
-</iframe>
+{% img /data/images/removed.png Removed %}
+
+See: [https://soundcloud.com/platform](https://soundcloud.com/platform/scuba-60-min-boiler-room)
 
 <pre>
 00:00 Ceasare & Disorder – Soul Driver

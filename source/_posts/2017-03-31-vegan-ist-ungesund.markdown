@@ -7,6 +7,7 @@ categories:
   - 2017
   - food
   - vegan
+  - video
 ---
 {% youtube 7BngtghGoN4 %}
 

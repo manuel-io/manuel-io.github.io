@@ -7,5 +7,6 @@ categories:
   - 2016
   - food
   - vegan
+  - video
 ---
 {% youtube o0VrZPBskpg %}
