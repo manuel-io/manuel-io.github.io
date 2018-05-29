@@ -36,7 +36,7 @@ Seiten eingebunden werden. Das mache ich auch hier mit dem
 Z.B. können verbundene Rezepte etwa für Tzatziki oder die Mayo nicht
 eingesehen werden, da diese nicht automatisch auch öffentlich sind.
 
-Viel Spaß beim Nachkochen!
+Viel Spaß beim Kochen!
 
 <iframe
   style='width:100%;height:500px;'
