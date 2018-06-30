@@ -1,0 +1,22 @@
+---
+layout: post
+title: "VegMe!"
+date: 2018-06-30 13:46:31 +0200
+comments: true
+categories: 
+  - 2018
+  - cooking
+  - kitchen
+  - vegan
+---
+Ich habe im Netz eine Firma gefunden die das Internet nach Rezepten
+etc. absucht und irgendwie Informationen zusammenstellt: „Our goal is
+to capture the world's food knowledge“ (https://www.edamam.com/). Die
+haben eine Schnittstelle (API) die Entwickler auch mal einfach so
+benutzen können. Zwei Entwicklerinnen haben daraus mal eine
+Seite gebastelt mit der nach veganen Rezepten gesucht werden kann:
+
+[VegMe!](https://vegme.herokuapp.com/). Keine Ahnung ob das was ist. Schöne
+Bilder für ideenlose Tage sind aber dabei: [Beispiel][example].
+
+[example]: https://vegme.herokuapp.com/queries?health=vegan&max_cal=500&q=sushi&search_id=8003b097-142b-40e8-83b8-f0debcd106ba
