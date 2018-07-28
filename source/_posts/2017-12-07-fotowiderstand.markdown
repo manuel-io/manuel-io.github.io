@@ -17,7 +17,7 @@ Ich stehe vor der Herausforderung, dass ich einen Mikrocontroller
 ([Atmega8][atmega8]) über die umgebenen Lichtverhältnisse informieren möchte und
 dafür auch schon einen licht-abhängigen Widerstand habe ([A
 906011][a906011]). Dieser Widerstand ändert seinen Wert in Abhängekit des
-Umgebungslichtes. Dabei bedeutet viel Licht einen kleiner
+Umgebungslichtes. Dabei bedeutet viel Licht einen kleinen
 Widerstandswert und umgekehrt wenig Licht oder gar Dunkelheit einen
 großen Widerstand. Die genauen Werte ergeben sich aus dem Datenblatt.
 
