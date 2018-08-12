@@ -8,7 +8,7 @@ categories:
   - vegan
   - kitchen
 ---
-So ein Foo (⚡⚠☠☔). Ich hatte diesen Artikel schon geschrieben und
+So ein Foo (⚡⚠☠☔). Ich habe diesen Artikel schon geschrieben und
 wollte dieses Rezept möglichst vielen Menschen bekannt machen um diese
 von dem großartigen Geschmack dieses veganen Gerichtes zu überzeugen
 und dann war es einfach weg. Und um dann nochmal zu spüren wie
