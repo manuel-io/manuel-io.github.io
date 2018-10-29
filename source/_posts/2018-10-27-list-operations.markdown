@@ -9,12 +9,13 @@ categories:
   - ruby
   - python
   - haskell
+  - javascript
   - ecmascript
 ---
 Apply a function to each member of a list:
 
-    Ruby:       [1,2,3].map { |x| x*2 }
-    Python:     map(lambda x: x *2, [1,2,3])
+    Ruby:       [1,2,3].map { |x| x * 2 }
+    Python:     map(lambda x: x * 2, [1,2,3])
     Haskell:    map (*2) [1,2,3]
     Javascript: [1,2,3,4].map(x => x * 2)
 
@@ -27,14 +28,14 @@ Flatten a list of multiple sublists:
 
 Multiply all members of a list:
 
-    Ruby:       [1,2,3,4].reduce(:*)
-    Python:     reduce((lambda x, y: x * y), [1,2,3,4])
+    Ruby:       [1,2,3,4].reduce(1,:*)
+    Python:     reduce((lambda x, y: x * y), [1,2,3,4], 1)
     Haskell:    foldl (*) 1 [1,2,3,4]
-    Javascript: [1,2,3,4].reduce((accu, item) => accu + item)
+    Javascript: [1,2,3,4].reduce((accu, item) => accu * item, 1)
 
-Filter all even memebers from a list:
+Filter all even members from a list:
 
-    Ruby:       [0,1,2,3,4,5,6,7,8,9].select { |x| x % 2 == 0 }
+    Ruby:       [0,1,2,3,4,5,6,7,8,9].select &:even?
     Python:     filter(lambda x: not x % 2, [0,1,2,3,4,5,6,7,8,9])
     Haskell:    filter (even) [0,1,2,3,4,5,6,7,8,9]
     Javascript: [0,1,2,3,4,5,6,7,8,9].filter(x => x % 2 == 0)
@@ -46,7 +47,7 @@ Sort a list ascending:
     Haskell:    Data.List.sort [5,9,0,1,3,2,4,8,6,7]
     Javascript: [5,9,0,1,3,2,4,8,6,7].sort()
 
-Element is member of list
+Element is member of the list
 
     Ruby:       [0,1,2,3,4,5,6,7,8,9].include? 5
     Python:     5 in [0,1,2,3,4,5,6,7,8,9]
@@ -58,7 +59,7 @@ List of numbers between 100 and 200
     Ruby:       (100..200).to_a
     Python:     range(100,200 + 1)
     Haskell:    [100..200]
-    Javascript: Array(100).fill(100).map((e,i) => e + i)
+    Javascript: Array(100 + 1).fill(100).map((e,i) => e + i)
 
 Two lists and return a list of corresponding pairs:
 
@@ -67,12 +68,19 @@ Two lists and return a list of corresponding pairs:
     Haskell:    zip [1,2,3,4,5] [5,4,3,2,1]
     Javascript: No suitable oneliner
 
-Minimum and Maxmum of a list:
+Minimum and Maximum of a list:
 
     Ruby:       [:min, :max].map { |m| [5,2,6,2,1,7,3].method(m).call }
     Python:     [m([5,2,6,2,1,7,3]) for m in [min, max]]
     Haskell:    [m [5,2,6,2,1,7,3] | m <- [minimum, maximum]]
     Javascript: [Math.min, Math.max].map(m => m.apply(null, [5,2,6,2,1,7,3]))
+
+Print each member of a list
+
+    Ruby:       [1,2,3,4,5].each { |v| puts v }
+    Python:     print '\n'.join(str(p) for p in [1,2,3,4,5])
+    Haskell:    mapM_ (putStrLn . show) [1,2,3,4,5]
+    Javascript: [1,2,3,4,5].forEach(x => console.log(x))
 
 Multiple lines to one single line string:
 
