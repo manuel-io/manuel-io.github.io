@@ -29,3 +29,4 @@ some functional features. Like others:
     Phython:    reduce(lambda x, y: y(x), [lambda a: a+10, lambda a: a*10, lambda a: a-5], 23)
     Javascript: [a => a+10, a => a*10, a => a-5].reduce((a, i) => i(a), 23)
     Haskell:    foldl (\x y -> y(x)) 23 [(+10), (*10), (+(-5))]
+    Racket:     (foldl (λ (b a) (b a)) 23 (list (λ (a) (+ a 10)) (λ (a) (* a 10)) (λ (a) (- a 5))))
