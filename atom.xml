@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[A personal Blog]]></title>
-  <link href="http://manuel-io.github.io/atom.xml" rel="self"/>
-  <link href="http://manuel-io.github.io/"/>
-  <updated>2019-03-03T03:41:21+01:00</updated>
-  <id>http://manuel-io.github.io/</id>
+  <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
+  <link href="https://manuel-io.github.io/"/>
+  <updated>2019-03-03T13:37:54+01:00</updated>
+  <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
@@ -13,26 +13,27 @@
   
   <entry>
     <title type="html"><![CDATA[CSS Animation 101]]></title>
-    <link href="http://manuel-io.github.io/blog/2019/03/02/css-animation-101/"/>
+    <link href="https://manuel-io.github.io/blog/2019/03/02/css-animation-101/"/>
     <updated>2019-03-02T22:03:34+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2019/03/02/css-animation-101</id>
-    <content type="html"><![CDATA[<iframe src="http://manuel-io.github.io/data/dat/css-animation-101.html"
+    <id>https://manuel-io.github.io/blog/2019/03/02/css-animation-101</id>
+    <content type="html"><![CDATA[<iframe src="https://manuel-io.github.io/data/dat/css-animation-101.html"
         style="width:100%;height:400px;"
         frameborder="0">
 </iframe>
 
 
-<p>The picture is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">Creative Commons Attribution-Share
+<p>This is an example of how to interact with a Website using pure CSS.
+The picture is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">Creative Commons Attribution-Share
 Alike 4.0</a> International license. You can find a copy <a href="https://commons.wikimedia.org/wiki/File:Sunset-spring-2019.jpg">here</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Driving Batteries in Parallel]]></title>
-    <link href="http://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel/"/>
+    <link href="https://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel/"/>
     <updated>2019-02-03T14:21:04+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel</id>
-    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/driving-parallel.jpg" title="Driving Parallel" alt="Driving Parallel">
+    <id>https://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/driving-parallel.jpg" title="Driving Parallel" alt="Driving Parallel">
 
 
 <p><a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+0.07470175003104325+50+5+43%0A370+304+64+384+64+1+0%0Ar+384+64+384+128+0+190%0A162+384+128+384+224+2+default-led+1+0+0+0.02%0Ag+384+256+384+288+0%0Ap+304+64+304+256+1+0%0Aw+304+256+384+256+0%0Aw+384+224+384+256+0%0Ap+464+128+464+256+1+0%0Aw+464+128+384+128+0%0Aw+464+256+384+256+0%0Aw+256+64+304+64+0%0Aw+256+128+256+64+0%0A370+160+128+256+128+1+0%0Ap+80+160+160+160+1+0%0Ad+80+128+160+128+2+1N4004%0Aw+160+160+160+128+0%0Aw+80+160+80+128+0%0AR+80+128+16+128+0+0+40+6.1+0+0+0.5%0AR+80+192+16+192+0+0+40+6.2+0+0+0.5%0Ad+80+192+160+192+2+1N4004%0A370+160+192+256+192+1+0%0Ap+80+224+160+224+1+0%0Aw+80+224+80+192+0%0Aw+160+224+160+192+0%0Aw+256+192+256+128+0%0AR+80+256+16+256+0+0+40+6.3+0+0+0.5%0Ad+80+256+160+256+2+1N4004%0A370+160+256+256+256+1+0%0Ap+80+288+160+288+1+0%0Aw+80+288+80+256+0%0Aw+160+288+160+256+0%0Aw+256+256+256+192+0%0Ap+80+96+160+96+1+0%0Ad+80+64+160+64+2+1N4004%0A370+160+64+256+64+1+0%0AR+80+64+16+64+0+0+40+6+0+0+0.5%0Aw+80+96+80+64+0%0Aw+160+96+160+64+0%0Ap+80+32+160+32+1+0%0Ad+80+0+160+0+2+1N4004%0AR+80+0+16+0+0+0+40+5.6+0+0+0.5%0A370+160+0+256+0+1+0%0Aw+80+32+80+0+0%0Aw+160+32+160+16+0%0Aw+160+16+160+0+0%0Aw+256+0+256+64+0%0Ap+80+-32+160+-32+1+0%0Ad+80+-64+160+-64+2+1N4004%0AR+80+-64+16+-64+0+0+40+5.3+0+0+0.5%0A370+160+-64+256+-64+1+0%0Aw+80+-32+80+-64+0%0Aw+160+-32+160+-64+0%0Aw+256+-64+256+0+0%0A">Simulated Circuit</a></p>
@@ -41,10 +42,10 @@ Alike 4.0</a> International license. You can find a copy <a href="https://common
   
   <entry>
     <title type="html"><![CDATA[Vegane Rezepte 2018]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018/"/>
+    <link href="https://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018/"/>
     <updated>2018-12-31T22:54:44+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018</id>
-    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/recipes.jpg" title="Recipes" alt="Recipes">
+    <id>https://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/recipes.jpg" title="Recipes" alt="Recipes">
 
 
 <p>Ich habe angefangen möglichst viele Rezepte zu Dokumentieren und
@@ -55,9 +56,9 @@ voll geworden ;-).</p>
   
   <entry>
     <title type="html"><![CDATA[Zyklische Redundanzprüfung (Theorie)]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung/"/>
+    <link href="https://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung/"/>
     <updated>2018-12-24T01:12:36+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung</id>
+    <id>https://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung</id>
     <content type="html"><![CDATA[<p>Hier geht es um Vektorrechnung. Dazu habe ich ja schon hier und da
 etwas gehabt: Komplexe Zahlen, Polynome, Vektorintegral. Jetzt geht es
 um Bitvektoren. Also nehmen wir hier als Beispiel eine Zahlenfolge aus
@@ -183,10 +184,10 @@ eine Erklärung. Einen guten Einstieg bietet auch die <a href="https://de.wikipe
   
   <entry>
     <title type="html"><![CDATA[Just my two cent]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/12/09/just-my-two-cent/"/>
+    <link href="https://manuel-io.github.io/blog/2018/12/09/just-my-two-cent/"/>
     <updated>2018-12-09T12:58:29+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/12/09/just-my-two-cent</id>
-    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/twocent.png" title="Just my two cent" alt="Just my two cent">
+    <id>https://manuel-io.github.io/blog/2018/12/09/just-my-two-cent</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/twocent.png" title="Just my two cent" alt="Just my two cent">
 
 
 <p>Recently, I saw an example of how to solve <a href="https://twitter.com/hukl/status/1065670048407306243">a problem in different
@@ -212,9 +213,9 @@ Racket:     (foldl (λ (b a) (b a)) 23 (list (λ (a) (+ a 10)) (λ (a) (* a 10))
   
   <entry>
     <title type="html"><![CDATA[List operations]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/10/27/list-operations/"/>
+    <link href="https://manuel-io.github.io/blog/2018/10/27/list-operations/"/>
     <updated>2018-10-27T15:41:08+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/10/27/list-operations</id>
+    <id>https://manuel-io.github.io/blog/2018/10/27/list-operations</id>
     <content type="html"><![CDATA[<p>Apply a function to each member of a list:</p>
 
 <pre><code>Ruby:       [1,2,3].map { |x| x * 2 }
@@ -313,9 +314,9 @@ Javascript: "Hello\nprograming\n world".split('\n').map(x =&gt; x.replace(' ', '
   
   <entry>
     <title type="html"><![CDATA[Dürüm (vegan)]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/10/23/durum-vegan/"/>
+    <link href="https://manuel-io.github.io/blog/2018/10/23/durum-vegan/"/>
     <updated>2018-10-23T17:54:23+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/10/23/durum-vegan</id>
+    <id>https://manuel-io.github.io/blog/2018/10/23/durum-vegan</id>
     <content type="html"><![CDATA[<iframe style='width:100%;height:500px;'
 src='https://vkitchen.herokuapp.com/recipes/151/embedded?locale=de&published=false'
 frameborder='0'> </iframe>
@@ -325,10 +326,10 @@ frameborder='0'> </iframe>
   
   <entry>
     <title type="html"><![CDATA[Transferzeit]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/10/06/transferzeit/"/>
+    <link href="https://manuel-io.github.io/blog/2018/10/06/transferzeit/"/>
     <updated>2018-10-06T23:49:33+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/10/06/transferzeit</id>
-    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/hohmann.png" width="300" title="Hohmann-Transfer" alt="Hohmann-Transfer">
+    <id>https://manuel-io.github.io/blog/2018/10/06/transferzeit</id>
+    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/hohmann.png" width="300" title="Hohmann-Transfer" alt="Hohmann-Transfer">
 
 
 <p>Dieser Eintrag beschreibt die Zeit auf einem <a href="https://de.wikipedia.org/wiki/Hohmann-Transfer">Hohmann-Transfer</a>
@@ -405,9 +406,9 @@ zur ISS mit jenem Manöver beschreibt.</p>
   
   <entry>
     <title type="html"><![CDATA[Vegane Pizza Woche]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche/"/>
+    <link href="https://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche/"/>
     <updated>2018-08-12T11:15:26+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche</id>
+    <id>https://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche</id>
     <content type="html"><![CDATA[<p>Die vegane Kitchen ist gerade das einzige Project für das ich Zeit
 finde. Na klar für Kochen muss doch immer Zeit bleiben und als
 Veganer hat man in meiner Wohngegend auch gar keine andere Chance.</p>
@@ -436,9 +437,9 @@ frameborder='0'> </iframe>
   
   <entry>
     <title type="html"><![CDATA[VegMe!]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/06/30/vegme/"/>
+    <link href="https://manuel-io.github.io/blog/2018/06/30/vegme/"/>
     <updated>2018-06-30T13:46:31+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/06/30/vegme</id>
+    <id>https://manuel-io.github.io/blog/2018/06/30/vegme</id>
     <content type="html"><![CDATA[<p>Ich habe im Netz eine Firma gefunden die das Internet nach Rezepten
 etc. absucht und irgendwie Informationen zusammenstellt: „Our goal is
 to capture the world&rsquo;s food knowledge“ (<a href="https://www.edamam.com/">https://www.edamam.com/</a>). Die
@@ -453,9 +454,9 @@ Bilder für ideenlose Tage sind aber dabei: <a href="https://vegme.herokuapp.com
   
   <entry>
     <title type="html"><![CDATA[Kurze Notiz]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/06/22/kurze-notiz/"/>
+    <link href="https://manuel-io.github.io/blog/2018/06/22/kurze-notiz/"/>
     <updated>2018-06-22T11:33:05+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/06/22/kurze-notiz</id>
+    <id>https://manuel-io.github.io/blog/2018/06/22/kurze-notiz</id>
     <content type="html"><![CDATA[<blockquote><p>… und merke dir: Du bis nur am Leben um in einer Tierfabrik gemästet
 zu werden um anschließend auf einem Teller zu landen. Wenn du auf dem
 Weg zur Tierfabrik deine Nase durch die Gitterstäbe des Transportes
@@ -474,9 +475,9 @@ zusammenfassen. Ich lasse das einfach mal so stehen.</p>
   
   <entry>
     <title type="html"><![CDATA[Soja Frikassee]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/05/27/soja-frikassee/"/>
+    <link href="https://manuel-io.github.io/blog/2018/05/27/soja-frikassee/"/>
     <updated>2018-05-27T13:30:53+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/05/27/soja-frikassee</id>
+    <id>https://manuel-io.github.io/blog/2018/05/27/soja-frikassee</id>
     <content type="html"><![CDATA[<p>So ein Foo (⚡⚠☠☔). Ich habe diesen Artikel schon geschrieben und
 wollte dieses Rezept möglichst vielen Menschen bekannt machen um diese
 von dem großartigen Geschmack dieses veganen Gerichtes zu überzeugen
@@ -504,9 +505,9 @@ eingebunden werden.</p>
   
   <entry>
     <title type="html"><![CDATA[Veganes Gyros]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/05/08/veganes-gyros/"/>
+    <link href="https://manuel-io.github.io/blog/2018/05/08/veganes-gyros/"/>
     <updated>2018-05-08T13:57:21+02:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/05/08/veganes-gyros</id>
+    <id>https://manuel-io.github.io/blog/2018/05/08/veganes-gyros</id>
     <content type="html"><![CDATA[<p>In letzter Zeit habe ich ein wenig mit dem Gedanken gespielt einen
 veganen Gyrosteller zusammenzustellen und ich muss sagen, das
 Endergebnis ist ein geschmackliches Highlight. Als Veganer kann ich
@@ -551,16 +552,16 @@ eingesehen werden, da diese nicht automatisch auch öffentlich sind.</p>
   
   <entry>
     <title type="html"><![CDATA[My Work in February]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/02/27/my-work-in-february/"/>
+    <link href="https://manuel-io.github.io/blog/2018/02/27/my-work-in-february/"/>
     <updated>2018-02-27T13:10:52+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/02/27/my-work-in-february</id>
+    <id>https://manuel-io.github.io/blog/2018/02/27/my-work-in-february</id>
     <content type="html"><![CDATA[<h3>DIY: 7 Segment Display</h3>
 
 <p>My work on the do it yourself 7-segment-display with two digits at the
 moment. It is a matrix of some led&rsquo;s which are driven by a hardware
 board. The driver consists of two shift registers and some cords.</p>
 
-<img class="left" src="http://manuel-io.github.io/data/images/7seg.jpg" width="300" title="Seven Segment Display" alt="Seven Segment Display">
+<img class="left" src="https://manuel-io.github.io/data/images/7seg.jpg" width="300" title="Seven Segment Display" alt="Seven Segment Display">
 
 
 <p>Obviously there is a software part required to make useful things.
@@ -573,12 +574,12 @@ digit. Costs are less then 5 Euros.</p>
 
 <hr />
 
-<img class="left" src="http://manuel-io.github.io/data/images/recipes.png" width="300" title="Web Application" alt="Web Application">
+<img class="left" src="https://manuel-io.github.io/data/images/recipes.png" width="300" title="Web Application" alt="Web Application">
 
 
 <h3>Kitchen: Web App &amp; Database</h3>
 
-<p>Recent work on my <a href="https://github.com/manuel-io/kitchen">kitchen app</a>. Since I <a href="http://manuel-io.github.io/blog/2017/06/03/recipes">started the project in
+<p>Recent work on my <a href="https://github.com/manuel-io/kitchen">kitchen app</a>. Since I <a href="https://manuel-io.github.io/blog/2017/06/03/recipes">started the project in
 june</a> last year a lot of has changed. Some fixes and
 improvements are still required but I considerer this app in a good
 development state. Also, some tests would harden the project for the
@@ -590,7 +591,7 @@ only sources at the moment.</p>
 
 <hr />
 
-<img class="left" src="http://manuel-io.github.io/data/images/airrohr.jpg" width="300" title="Airrohr" alt="Airrohr">
+<img class="left" src="https://manuel-io.github.io/data/images/airrohr.jpg" width="300" title="Airrohr" alt="Airrohr">
 
 
 <h3>Airrohr: Measuring air pollution</h3>
@@ -617,20 +618,20 @@ software using lua. But this is a story for the next article.</p>
   
   <entry>
     <title type="html"><![CDATA[DIY: 7-Segment Display]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display/"/>
+    <link href="https://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display/"/>
     <updated>2018-01-28T17:06:18+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display</id>
-    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/7seg.png" title="Seven Segment Display" alt="Seven Segment Display">
+    <id>https://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display</id>
+    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/7seg.png" title="Seven Segment Display" alt="Seven Segment Display">
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Reactions to Meltdown and Spectre]]></title>
-    <link href="http://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre/"/>
+    <link href="https://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre/"/>
     <updated>2018-01-05T14:36:22+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre</id>
-    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/meltdown-and-spectre.jpg" title="Meltdown and Spectre" alt="Meltdown and Spectre">
+    <id>https://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre</id>
+    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/meltdown-and-spectre.jpg" title="Meltdown and Spectre" alt="Meltdown and Spectre">
 
 
 <p>A recent <a href="http://www.commitstrip.com/en/2018/01/04/reactions-to-meltdown-and-spectre-exploits/">illustration</a>* by <a href="http://www.commitstrip.com/">CommitStrip</a> got
@@ -716,10 +717,10 @@ discrepancies between the abstraction and reality.
   
   <entry>
     <title type="html"><![CDATA[Papercraft Car]]></title>
-    <link href="http://manuel-io.github.io/blog/2017/12/25/papercraft-car/"/>
+    <link href="https://manuel-io.github.io/blog/2017/12/25/papercraft-car/"/>
     <updated>2017-12-25T14:51:03+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2017/12/25/papercraft-car</id>
-    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/papercraftcar001.jpg" title="Papercraft Car" alt="Papercraft Car">
+    <id>https://manuel-io.github.io/blog/2017/12/25/papercraft-car</id>
+    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/papercraftcar001.jpg" title="Papercraft Car" alt="Papercraft Car">
 
 
 <p>This is the design of a <a href="https://github.com/manuel-io/papercraftcar">papercraft car</a> based on a atmega
@@ -747,10 +748,10 @@ the car too.</p>
   
   <entry>
     <title type="html"><![CDATA[Fotowiderstand]]></title>
-    <link href="http://manuel-io.github.io/blog/2017/12/07/fotowiderstand/"/>
+    <link href="https://manuel-io.github.io/blog/2017/12/07/fotowiderstand/"/>
     <updated>2017-12-07T22:16:06+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2017/12/07/fotowiderstand</id>
-    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/ldr.png" width="200" title="Light Dependent Resistor" alt="Light Dependent Resistor">
+    <id>https://manuel-io.github.io/blog/2017/12/07/fotowiderstand</id>
+    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/ldr.png" width="200" title="Light Dependent Resistor" alt="Light Dependent Resistor">
 
 
 <p>Ich stehe vor der Herausforderung, dass ich einen Mikrocontroller
@@ -856,10 +857,10 @@ unteren 2 bit verzichten.</p>
   
   <entry>
     <title type="html"><![CDATA[Lichtdose]]></title>
-    <link href="http://manuel-io.github.io/blog/2017/11/14/lichtdose/"/>
+    <link href="https://manuel-io.github.io/blog/2017/11/14/lichtdose/"/>
     <updated>2017-11-14T14:05:56+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2017/11/14/lichtdose</id>
-    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/lightcan.jpg" width="200" title="Lichtdose" alt="Lichtdose">
+    <id>https://manuel-io.github.io/blog/2017/11/14/lichtdose</id>
+    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/lightcan.jpg" width="200" title="Lichtdose" alt="Lichtdose">
 
 
 <p>Wieder einmal eine kleine Spielerei mit Leuchtdioden. Dieses mal ganz
@@ -875,22 +876,22 @@ größere Potentialdifferenz sein. Im Zweifel die Datenblätter lesen.
 Bei 3V eignet sich eine Knopfzelle als Spannungsquelle. Etwa
 <code>CR2032</code>. Diese sollte auch noch Platzt in der Dose haben.</p>
 
-<p>Etwas dokumentiert habe ich das Projekt auch. <a href="http://manuel-io.github.io/data/images/lightcan-schematic.png">Hier
+<p>Etwas dokumentiert habe ich das Projekt auch. <a href="https://manuel-io.github.io/data/images/lightcan-schematic.png">Hier
 ist ein Schema</a> wie die LED&rsquo;s
 angesteuert werden und ein Abbild der Logikeinheit auf einer
 Lochrasterplatine:</p>
 
-<img src="http://manuel-io.github.io/data/images/lightcan-pcb.png" title="Lichtdose" alt="Lichtdose">
+<img src="https://manuel-io.github.io/data/images/lightcan-pcb.png" title="Lichtdose" alt="Lichtdose">
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[* Mai 2017 - † Novermber 2017]]></title>
-    <link href="http://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017/"/>
+    <link href="https://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017/"/>
     <updated>2017-11-07T19:16:06+01:00</updated>
-    <id>http://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017</id>
-    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/jerry.jpg" title="Jerry" alt="Jerry">
+    <id>https://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017</id>
+    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/jerry.jpg" title="Jerry" alt="Jerry">
 
 
 <p style="text-align:center;"> Vielen Dank, dass du mir in dieser kurzen Zeit so viel Freude
