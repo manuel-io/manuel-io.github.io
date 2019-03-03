@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[A personal Blog]]></title>
+  <link href="http://manuel-io.github.io/atom.xml" rel="self"/>
+  <link href="http://manuel-io.github.io/"/>
+  <updated>2019-03-03T03:41:21+01:00</updated>
+  <id>http://manuel-io.github.io/</id>
+  <author>
+    <name><![CDATA[Manuel]]></name>
+    <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[CSS Animation 101]]></title>
+    <link href="http://manuel-io.github.io/blog/2019/03/02/css-animation-101/"/>
+    <updated>2019-03-02T22:03:34+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2019/03/02/css-animation-101</id>
+    <content type="html"><![CDATA[<iframe src="http://manuel-io.github.io/data/dat/css-animation-101.html"
+        style="width:100%;height:400px;"
+        frameborder="0">
+</iframe>
+
+
+<p>The picture is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">Creative Commons Attribution-Share
+Alike 4.0</a> International license. You can find a copy <a href="https://commons.wikimedia.org/wiki/File:Sunset-spring-2019.jpg">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Driving Batteries in Parallel]]></title>
+    <link href="http://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel/"/>
+    <updated>2019-02-03T14:21:04+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2019/02/03/driving-batteries-in-parallel</id>
+    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/driving-parallel.jpg" title="Driving Parallel" alt="Driving Parallel">
+
+
+<p><a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+0.07470175003104325+50+5+43%0A370+304+64+384+64+1+0%0Ar+384+64+384+128+0+190%0A162+384+128+384+224+2+default-led+1+0+0+0.02%0Ag+384+256+384+288+0%0Ap+304+64+304+256+1+0%0Aw+304+256+384+256+0%0Aw+384+224+384+256+0%0Ap+464+128+464+256+1+0%0Aw+464+128+384+128+0%0Aw+464+256+384+256+0%0Aw+256+64+304+64+0%0Aw+256+128+256+64+0%0A370+160+128+256+128+1+0%0Ap+80+160+160+160+1+0%0Ad+80+128+160+128+2+1N4004%0Aw+160+160+160+128+0%0Aw+80+160+80+128+0%0AR+80+128+16+128+0+0+40+6.1+0+0+0.5%0AR+80+192+16+192+0+0+40+6.2+0+0+0.5%0Ad+80+192+160+192+2+1N4004%0A370+160+192+256+192+1+0%0Ap+80+224+160+224+1+0%0Aw+80+224+80+192+0%0Aw+160+224+160+192+0%0Aw+256+192+256+128+0%0AR+80+256+16+256+0+0+40+6.3+0+0+0.5%0Ad+80+256+160+256+2+1N4004%0A370+160+256+256+256+1+0%0Ap+80+288+160+288+1+0%0Aw+80+288+80+256+0%0Aw+160+288+160+256+0%0Aw+256+256+256+192+0%0Ap+80+96+160+96+1+0%0Ad+80+64+160+64+2+1N4004%0A370+160+64+256+64+1+0%0AR+80+64+16+64+0+0+40+6+0+0+0.5%0Aw+80+96+80+64+0%0Aw+160+96+160+64+0%0Ap+80+32+160+32+1+0%0Ad+80+0+160+0+2+1N4004%0AR+80+0+16+0+0+0+40+5.6+0+0+0.5%0A370+160+0+256+0+1+0%0Aw+80+32+80+0+0%0Aw+160+32+160+16+0%0Aw+160+16+160+0+0%0Aw+256+0+256+64+0%0Ap+80+-32+160+-32+1+0%0Ad+80+-64+160+-64+2+1N4004%0AR+80+-64+16+-64+0+0+40+5.3+0+0+0.5%0A370+160+-64+256+-64+1+0%0Aw+80+-32+80+-64+0%0Aw+160+-32+160+-64+0%0Aw+256+-64+256+0+0%0A">Simulated Circuit</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vegane Rezepte 2018]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018/"/>
+    <updated>2018-12-31T22:54:44+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018</id>
+    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/recipes.jpg" title="Recipes" alt="Recipes">
+
+
+<p>Ich habe angefangen möglichst viele Rezepte zu Dokumentieren und
+in meiner <a href="https://vkitchen.herokuapp.com/">Rezepte-Datenbank</a> zu speichern. Ist 2018 schon recht
+voll geworden ;-).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zyklische Redundanzprüfung (Theorie)]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung/"/>
+    <updated>2018-12-24T01:12:36+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung</id>
+    <content type="html"><![CDATA[<p>Hier geht es um Vektorrechnung. Dazu habe ich ja schon hier und da
+etwas gehabt: Komplexe Zahlen, Polynome, Vektorintegral. Jetzt geht es
+um Bitvektoren. Also nehmen wir hier als Beispiel eine Zahlenfolge aus
+4 Bit 1101. Mit 4 Bit können $ 2^{4} $ Zahlen/Zustände abgebildet
+werden (hier 16 Zahlen).</p>
+
+<p>Diese Zahlenfolge $ v_i $ mit $ v_i \in {0,1} $ wird jetzt als Vektor in
+dezimalen Zahlen abgebildet. Also als Polynom $ f $ mit Definition von Addition
+und Multiplikation.  Die Summe der Koeffizienten entspricht dem Wert der
+Bitfolge. Hier: $ 13 $.</p>
+
+<figure class='equation'>\begin{equation}f(x) = \sum_{i = 0}^{i-1} v_i\cdot 2^i\cdot x^i = 8x^3 + 4x^2 + 1\end{equation}</figure>
+
+
+<p>$ f $ sind die Daten, die zwischen Sender und Empfänger ausgetauscht
+werden sollen.</p>
+
+<p>Das Generatorpolynom $ g $ ist konstant und wird vom Sender verwendet um die
+Prüfsumme von den Daten abzuleiten. Der Empfänger benutzt das
+Polynom zu Fehlererkennung der empfangenen Daten.</p>
+
+<figure class='equation'>\begin{equation}g(x) = x^3 + x^2 + x\quad\hbox{mit}\quad grad(g) \leq grad(f)\end{equation}</figure>
+
+
+<p>Mit einem Trägerpolynom $ t(x) $ sollen Daten und Prüfsumme in einem
+Paket übertragen werden. Dazu werden Daten, die mit $ f $ abgebildet
+werden, durch Multiplikation mit $ x^{n} $ im oberen Bereich plaziert,
+im unteren Bereich ist Platz für die Prüfsumme der Daten, die durch
+addition angehängt wird. Die Prüfsumme hat maximal die Größe des
+Generatorpolynoms wodurch der Wert von $ n= grad(g) $ bestimmt ist.</p>
+
+<figure class='equation'>\begin{equation}f^*(x) = (t\circ f)(x) = f(x)\cdot x^{n} = (8x^3 + 4x^2 + 1)\cdot x^3 = 8x^6 + 4x^5 + x^3\end{equation}</figure>
+
+
+<p>Wie die Prüfsumme gebildet wird und anschließend mit den Daten transportiert
+wird soll hier theoretisch disskutiert werden: Die Annahme ist, dass das
+Polynom $ f^* $ in einen ganzrationalen Anteil und einen echt
+gebrochenrationalen Anteil zerlegt werden kann:</p>
+
+<figure class='equation'>\begin{equation}\label{eq:div}
+  f^*(x) = q(x)\cdot g(x) + r(x)\quad\Leftrightarrow\quad\frac{f^*(x)}{g(x)} = q(x) + \frac{r(x)}{g(x)}\end{equation}</figure>
+
+
+<p>Es gilt dann zunächst $ grad(r) &lt; grad(f) $. Durch iterierte Anwendung von
+\eqref{eq:div} kann der Rest immer wieder Zerlegt werden bis $ grad(r) &lt; grad(g) $ gilt.
+Bekannt ist das Verfahren unter dem Namen: Polynomdivision.</p>
+
+<figure class='equation'>\begin{equation}q(x)\cdot g(x) + r(x) = q(x)\cdot g(x) + (q_1(x)\cdot g(x) + r_1(x)) = ...\end{equation}</figure>
+
+
+<p>Der verbleibende Anteil $ r(x) $ mit $ grad(r) &lt; grad(g) = n $ bildet die
+Prüfsumme. Der Träger $ t $ aus $ f^* $ und $ r $  wird durch
+Umformung aufgelöst:</p>
+
+<figure class='equation'>\begin{equation}t(x) = f^*(x) - r(x) = f(x)\cdot x^n - r(x) = q(x)\cdot g(x)\end{equation}</figure>
+
+
+<p>Polynomdivision: Die Daten $ f^* $ werden durch das Generatorpolynom sukzessive
+geteilt. Das verbleibende Restpolynom bildet die Prüfsumme ab:</p>
+
+<figure class='equation'>\begin{align}& 8x^6 + 4x^5 + x^3 : x^3 + x^2 + x= 8x^3 - 4x^2 + 9 \\
+& -(8x^6 + 8x^5 + 8x^4) \nonumber\\
+\hline
+& - 4x^5 - 8x^4 + x^3 \nonumber\\
+& -(- 4x^5 - 4x^4 - 4x^3) \nonumber\\
+\hline
+& -4x^4 + 5x^3 \nonumber\\
+& -(- 4x^4 - 4x^3 - 4x^2) \nonumber\\
+\hline
+& 9x^3 + 4x^2 \nonumber\\ 
+& -(9x^3 + 9x^2 + 9x) \nonumber\\
+\hline
+& - 5x^2 - 9x \nonumber\\\end{align}</figure>
+
+
+<p>Das Polynom aus Daten und Prüfsumme $ f^*(x) - r(x) $ hat entsprechend
+folgendes aussehen:</p>
+
+<figure class='equation'>\begin{equation}t(x) = f(x)\cdot x^n - r(x) = 8x^6 + 4x^5 + x^3 + 5x^2 + 9x\end{equation}</figure>
+
+
+<p>Polynomdivision: Die Daten $ t $ werden übertragen. Das
+Polynom vom Empfänger erneut durch das Generatorpolynom $ g $ geteilt. Es
+sollte sich dann kein Rest mehr ergeben und die Übertragung war
+erfolgreich.</p>
+
+<figure class='equation'>\begin{align}& 8x^6 + 4x^5 +x^3 + 5x^2 + 9x : x^3 + x^2 + x = 8x^3 - 4x^2 - 4x + 9 \\
+& -(8x^6 + 8x^5 + 8x^4) \nonumber\\
+\hline
+& - 4x^5 - 8x^4 + x^3 + 5x^2 + 9x \nonumber\\
+& -(- 4x^5 - 4x^4 - 4x^3) \nonumber\\
+\hline
+& - 4x^4 + 5x^3 + 5x^2 + 9x \nonumber\\
+& -(- 4x^4 - 4x^3 - 4x^2) \nonumber\\
+\hline
+& 9x^3 + 9x^2 + 9x \nonumber\\
+& -(9x3 + 9x^2 + 9x) \nonumber\\
+\hline
+& 0 \nonumber\\\end{align}</figure>
+
+
+<p>Um die eigentlichen Daten $ f $ aus dem Träger zu extrahieren, muss dieses durch
+das Polynom $ x^{n} $ mit $ n = grad(g) $ sukzessive geteilt werden:</p>
+
+<figure class='equation'>\begin{equation}8x^6 + 4x^5 +x^3 + 5x^2 + 9x : x^3 = 8x^3 + 4x^2 + 1 + Rest\end{equation}</figure>
+
+
+<p>Der Rest ist in dem Fall uninteressant. Nur der ganzrationale Anteil spiegelt
+die Daten wieder.</p>
+
+<p>Wie das Verfahren in der Praxis konkret aussieht, dann im Polynomring $ \mathbb{Z_2]}[x] $,
+wird hier nicht Thematisiert. Es vereinfacht sich aber einiges mit binären
+Operatoren. Es sei $ a,b,c\in\mathbb{Z_2}$ und $ x,y,z\in\mathbb{Z} $:</p>
+
+<figure class='equation'>\begin{align}& a\hbox{ xor }b = c\quad\Leftrightarrow\qquad x + y \equiv z \mod 2\\
+& a\hbox{ and }b = c\quad\Leftrightarrow\qquad x\cdot y \equiv z\mod 2 \nonumber\\\end{align}</figure>
+
+
+<p>Und macht das Verfahren dadurch praktikabel. Ein <a href="https://resources.mpi-inf.mpg.de/departments/d1/teaching/ss10/MFI2/kap31.pdf">PDF</a> vom MPI-INF hat
+eine Erklärung. Einen guten Einstieg bietet auch die <a href="https://de.wikipedia.org/wiki/Zyklische_Redundanzpr%C3%BCfung">Wikipedia</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Just my two cent]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/12/09/just-my-two-cent/"/>
+    <updated>2018-12-09T12:58:29+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/12/09/just-my-two-cent</id>
+    <content type="html"><![CDATA[<img class="center" src="http://manuel-io.github.io/data/images/twocent.png" title="Just my two cent" alt="Just my two cent">
+
+
+<p>Recently, I saw an example of how to solve <a href="https://twitter.com/hukl/status/1065670048407306243">a problem in different
+programming languages</a>.
+The title was: &ldquo;In Erlang, the Ruby code example would look like
+this&rdquo;. Actually, I don&rsquo;t know how the ruby code example looks like to solve the
+same problem, however from the point of what it does I can guess:</p>
+
+<pre><code>[-&gt; a {a+10}, -&gt; a {a*10}, -&gt; a {a-5}].reduce(23) {|a, b| b.call a}
+</code></pre>
+
+<p>Right? No, Ruby is a fundamental object oriented programming language
+and the example would probably look different. But also, Ruby has
+some functional features. Like others:</p>
+
+<pre><code>Phython:    reduce(lambda x, y: y(x), [lambda a: a+10, lambda a: a*10, lambda a: a-5], 23)
+Javascript: [a =&gt; a+10, a =&gt; a*10, a =&gt; a-5].reduce((a, i) =&gt; i(a), 23)
+Haskell:    foldl (\x y -&gt; y(x)) 23 [(+10), (*10), (+(-5))]
+Racket:     (foldl (λ (b a) (b a)) 23 (list (λ (a) (+ a 10)) (λ (a) (* a 10)) (λ (a) (- a 5))))
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[List operations]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/10/27/list-operations/"/>
+    <updated>2018-10-27T15:41:08+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/10/27/list-operations</id>
+    <content type="html"><![CDATA[<p>Apply a function to each member of a list:</p>
+
+<pre><code>Ruby:       [1,2,3].map { |x| x * 2 }
+Python:     map(lambda x: x * 2, [1,2,3])
+Haskell:    map (*2) [1,2,3]
+Javascript: [1,2,3,4].map(x =&gt; x * 2)
+Racket:     (map (λ (x) (* x 2)) (list 1 2 3))
+</code></pre>
+
+<p>Flatten a list of multiple sublists:</p>
+
+<pre><code>Ruby;       [[1,2,3],[4,5,6],[7,8,9]].flatten
+Python:     [item for list in [[1,2,3],[4,5,6],[7,8,9]] for item in list]
+Haskell:    concat [[1,2,3],[4,5,6],[7,8,9]]
+Javascript: [].concat(...[[1,2,3],[4,5,6],[7,8,9]])
+</code></pre>
+
+<p>Multiply all members of a list:</p>
+
+<pre><code>Ruby:       [1,2,3,4].reduce(1,:*)
+Python:     reduce((lambda x, y: x * y), [1,2,3,4], 1)
+Haskell:    foldl (*) 1 [1,2,3,4]
+Javascript: [1,2,3,4].reduce((accu, item) =&gt; accu * item, 1)
+Racket:     (foldl * 1 (list 1 2 3 4))
+</code></pre>
+
+<p>Filter all even members from a list:</p>
+
+<pre><code>Ruby:       [0,1,2,3,4,5,6,7,8,9].select &amp;:even?
+Python:     filter(lambda x: not x % 2, [0,1,2,3,4,5,6,7,8,9])
+Haskell:    filter (even) [0,1,2,3,4,5,6,7,8,9]
+Javascript: [0,1,2,3,4,5,6,7,8,9].filter(x =&gt; x % 2 == 0)
+Racket:     (filter even? (list 0 1 2 3 4 5 6 7 8 9))
+</code></pre>
+
+<p>Sort a list ascending:</p>
+
+<pre><code>Ruby:       [5,9,0,1,3,2,4,8,6,7].sort
+Python:     sorted([5,9,0,1,3,2,4,8,6,7])
+Haskell:    Data.List.sort [5,9,0,1,3,2,4,8,6,7]
+Javascript: [5,9,0,1,3,2,4,8,6,7].sort()
+Racket:     (sort (list 5 9 0 1 3 2 4 8 6 7) &lt;)
+</code></pre>
+
+<p>Element is member of the list:</p>
+
+<pre><code>Ruby:       [0,1,2,3,4,5,6,7,8,9].include? 5
+Python:     5 in [0,1,2,3,4,5,6,7,8,9]
+Haskell:    5 `elem` [0,1,2,3,4,5,6,7,8,9]
+Javascript: [0,1,2,3,4,5,6,7,8,9].includes(5)
+Racket:     (if [member 5 (list 0 1 2 3 4 5 6 7 8 9)] #t #f)
+</code></pre>
+
+<p>List of numbers between 100 and 200:</p>
+
+<pre><code>Ruby:       (100..200).to_a
+Python:     range(100,200 + 1)
+Haskell:    [100..200]
+Javascript: Array(100 + 1).fill(100).map((e,i) =&gt; e + i)
+</code></pre>
+
+<p>Two lists and return a list of corresponding pairs:</p>
+
+<pre><code>Ruby:       [1,2,3,4,5].zip([5,4,3,2,1])
+Python:     zip([1,2,3,4,5], [5,4,3,2,1])
+Haskell:    zip [1,2,3,4,5] [5,4,3,2,1]
+</code></pre>
+
+<p>Minimum and Maximum of a list:</p>
+
+<pre><code>Ruby:       [:min, :max].map { |m| [5,2,6,2,1,7,3].method(m).call }
+Python:     [m([5,2,6,2,1,7,3]) for m in [min, max]]
+Haskell:    [m [5,2,6,2,1,7,3] | m &lt;- [minimum, maximum]]
+Javascript: [Math.min, Math.max].map(m =&gt; m.apply(null, [5,2,6,2,1,7,3]))
+Racket:     (map (λ (f) (apply f (list 5 2 6 2 1 7 3))) (list min max))
+</code></pre>
+
+<p>Print each member of a list:</p>
+
+<pre><code>Ruby:       [1,2,3,4,5].each { |v| puts v }
+Python:     print '\n'.join(str(p) for p in [1,2,3,4,5])
+Haskell:    mapM_ (putStrLn . show) [1,2,3,4,5]
+Javascript: [1,2,3,4,5].forEach(x =&gt; console.log(x))
+Racket:     (map (λ (x) (println (number-&gt;string x))) (list 1 2 3 4 5))
+</code></pre>
+
+<p>Multiple lines to one single line string:</p>
+
+<pre><code>Ruby:       "Hello\nprograming\n world".lines.map(&amp;:strip).join ' '
+Python:     ' '.join([line.strip() for line in "Hello\nprograming\n world".splitlines()])
+Haskell:    Data.Text.unpack $ Data.Text.unwords $ map(Data.Text.strip) $ Data.Text.lines $ Data.Text.pack "Hello\nprograming\n world"
+Javascript: "Hello\nprograming\n world".split('\n').map(x =&gt; x.replace(' ', '')).join(' ')
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dürüm (vegan)]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/10/23/durum-vegan/"/>
+    <updated>2018-10-23T17:54:23+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/10/23/durum-vegan</id>
+    <content type="html"><![CDATA[<iframe style='width:100%;height:500px;'
+src='https://vkitchen.herokuapp.com/recipes/151/embedded?locale=de&published=false'
+frameborder='0'> </iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Transferzeit]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/10/06/transferzeit/"/>
+    <updated>2018-10-06T23:49:33+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/10/06/transferzeit</id>
+    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/hohmann.png" width="300" title="Hohmann-Transfer" alt="Hohmann-Transfer">
+
+
+<p>Dieser Eintrag beschreibt die Zeit auf einem <a href="https://de.wikipedia.org/wiki/Hohmann-Transfer">Hohmann-Transfer</a>
+zwischen zwei Kreisbahnen um einen Zentralkörper und ist im Weiteren
+auch für einen <a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling/Bi-elliptischer_Transfer">Bi-elliptischen-Transfer</a> interessant. Die Bahn
+für den Transfer ist dabei immer eine Ellipse mit der großen Halbachse
+$a = \frac{r_1 + r_2}{2}$ Dabei ist $r_1$ Radius der inneren
+Kreisbahn und $r_2$ Radius der äußeren Bahn.</p>
+
+<p>Die Frage nach der Transferzeit $T$ auf einer Ellipse kann durch das
+3. Keplersche Gesetz beantwortet werden. Nachdem gilt: Die Periode der
+quadratischen Umlaufzeit auf einer Ellipsenbahn ist proportional zu
+der dritten Potenz der Halbachse $a$:</p>
+
+<figure class='equation'>\begin{equation}\label{eq:test}
+T^2\sim a^3\quad\Leftrightarrow\quad T^2 = c\cdot a^3,\quad c\in\mathbb{R}\end{equation}</figure>
+
+
+<p>Da die Halbachse bereits bestimmt wurde, muss hier noch der
+Proportionalitätsfaktor $c$ bestimmt werden.</p>
+
+<p>Dieser wird hier durch eine möglichst einfache Ellipse bestimmt. Die
+Ausgangskreisbahn umkreist den gleichen Zentralkörper mit der Masse $M$
+wie auch die Transfer-Ellipse somit ergibt sich die gleiche Konstante.
+Für die gilt:</p>
+
+<figure class='equation'>\begin{equation}\label{eq:kreisbahn}
+T^2\sim r^3\quad\Leftrightarrow\quad T^2 = c\cdot r^3,\quad c\in\mathbb{R}\end{equation}</figure>
+
+
+<p>Damit sich ein Körper auf einer Kreisbahn befindet müssen sich
+Zentripetalkraft und Gravitationskraft ausgleichen. Da die Vektoren
+stets in entgegengesetzte Richtung zeigen, sind hier nur die Beträge
+wichtig:</p>
+
+<figure class='equation'>\begin{equation}F_z = F_g\quad\Leftrightarrow\quad m\frac{v^2}{r} = \gamma\frac{M\cdot m}{r^2},\quad\gamma\in\mathbb{R}\end{equation}</figure>
+
+
+<p>$\gamma$ ist die Gravitationskonstante. Damit ergibt sich die
+Kreisbahngeschwindigkeit:</p>
+
+<figure class='equation'>\begin{equation}\Rightarrow\quad v = \sqrt{\frac{\gamma\cdot M}{r}}\end{equation}</figure>
+
+
+<p>Mit dem Kreisumfang $2\cdot r\cdot\pi$ für die gesamte Strecke einer
+Periode ergibt sich dann die Zeit $T$ nach $v = \frac{2\cdot
+r\cdot\pi}{T}$ mit dem gewöhnlichen Weg-Zeit-Gesetz. Die Konstante $c$
+kann resultierend in $\eqref{eq:kreisbahn}$ aufgelöst werden:</p>
+
+<figure class='equation'>\begin{equation}T^2 = \frac{4\cdot\pi^2\cdot r^3}{\gamma\cdot M}\quad\Rightarrow\qquad c = \frac{4\cdot\pi^2}{\gamma\cdot M}\end{equation}</figure>
+
+
+<p>Damit ist für die ursprüngliche Transfer-Ellipse $\eqref{eq:test}$,
+mit der großen Halbachse $a = \frac{r_2 + r_1}{2}$ und dem Wert für
+$c$, die Periode gegeben:</p>
+
+<figure class='equation'>\begin{equation}T^2 = c\cdot a^3\quad\Leftrightarrow\quad T^2 = \frac{4\cdot\pi^2}{\gamma\cdot M}\cdot \frac{(r_2 + r_1)^3}{8}\end{equation}</figure>
+
+
+<p>Da die Transfer-Ellipse nur aus einer halben Ellipse besteht, wird hier
+auch nur die Hälfte der Periode genommen:</p>
+
+<figure class='equation'>\begin{equation}T = \pi\sqrt{\frac{(r_2 + r_1)^3}{2\cdot\gamma\cdot M}} ,\quad T_{1/2} = \pi\sqrt{\frac{(r_2 + r_1)^3}{8\cdot\gamma\cdot M}}\end{equation}</figure>
+
+
+<p>Damit ist die Transferzeit $ T_{&frac12;} $ gegeben.</p>
+
+<p>Hintergrund ist, dass diese Transferzeit auch für den
+<a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling/Bi-elliptischer_Transfer">Bi-elliptischen</a> Transfer erweitert werden kann und dass die
+ESA in einem Video „<a href="https://www.youtube-nocookie.com/embed/M2_NeFbFcSw">Soyuz rendezvous and docking explained</a>“ den Flug
+zur ISS mit jenem Manöver beschreibt.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vegane Pizza Woche]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche/"/>
+    <updated>2018-08-12T11:15:26+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche</id>
+    <content type="html"><![CDATA[<p>Die vegane Kitchen ist gerade das einzige Project für das ich Zeit
+finde. Na klar für Kochen muss doch immer Zeit bleiben und als
+Veganer hat man in meiner Wohngegend auch gar keine andere Chance.</p>
+
+<p>Ich kann Fortschritte bezüglich meiner Rezepte-Datenbank
+berichten. Es ist jetzt möglich ein Rezept auch mit Verbindungen zu anderen
+Rezepten zu veröffentlichen und auf einer Seite anzuzeigen.
+Problematisch wird es wenn ein Rezept mit einem Rezept verbunden ist,
+dass wiederum mit einem Rezept verbunden ist. Diese Kette kann man
+beliebig weiter spinnen. Die Software erlaubt das Prinzip.</p>
+
+<p>Gute Beispiele, die jetzt gelöst sind, sind die Pizza Rezepte.
+<a href="https://vkitchen.herokuapp.com/recipes/140/embedded?locale=de">Pizza Funghi</a>, <a href="https://vkitchen.herokuapp.com/recipes/143/embedded?locale=de">Pizza Hawaii</a> und <a href="https://vkitchen.herokuapp.com/recipes/57/embedded?locale=de">Lahmacun</a>. Zwei Pizzen haben
+z.B. den gleichen Teig und die gleiche Sauce. Da bietet es sich einfach an
+ein Rezept für den Pizzateig und eines für die Pizzasauce
+anzulegen um dann die Pizzen mit Teig und Sauce zu verbinden.</p>
+
+<iframe style='width:100%;height:500px;'
+src='https://vkitchen.herokuapp.com/recipes/143/embedded?locale=de&published=false'
+frameborder='0'> </iframe>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VegMe!]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/06/30/vegme/"/>
+    <updated>2018-06-30T13:46:31+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/06/30/vegme</id>
+    <content type="html"><![CDATA[<p>Ich habe im Netz eine Firma gefunden die das Internet nach Rezepten
+etc. absucht und irgendwie Informationen zusammenstellt: „Our goal is
+to capture the world&rsquo;s food knowledge“ (<a href="https://www.edamam.com/">https://www.edamam.com/</a>). Die
+haben eine Schnittstelle (API) die Entwickler auch mal einfach so
+benutzen können. Zwei Entwicklerinnen haben daraus mal eine
+Seite gebastelt mit der nach veganen Rezepten gesucht werden kann:</p>
+
+<p><a href="https://vegme.herokuapp.com/">VegMe!</a>. Keine Ahnung ob das was ist. Schöne
+Bilder für ideenlose Tage sind aber dabei: <a href="https://vegme.herokuapp.com/queries?health=vegan&amp;max_cal=500&amp;q=sushi&amp;search_id=8003b097-142b-40e8-83b8-f0debcd106ba">Beispiel</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kurze Notiz]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/06/22/kurze-notiz/"/>
+    <updated>2018-06-22T11:33:05+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/06/22/kurze-notiz</id>
+    <content type="html"><![CDATA[<blockquote><p>… und merke dir: Du bis nur am Leben um in einer Tierfabrik gemästet
+zu werden um anschließend auf einem Teller zu landen. Wenn du auf dem
+Weg zur Tierfabrik deine Nase durch die Gitterstäbe des Transportes
+steckst und die Aussicht mit frischer Luft und Sonne genießen
+kannst, dann freue dich, denn in der Tierfabrik gibt es weder
+frische Luft noch Sonne und Regen. Wir Menschen würden an den
+Bedingungen kaputt gehen, aber mache dir keine sorgen, wir versorgen
+dich gut mit Medikamenten denn kranke Tiere sind nur schwer
+verdaulich. Und noch etwas: Es wäre schön, wenn du zum Wohle der
+Umwelt nicht so viel Ausdünsten würdest.</p></blockquote>
+
+<p>So würde ich mein Erlebnis heute Morgen auf dem Weg zum Einkauf
+zusammenfassen. Ich lasse das einfach mal so stehen.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Soja Frikassee]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/05/27/soja-frikassee/"/>
+    <updated>2018-05-27T13:30:53+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/05/27/soja-frikassee</id>
+    <content type="html"><![CDATA[<p>So ein Foo (⚡⚠☠☔). Ich habe diesen Artikel schon geschrieben und
+wollte dieses Rezept möglichst vielen Menschen bekannt machen um diese
+von dem großartigen Geschmack dieses veganen Gerichtes zu überzeugen
+und dann war es einfach weg. Und um dann nochmal zu spüren wie
+schmerzlich Datenverlust sein kann, wenn man kein Backup hat, ist der
+ursprüngliche Text für diesen Artikel auch verloren.</p>
+
+<p>Die gute Nachricht: Der Text war gar nicht so wichtig und bestand nur
+aus den üblichen Floskeln. Das Rezept für das <a href="https://vkitchen.herokuapp.com/recipes/5/embedded">Frikassee</a>
+ist aus meiner Rezepte-Datenbank und kann hier einfach wieder
+eingebunden werden.</p>
+
+<p>Viel Spaß beim Kochen!</p>
+
+<iframe
+  style='width:100%;height:500px;'
+  src='https://vkitchen.herokuapp.com/recipes/5/embedded'
+  frameborder='0'>
+</iframe>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Veganes Gyros]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/05/08/veganes-gyros/"/>
+    <updated>2018-05-08T13:57:21+02:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/05/08/veganes-gyros</id>
+    <content type="html"><![CDATA[<p>In letzter Zeit habe ich ein wenig mit dem Gedanken gespielt einen
+veganen Gyrosteller zusammenzustellen und ich muss sagen, das
+Endergebnis ist ein geschmackliches Highlight. Als Veganer kann ich
+natürlich nicht sagen ob jemand der regelmäßig in ein griechisches
+Restaurant geht mit dem Ergebnis zufrieden ist, vermutlich aber schon.</p>
+
+<p>Während Tzatziki und Mayonnaise auch in der veganen Küche schon lange
+keine Zauberei mehr sind, steht noch im Raum aus welchen Zutaten das
+Gyros bestehen soll. Und um diese Frage gleich vorweg zu beantworten:
+Glutenmehl hat hier mal wieder gezeigt wie vielseitig verwendbar es
+ist. Mit der richtigen Gewürzmischung und Zubereitungsmethode bekomme
+ich ein tolles Ergebnis.</p>
+
+<p>Ich habe ein bisschen herumprobiert z.B. mit dem Sezuantofu der Marke
+Treiber und bevor das hier untergeht. Das ist wirklich ein ganz tolles
+Tofu mit einem Geschmackserlebnis das es in keinem klassischen
+Restaurant gibt. Das Rennen hat dann aber das Glutenmehl, weil der
+Geschmack dem Gyros näher kommt.</p>
+
+<p>Kleine Besonderheit am Rande. Ich habe meine Software zum Auslesen der
+Rezept-Datenbank weiterentwickelt. Jetzt können individuell Rezepte
+freigeschaltet werden und damit öffentlich zugänglich gemacht werden.
+Zum Beispiel können Rezepte damit wie ein Youtube-Video in beliebige
+Seiten eingebunden werden. Das mache ich auch hier mit dem
+<a href="https://vkitchen.herokuapp.com/recipes/132/embedded">Gyros-Rezept</a>. Kleinere Einschränkungen gibt es aber noch.
+Z.B. können verbundene Rezepte etwa für Tzatziki oder die Mayo nicht
+eingesehen werden, da diese nicht automatisch auch öffentlich sind.</p>
+
+<p>Viel Spaß beim Kochen!</p>
+
+<iframe
+  style='width:100%;height:500px;'
+  src='https://vkitchen.herokuapp.com/recipes/132/embedded'
+  frameborder='0'
+  >
+</iframe>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Work in February]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/02/27/my-work-in-february/"/>
+    <updated>2018-02-27T13:10:52+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/02/27/my-work-in-february</id>
+    <content type="html"><![CDATA[<h3>DIY: 7 Segment Display</h3>
+
+<p>My work on the do it yourself 7-segment-display with two digits at the
+moment. It is a matrix of some led&rsquo;s which are driven by a hardware
+board. The driver consists of two shift registers and some cords.</p>
+
+<img class="left" src="http://manuel-io.github.io/data/images/7seg.jpg" width="300" title="Seven Segment Display" alt="Seven Segment Display">
+
+
+<p>Obviously there is a software part required to make useful things.
+However this project is still in an early stage and I will deliver
+some code and build instructions on my GitHub <a href="https://github.com/manuel-io">repository</a> soon.</p>
+
+<p>Actually I was looking for a cheap display big enough to fit my needs
+but I failed and constructed my own one in the size of 297x210 mm per
+digit. Costs are less then 5 Euros.</p>
+
+<hr />
+
+<img class="left" src="http://manuel-io.github.io/data/images/recipes.png" width="300" title="Web Application" alt="Web Application">
+
+
+<h3>Kitchen: Web App &amp; Database</h3>
+
+<p>Recent work on my <a href="https://github.com/manuel-io/kitchen">kitchen app</a>. Since I <a href="http://manuel-io.github.io/blog/2017/06/03/recipes">started the project in
+june</a> last year a lot of has changed. Some fixes and
+improvements are still required but I considerer this app in a good
+development state. Also, some tests would harden the project for the
+future and a better, responsive user interface would be awesome too.
+There is still some work and usually it is more then it seems to be at
+the moment. Due to lack of translation you can only <a href="https://vkitchen.herokuapp.com">visit a
+preview</a> in german language. As mentioned earlier I publish
+only sources at the moment.</p>
+
+<hr />
+
+<img class="left" src="http://manuel-io.github.io/data/images/airrohr.jpg" width="300" title="Airrohr" alt="Airrohr">
+
+
+<h3>Airrohr: Measuring air pollution</h3>
+
+<p>A project to measure air pollution using the <a href="https://www.espressif.com/en/products/hardware/esp8266ex/overview">ESP8266
+controller</a> and SDS011 particle sensor. Background of the
+project is to motivate people building there own hardware and sending
+local air pollution data to a centralized place. At the end you get an
+<a href="http://deutschland.maps.luftdaten.info">overview</a> on a map. Interestingly the project is designed to
+give all people without background knowladge the possibility to
+participate.  Just follow <a href="https://luftdaten.info">the introduction</a>.</p>
+
+<p>That worked well but doesn&rsquo;t fit my needs. I want to share the
+wireless hardware with a second project and have to modify the
+firmware. The project suggests using the <a href="https://github.com/nodemcu/nodemcu-firmware">NodeMCU firmware</a> on
+the ESP8266 controller but it doesn&rsquo;t. The original <a href="https://github.com/opendata-stuttgart/sensors-software/tree/master/airrohr-firmware">airrohr
+firmware</a> is not scripted in lua. It is more a native
+application with some Arduino foo. This was a bit annoying because I
+ensured in advance to have the tools <a href="https://github.com/pfalcon/esp-open-sdk">building the latest NodeMCU
+firmware</a>. Now I decided to script my own measurement
+software using lua. But this is a story for the next article.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DIY: 7-Segment Display]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display/"/>
+    <updated>2018-01-28T17:06:18+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display</id>
+    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/7seg.png" title="Seven Segment Display" alt="Seven Segment Display">
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reactions to Meltdown and Spectre]]></title>
+    <link href="http://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre/"/>
+    <updated>2018-01-05T14:36:22+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre</id>
+    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/meltdown-and-spectre.jpg" title="Meltdown and Spectre" alt="Meltdown and Spectre">
+
+
+<p>A recent <a href="http://www.commitstrip.com/en/2018/01/04/reactions-to-meltdown-and-spectre-exploits/">illustration</a>* by <a href="http://www.commitstrip.com/">CommitStrip</a> got
+the point. Some <a href="https://meltdownattack.com/">researchers</a> discovered a huge leak in the
+hardware which is accompaning our daily life. Many products are
+effected. This is a collection of some reactions and voices until now:</p>
+
+<h3><strong> 15.11.2017 </strong></h3>
+
+<ul>
+<li><a href="https://lwn.net/Articles/738975/">Jonathan Corbet</a>: KAISER: hiding the kernel from user space</li>
+</ul>
+
+
+<h2><strong> 26.12.2017 </strong></h2>
+
+<ul>
+<li><a href="https://www.intel.com/content/www/us/en/support/articles/000025619/software.html">Intel</a>: Intel Management Engine Critical Firmware Update (Intel-SA-00086)</li>
+</ul>
+
+
+<h3><strong> 03.01.2018 </strong></h3>
+
+<ul>
+<li><a href="https://googleprojectzero.blogspot.de/2018/01/reading-privileged-memory-with-side.html">Project Zero</a>: Reading privileged memory with a side-channel</li>
+<li><a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">Mozilla Security Blog</a>: Mitigations landing for new class of timing attack</li>
+<li><a href="https://lkml.org/lkml/2018/1/3/797">Linus Torvalds</a>: Comment</li>
+</ul>
+
+
+<h3><strong> 04.01.2018 </strong></h3>
+
+<ul>
+<li><a href="https://www.tugraz.at/en/tu-graz/services/news-stories/tu-graz-news/singleview/article/schwere-sicherheitsluecke-tu-graz-forscher-zentral-beteiligt/">TU Graz</a>: Researchers discover serious security vulnerabilities</li>
+<li><a href="https://plus.google.com/+AlanCoxLinux/posts/Z6inLSq4iqH">Alan Cox</a>: Advice</li>
+<li><a href="https://reviews.llvm.org/D41723">LLVM</a>: Introduce the &ldquo;retpoline&rdquo; x86 mitigation technique</li>
+<li><a href="https://blog.sesse.net/blog/tech/2018-01-04-23-46_loose_threads_about_spectre_mitigat">Steinar H. Gunderson</a>: Loose threads about Spectre mitigation</li>
+</ul>
+
+
+<h3><strong> 05.01.2018 </strong></h3>
+
+<ul>
+<li><a href="https://cyber.wtf/2018/01/05/behind-the-scene-of-a-bug-collision/">Anders Fogh</a>: Behind the scenes of a bug collision</li>
+<li><a href="https://www.raspberrypi.org/blog/why-raspberry-pi-isnt-vulnerable-to-spectre-or-meltdown/">Raspberry Pi</a>: Why Raspberry Pi isn&rsquo;t vulnerable to Spectre or Meltdown</li>
+<li><a href="https://support.apple.com/en-us/HT208394">Apple</a>: About speculative execution vulnerabilities in ARM-based and Intel CPUs</li>
+<li><a href="https://aws.amazon.com/de/security/security-bulletins/AWS-2018-013/">Amazon</a>: Processor Speculative Execution Research Disclosure</li>
+</ul>
+
+
+<h3><strong> 06.01.2018 </strong></h3>
+
+<ul>
+<li><a href="http://kroah.com/log/blog/2018/01/06/meltdown-status/">Greg Kroah-Hartman</a>: Meltdown and Spectre Linux Kernel Status</li>
+</ul>
+
+
+<p>In addition my laptop has reached the <a href="https://download.lenovo.com/eol/">end of life</a> and is
+no longer supported by the manufacturer and it looks like there are
+many systems they have the same problem. Many people don&rsquo;t even know
+they have a problem. We all can only apply software patches if they&rsquo;re
+reaching us. Holders of most smartphones just bought a buggy device.
+The dream of multi-user-tasking devices got disruptions. Actually, the
+whole idea of memory protection based on the hardware protection mechanism
+which separates the kernel space from the userspace.</p>
+
+<p><em>If you&rsquo;re still confused by the events which are shaking the IT world so
+much and do not understand why action is required maybe the
+<a href="https://xkcd.com/1938/">XKCD</a> can help.</em></p>
+
+<p>*) Published with <a href="http://www.commitstrip.com/en/about/">friendly permissions</a> on a non-commercial blog.</p>
+
+<blockquote><p>
+Meltdown and Spectre are examples of what happens when we reason about
+security in the context of that abstraction, and then encounter minor
+discrepancies between the abstraction and reality.
+</p><address>Eben Upton </address></blockquote>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Papercraft Car]]></title>
+    <link href="http://manuel-io.github.io/blog/2017/12/25/papercraft-car/"/>
+    <updated>2017-12-25T14:51:03+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2017/12/25/papercraft-car</id>
+    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/papercraftcar001.jpg" title="Papercraft Car" alt="Papercraft Car">
+
+
+<p>This is the design of a <a href="https://github.com/manuel-io/papercraftcar">papercraft car</a> based on a atmega
+microcontroller.</p>
+
+<h3>Features:</h3>
+
+<ul>
+<li>Automatic lights system</li>
+<li>Forward ultrasonic radar</li>
+<li>Inertial navigation system</li>
+<li>Serial debug output</li>
+<li>In-system programming</li>
+</ul>
+
+
+<h3>Future improvements:</h3>
+
+<p>CAN bus or I2C bus to exchange information between all the car
+components. A more robust and good looking design. The posibility
+to give wireless instuctions. All this this will increase the size of
+the car too.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fotowiderstand]]></title>
+    <link href="http://manuel-io.github.io/blog/2017/12/07/fotowiderstand/"/>
+    <updated>2017-12-07T22:16:06+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2017/12/07/fotowiderstand</id>
+    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/ldr.png" width="200" title="Light Dependent Resistor" alt="Light Dependent Resistor">
+
+
+<p>Ich stehe vor der Herausforderung, dass ich einen Mikrocontroller
+(<a href="http://www.atmel.com/Images/Atmel-2486-8-bit-AVR-microcontroller-ATmega8_L_datasheet.pdf">Atmega8</a>) über die umgebenen Lichtverhältnisse informieren möchte und
+dafür auch schon einen licht-abhängigen Widerstand habe (<a href="https://cdn-reichelt.de/documents/datenblatt/A500/A90xxxx%23PE.pdf">A
+906011</a>). Dieser Widerstand ändert seinen Wert in Abhängekit des
+Umgebungslichtes. Dabei bedeutet viel Licht einen kleinen
+Widerstandswert und umgekehrt wenig Licht oder gar Dunkelheit einen
+großen Widerstand. Die genauen Werte ergeben sich aus dem Datenblatt.</p>
+
+<p>Jetzt geht es um den Anschluss am Mikrocontroller. Dieser verfügt über
+einen Analog-Digital-Wandler und kann in Abhängigkeit einer
+Referenzspannung analoge Spannungswerte auf einen 10 bit großen
+nummerischen Wert abbilden (10 bit bedeutet 2<sup>10</sup> = 1024. Also ein
+Zahlenbereich von 0 bis 1023).</p>
+
+<p>Damit an dem  licht-abhängigen Widerstand eine Spannung abfällt, muss
+dieser in einfacher Weise zu einem Spannungsteiler verschaltet werde
+(siehe Abbildung).</p>
+
+<p>Formal stellt lässt sich die Situation durch zwei Formeln beschreiben.
+Die Maschenregel und das Ohmsche Gesetz:</p>
+
+<p>$ U = \oint_G E\, ds = 0 $ oder $ U – U_1 – U_2 = 0 $ oder $ U = U_1 + U_2 $</p>
+
+<figure class='equation'>\begin{equation}\label{eq:ohm}
+U = R_1 \cdot I + R_2 \cdot I
+\Leftrightarrow U = (R_1 + R_2) \cdot I
+\Leftrightarrow I = \frac{U}{R_1 + R_2}\end{equation}</figure>
+
+
+<p>$ U_2 $ ist hier die Spannung am licht-abhängigen Widerstand:</p>
+
+<p>$ U_2 = R_2 \cdot I \quad\hbox{mit}\quad I = \frac{U}{R_1 + R_2} \quad\hbox{aus (\ref{eq:ohm})} $</p>
+
+<figure class='equation'>\begin{equation}\label{eq:ldr}
+U_2 = U \cdot \frac{R_2}{R_2 + R_1}\end{equation}</figure>
+
+
+<p>Damit ist die Spannung am licht-abhängigen Widerstand gegeben. Wie
+schon in der Einleitung beschrieben ändert dieser Widerstand seinen
+Wert $ R_2 $ in Abhängigkeit des Umgebungslichtes. Dabei nimmt der Wert
+zwei Extrema an:</p>
+
+<p>$ R_i $ bei besonders viel Licht und $ R_x $ bei besonders wenig Licht.</p>
+
+<p>Ziel ist jetzt den Widerstand $ R_1 $ so zu dimensionieren, dass am
+licht-abhängigen Widerstand ein möglichst großes Spannungsspektrum
+abfällt. Dazu werden die Werte für $ R_i \hbox{ und } R_x \hbox{ für } R_2
+\hbox{ in (\ref{eq:ldr})} $ eingesetzt und die Differenzspannung weiter diskutiert.</p>
+
+<figure class='equation'>\begin{equation}\Delta U(R_1) = U \cdot \frac{R_x}{R_x + R_1} – U \cdot \frac{R_i}{R_i + R_1}\end{equation}</figure>
+
+
+<p>Jetzt wird die erste Ableitung gebildet  und gleich Null gesetzt, um
+die maximale Differenzspannung ermitteln zu können:</p>
+
+<figure class='equation'>\begin{equation}\frac{d\Delta U(R_1)}{dR_1} = U \cdot \frac{R_i}{(R_i + R_1)^2} - \frac{R_x}{(R_x + R_1)^2}\end{equation}</figure>
+
+
+<p>Weiter wird die Ableitung gleich Null gesetzt: $ \frac{d\Delta
+U(R_1)}{dR_1} \overset{!}{=} 0 $. Da ein Produkt immer Null ist, wenn
+einer der Faktoren Null ist und die Spannung $ U $ per
+Definition größer als Null ist, wird $ U $ hier nicht mehr gebraucht:</p>
+
+<figure class='equation'>\begin{equation}R_i \cdot (R_x + R_1)^2 =  R_x \cdot (R_i + R_1)^2\end{equation}</figure>
+
+
+<p>Ausmultiplizieren und $ R_1 $ ausklammern gibt weiter:</p>
+
+<figure class='equation'>\begin{equation}R_1^2 = \frac{R_i \cdot R_x^2 - R_x \cdot R_i^2}{R_x - R_i}\end{equation}</figure>
+
+
+<p>Und da $ R_x > R_i > 0 $ angenommen wird, steht unter der Wurzel immer
+etwas positives. Und auch das Ergebnis der Wurzel ist nur positiv
+sinnvoll:</p>
+
+<figure class='equation'>\begin{equation}R_1 = \sqrt{R_x \cdot \frac{R_i \cdot R_x - R_i^2}{R_x – R_i}}\end{equation}</figure>
+
+
+<p>Für meinen Fall beträgt der Widerstand bei maximalen Lichteinfall $
+3,5k\Omega $ und bei Dunkelheit $ 180k\Omega $. Damit ist für $ R_1 =
+25k\Omega $ gegeben. Die Differenzspannung beträgt $ \Delta U = 3,78 V
+$, die minimale Spannung beträgt $ U_i = 0,61 V $ und die maximale
+Spannung beträgt $ U_x = 4,39 V $.</p>
+
+<p>Im Analog-Digital-Wandler des Mikrocontrollers werden die analogen
+Werte nummerisch abgebildet:</p>
+
+<figure class='equation'>\begin{equation}ADC = \frac{U_i}{U}\cdot 1024\quad\hbox{und}\quad ADC = \frac{U_x}{U}\cdot 1024\end{equation}</figure>
+
+
+<p>Es ergibt sich ein Wertebereich von 125 bis 900 von viel Licht bis
+wenig Licht. Die Betriebsspannung von $ 5V $ für den Mikrocontroller
+entspricht bei mir auch der Referenzspannung des
+Analog-Digital-Wandlers.</p>
+
+<p>Da es bei meiner Anwendung nicht um hohe Präzision geht, kann ich den
+Analog-Digital-Wandlers Left-Adjusted betreiben werden und auf die
+unteren 2 bit verzichten.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lichtdose]]></title>
+    <link href="http://manuel-io.github.io/blog/2017/11/14/lichtdose/"/>
+    <updated>2017-11-14T14:05:56+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2017/11/14/lichtdose</id>
+    <content type="html"><![CDATA[<img class="left" src="http://manuel-io.github.io/data/images/lightcan.jpg" width="200" title="Lichtdose" alt="Lichtdose">
+
+
+<p>Wieder einmal eine kleine Spielerei mit Leuchtdioden. Dieses mal ganz
+ohne Mikrocontroller, eine kleine Fingerübung um mit den Bausteinen
+<code>74HC4017</code> und <code>NE555</code> warm zu werden.</p>
+
+<p>In eine leere Blechdose werden Löcher gebohrt und Leuchtdioden in
+diesen mit Heißkleber fixiert. Eine Steuereinheit innerhalb der Dose
+sorgt für abwechselt aufleuchtende Dioden.</p>
+
+<p>Die Schaltung ist für 3V ausgelegt. Es darf aber auch eine etwas
+größere Potentialdifferenz sein. Im Zweifel die Datenblätter lesen.
+Bei 3V eignet sich eine Knopfzelle als Spannungsquelle. Etwa
+<code>CR2032</code>. Diese sollte auch noch Platzt in der Dose haben.</p>
+
+<p>Etwas dokumentiert habe ich das Projekt auch. <a href="http://manuel-io.github.io/data/images/lightcan-schematic.png">Hier
+ist ein Schema</a> wie die LED&rsquo;s
+angesteuert werden und ein Abbild der Logikeinheit auf einer
+Lochrasterplatine:</p>
+
+<img src="http://manuel-io.github.io/data/images/lightcan-pcb.png" title="Lichtdose" alt="Lichtdose">
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[* Mai 2017 - † Novermber 2017]]></title>
+    <link href="http://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017/"/>
+    <updated>2017-11-07T19:16:06+01:00</updated>
+    <id>http://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017</id>
+    <content type="html"><![CDATA[<img src="http://manuel-io.github.io/data/images/jerry.jpg" title="Jerry" alt="Jerry">
+
+
+<p style="text-align:center;"> Vielen Dank, dass du mir in dieser kurzen Zeit so viel Freude
+geschenkt hast. Du wirst immer in jenen Herzen bleiben, die du mit so
+viel Glück und Liebe gefüllt hast.</p>
+
+<blockquote><p>
+Wenn Tiere in unser Leben kommen, treten wir eine Reise voller
+Abenteuer, Lernprozesse und Liebe an. Die Tiere erreichen unser tiefes
+Inneres und verändern uns auf eine kaum beschreibbare Weise. Unsere
+Liebe wächst. Und wenn sie dann von uns gehen, sind wir verloren und
+verzweifelt. Mit der Zeit untersuchen wir, was geschehen ist, und
+erkennen die Bedeutung. Dann staunen wir über diese bewundernswerten
+Wesen. Was für eine Ehre erteilen sie uns, wenn sie eine Strecke
+unseres Lebensweges mit uns teilen.
+</p><address>Barbara Janelle </address></blockquote>
+
+]]></content>
+  </entry>
+  
+</feed>

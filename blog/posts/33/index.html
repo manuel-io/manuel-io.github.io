@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="blog, personal, coding, foot, math, physics, life"> <meta name="description" content="This is a personal Blog about my life"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="http://manuel-io.github.io/blog/posts/33"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "jax": ["input/TeX", "output/HTML-CSS"],
+    styles: { ".MathJax_Display": { "text-align": "left" } },
+    "tex2jax": {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      TagSide: "left"
+    },
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+      linebreaks: { automatic: true }
+    }
+  });
+</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <div class="blog-index"> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2012/03/13/vorbis2alsa/">vorbis2alsa</a></h1> <p> <time class='entry-date' datetime='2012-03-13T16:34:00+01:00'><span class='date'>Mar, 2012-03-13 | </span> <span class='time'>Tue, 16:34 CET</span></time> </p> </header> <section><p>Als Vorbereitung auf eines meiner, möglicherweise, nächsten Projekte habe ich mit <em>vorbis2alsa</em> einen minimalistischen <a href="https://github.com/manuel-io/petridish/tree/master/vorbis2alsa">Audioplayer</a> geschreiben. Das Programm kann ein <em>ogg vorbis file</em> öffnen und den Stream an das <em>alsa default interface</em> weitergeben:</p> <pre><code>https://github.com/manuel-io/petridish/tree/master/vorbis2alsa
+</code></pre> <p>Es wird in Zukunft auch keine grundlegenden Änderungen geben. Für mich waren nur die Grundlagen von <em>libvorbis</em> und <em>asoundlib</em> wichtig, sowie deren Kommunikation untereinander. Interessant finde ich aber noch in welcher Form die Metainformationen in einer ogg-Datei dargestellt werden können. Da wird es noch etwas geben. Eine große Hilfe beim Umgang mit den Bibliotheken war der Quelltext von <a href="http://www.xmms.org">XMMS</a>:</p> <p><strong>Update:</strong> Added Opus and MP3 support.</p> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2012/02/15/zeichnen-von-signalpegeln/">Zeichnen von Signalpegeln</a></h1> <p> <time class='entry-date' datetime='2012-02-15T15:36:00+01:00'><span class='date'>Feb, 2012-02-15 | </span> <span class='time'>Wed, 15:36 CET</span></time> </p> </header> <section><img src="/data/images/schaltung2.png" alt=""> <p>In den letzten Tagen musste ich für eine digitale Schaltung—also für eine regenerationsfähige Schaltung in der nur diskrete Spannungen genutzt werden—die Signalpegel, an den Ein- und Ausgängen der einzelnen Bauelemente, in einem Diagramm darstellen.</p> <p>Für die Umsetzung habe ich mir überlegt ein kleines <a href="https://gist.github.com/manuel-io/a4ef8c188d321d95d097">Computerprogramm</a> zu schreiben, das eine Textdatei ließt und die graphische Darstellung in Form einer <em>png</em>-Datei ausgibt.</p> <p>Hier ist ein <a href="/data/images/schaltung.png">Beispiel</a> zu der folgenden Datei:</p> <pre><code># Example ###############
+HLHLHLHLHLHLHLHLHLHLHLHLH : Timebase
+HHHHHHLLHHHHHHHHHHHHHHHHH : S
+HHHHHHHHHHHHHHHHHHHLLHHHH : R
+LLLLLLHHHHHHHHHHHHHLLLLLL : Q
+LLLLLLHLHLHLHLHLHLHLLLLLL : Q AND Timebase
+#########################
+</code></pre> <p>Vielleicht ist es auch möglich mit diesem Befehl die Funktionalität des ungetesteten und unspezifizierten Programm nachzuvollziehen:</p> <pre><code>hl-evel example.hl example.png
+</code></pre> <p>Dabei ist example.hl die Eingabedatei und example.png die Ausgabedatei. Tests als Ersatz für die Spezifikation schreibe ich noch, wenn ich das mal gelernt habe. Dann bleibt noch zu erwähnen, dass neben der Ruby Standard Library 1.9.3 auch chunky_png benötigt wird.</p> <p>Etwa:</p> <pre><code>export GEM_HOME=~/gems/1.9.3/
+gem install chunky_png
+</code></pre> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2012/01/01/28c3/">28C3</a></h1> <p> <time class='entry-date' datetime='2012-01-01T10:29:00+01:00'><span class='date'>Jan, 2012-01-01 | </span> <span class='time'>Sun, 10:29 CET</span></time> </p> </header> <section><p>Diese Stunden geht der <a href="https://events.ccc.de/congress/2011/wiki/Main_Page">28C3-Kongress</a> in Berlin zu Ende. Ich habe mir via Video-Stream einige Vorträge angesehen, werde dazu hier ein paar Worte schreiben und die Links setzen. Hauptsächlich sind das Vorträge von denen ich mir mehr Unterhaltung als abgefahrene, üble Hackz versprochen habe.</p> <ul> <li>Der <a href="https://media.ccc.de/browse/congress/2011/28c3-4901-de-der_staatstrojaner_aus_sicht_der_technik.html#video">Staatstrojaner</a>: Der Vortrag gibt einen Überblick der technischen Details des Staatstrojaners <em>0zapftis</em> und der damit verbundenen Reaktionen in der Öffentlichkeit.</li> <li><a href="https://media.ccc.de/browse/congress/2011/28c3-4676-en-apple_vs_google_client_platforms.html#video">Apple vs. Google Client Platforms</a>: Ein Vortrag, der irgendwo versucht die Sorgfalt im Bezug auf Datenschutz und Integrität von Produkten namenhafter IT-Hersteller zu betrachten. Zur Illustration werden auch einige konkrete Probleme/Bugs angesprochen.</li> <li><a href="https://media.ccc.de/browse/congress/2011/28c3-4680-en-effective_dos_attacks_against_web_application_platforms.html#video">Effective Denial of Service attacks against web application platforms</a>: Ein schöner Vortrag über <em>hash tables</em>, <em>hash functions</em> und damit verbundene Kollisionen. Für mich überhaupt der Einstig in diese Thematik. Problemfälle im Bezug auf den Titel sind hier zur Zeit insbesondere <em>PHP</em>, <em>ASP</em>, <em>Java</em> und manche die noch gefunden werden wollen.</li> <li><a href="https://media.ccc.de/browse/congress/2011/28c3-4799-de-can_trains_be_hacked.html#video">Can trains be hacked?</a>: Ein Vortrag mit hohem Unterhaltungswert—nicht nur wegen einer, an ein Stellwerk angeschlossenen, Modelleisenbahn. Es geht allgemein um die Technik von Eisenbahnsicherungsanlagen.</li> </ul> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2011/11/25/sortieren/">Sortieren</a></h1> <p> <time class='entry-date' datetime='2011-11-25T22:54:00+01:00'><span class='date'>Nov, 2011-11-25 | </span> <span class='time'>Fri, 22:54 CET</span></time> </p> </header> <section><p>Sortieren ist toll und der Unix-Befehl <em>sort</em> ist auch toll. Hier sind mal ein paar Beispiele für die Verwendung von <em>sort</em>.</p> <p>Welche Programme am häufigsten ausgeführt werden kann man durch Ausgabe und Sortierung der Unix-history erfahren:</p> <pre><code>history | tail -1000 | awk '{print $2}' | \
+  awk 'BEGIN {FS="|"} {print $1}' | \
+  sort | uniq -c | sort -rn | head -10 | cat -n
+</code></pre> <p>Bei mir sind das die folgenden Programme:</p> <pre><code> 1      192 ls
+ 2      130 cd
+ 3       29 vim
+ 4       19 clear
+ 5       18 su
+ 6       15 rm
+ 7       14 du
+ 8       12 ssh
+ 9       10 firefox
+10        7 history
+</code></pre> <p>Nützlich ist <em>sort</em> auch um Logdateien auf häufige Fehler zu durchsuchen. Hier ein Beispiel für <em>404-Fehler</em>:</p> <pre><code>cat httpd.log | grep GET | grep 404 | \
+  sed 's/^.*GET \([^ ]*\) .*$/\1/' | \
+  sort | uniq -c | sort -rn | head -10 | cat -n
+</code></pre> <p>Dazu habe ich auch eine großartige Liste:</p> <pre><code> 1      161 /favicon.ico
+ 2       54 /blog/default.css
+ 3       27 /blog/valid-xhtml10.png
+ 4        9 /pma/scripts/setup.php
+ 5        9 /phpMyAdmin/scripts/setup.php
+ 6        9 /phpmyadmin/scripts/setup.php
+ 7        8 /myadmin/scripts/setup.php
+ 8        7 /MyAdmin/scripts/setup.php
+ 9        4 /blog/LiberationSerif-Regular.ttf/
+10        3 /valid-xhtml10.png
+</code></pre> </section> <div style='clear:both;'></div> </article> <div id="pagination"> <table><tr> <td class='next'><a class="next" href="/blog/posts/34">Older</a></td> <td class='arch'><a class='arch' href="/blog/archives">Archives</a></td> <td class='prev'><a class="prev" href="/blog/posts/32">Newer</a></td> </tr></table> </div> </div> <footer><section class='posts'> <ul> <li><a href="/blog/2019/03/02/css-animation-101/">1. CSS Animation 101</a></li> <li><a href="/blog/2019/02/03/driving-batteries-in-parallel/">2. Driving Batteries in Parallel</a></li> <li><a href="/blog/2018/12/31/vegane-rezepte-2018/">3. Vegane Rezepte 2018</a></li> <li><a href="/blog/2018/12/24/zyklische-redundanzprufung/">4. Zyklische Redundanzprüfung (Theorie)</a></li> <li><a href="/blog/2018/12/09/just-my-two-cent/">5. Just my two cent</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2019 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>

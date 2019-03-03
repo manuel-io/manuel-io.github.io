@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="blog, personal, coding, foot, math, physics, life"> <meta name="description" content="This is a personal Blog about my life"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="http://manuel-io.github.io/blog/posts/12"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "jax": ["input/TeX", "output/HTML-CSS"],
+    styles: { ".MathJax_Display": { "text-align": "left" } },
+    "tex2jax": {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      TagSide: "left"
+    },
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+      linebreaks: { automatic: true }
+    }
+  });
+</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <div class="blog-index"> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2015/12/23/openpgpkey-posteo/">OPENPGPKEY & POSTEO</a></h1> <p> <time class='entry-date' datetime='2015-12-23T21:30:53+01:00'><span class='date'>Dec, 2015-12-23 | </span> <span class='time'>Wed, 21:30 </span></time> </p> </header> <section><p>First generate a public-private key-pair with gpg as usual. Next export the public key:</p> <pre><code>gpg2 -a --export --export-options export-minimal [KEY-ID] &gt; pub.asc
+</code></pre> <ul> <li><a href="https://posteo.de/en/help/policies-for-public-keys">Does my S/MIME or OpenPGP key need to fulfil certain criteria?</a></li> <li><a href="https://posteo.de/en/help/publishing-public-pgp-key-for-posteo-email-address">How do I publish the public PGP key for my Posteo email address in the Posteo key directory?</a></li> </ul> <p>Make sure you have a proper version of the <code>dig</code> tool (use <code>DiG 9.10.3-P2</code>). And your firewall rules allow global dns requests:</p> <pre><code>dig +short +vc OPENPGPKEY \
+  141fa5a54515c9fbb2ff131b23fb5b51339365324ece6efe1cabae37._openpgpkey.posteo.org \
+  @8.8.8.8 | sed 's/ //g' | base64 -d | gpg2
+</code></pre> <p>However, this request is not fully verified.</p> <p>It is a good idea to publish your public key at a second place (e.g. Website, <a href="https://pgp.mit.edu/">Key Server</a>) in case your email provider publishes any rubbish.</p> <p>Sources: <a href="https://sys4.de/de/blog/2015/03/08/openpgpkey-mit-unix-bordmitteln/">sys4.de</a>, <a href="https://tools.ietf.org/html/draft-wouters-dane-openpgp">ietf.org</a>, <a href="http://www.heise.de/netze/artikel/DNSSEC-und-DANE-Hilfestellung-zur-Mail-Verschluesselung-2619026.html">heise.de</a></p> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2015/12/05/erbsensuppe/">Erbsensuppe</a></h1> <p> <time class='entry-date' datetime='2015-12-05T16:07:49+01:00'><span class='date'>Dec, 2015-12-05 | </span> <span class='time'>Sat, 16:07 </span></time> </p> </header> <section><pre><code>500ml Gemüsebrühe
+100ml Soja Cuisine
+ 500g Geschälte Kartoffeln
+ 400g Erbsen
+ 4 EL Olivenöl
+    1 Zwiebel
+    1 Knoblauchzehe
+    2 Karotten
+ 1 TL Getrockneter Majoran
+ 1 TL Getrockneter Basilikum
+      Salz, Pfeffer
+</code></pre> <p>Im ersten Schritt, wenn nötig, die Gemüsebrühe zubereiten, da der Topf gleich noch gebraucht wird. In der Zwischenzeit das Gemüse, wenn nötig waschen und in kleine Stücke schneiden. Zunächst die geschnittenen Zwiebelstücke im Topf mit Olivenöl anbraten, wenn diese eine glasige oder leicht bräunliche Form angenommen haben die Knoblauchzehe(n) dazu geben. Danach Kartoffeln und Karotten ebenfalls in den Topf geben und nochmals 3 bis 5 Minuten bei mittlerer Hitze braten. Mit 2/3 der Gemüsebrühe auffüllen, Erbsen hinzufügen und auch mit Majoran und Basilikum würzen. Den Topfdeckel halb auflegen und 25min kochen, gelegentlich umrühren. Die Erbsen sollten jetzt gar sein. Den Topf runter nehmen und den Inhalt mit Pürierstab bearbeiten bis alles eine homogene Masse ergibt. Erneut auf den Herd stellen. Weiterhin erhitzen. Jetzt auf jeden Fall abschmecken und je nach Konsistenz und Geschmack Wasser oder die restliche Brühe dazu geben. Zuletzt mit Soja Cuisine, Salz und Pfeffer Abschmecken und die heiße Suppe servieren.</p> <p>Natürlich können zum Ende auch vegane Bockwürsten in den Topf geschnitten werden. Es schmeckt aber auch Knoblauchbaguette dazu.</p> <p><strong>Update:</strong> Druckbar als <a href="/data/docs/erbsensuppe.pdf">PDF</a></p> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2015/12/01/asia-bratnudeln/">Asia Bratnudeln</a></h1> <p> <time class='entry-date' datetime='2015-12-01T00:18:14+01:00'><span class='date'>Dec, 2015-12-01 | </span> <span class='time'>Tue, 00:18 </span></time> </p> </header> <section><p>Bratnudeln sind natürlich keine Zauberei, aber weil es mit der Mengenabschätzung so eine Sache ist und Bratnudeln zu meim Lieblingsgericht gehören, will ich hier mal etwas dokumentieren.</p> <img class="right" src="/data/images/noodles.jpg" width="200" title="Fried Noodles" alt="Fried Noodles"> <p>Hier die Grundzutaten für 3-4 Personen:</p> <pre><code>250g Quick Cooking Noodles
+175g Bambussproßen
+ 90g Mungobohnen
+4 EL Rapsöl
+4 EL Sojasauce
+   5 Champignons
+   1 Karotte
+   1 Paprika
+     Cayennepfeffer
+</code></pre> <p>Die Nudeln nach Anleitung kochen<sup>1</sup>. In der Zwischenzeit das Gemüse, wenn nötig waschen und in kleine Stücke schneiden. Den Wok mit Rapsöl erhitzen und zunächst die fein geriebenen Karotten andünsten. Nach und nach die Champignons und Paprika dazu gegeben und alles scharf anbraten. Den Herd auf kleine Stufe stellen, die Bambussproßen und Mungobohnen nach belieben dazu geben. Dann auch die abgetropften Nudeln dazugeben, jetzt braten. Alles gut vermengen und mit Sojasauce sowie Cayennepfeffer abschmacken. Den Herd abstellen und Servieren.</p> <p>1) I.d.R. Wasser zum kochen bringen, Nudeln mit Wasser übergießen, 5min ziehen lassen, abgießen. Evtl. mit kaltem Wasser abschrecken.</p> <p><strong>Update:</strong> Druckbar als <a href="/data/docs/asia-bratnudeln.pdf">PDF</a></p> </section> <div style='clear:both;'></div> </article> <article> <header class='post'> <h1 class="entry-title"><a href="/blog/2015/11/08/haskell-time/">UTCTime, UnixTime, POSIXTime, EpochTime, ZonedTime and ClockTime</a></h1> <p> <time class='entry-date' datetime='2015-11-08T13:00:22+01:00'><span class='date'>Nov, 2015-11-08 | </span> <span class='time'>Sun, 13:00 </span></time> </p> </header> <section><p>Let us discuss time formats in Haskell. There are several different names and data types. First let me show you that every data type has his own IO action:</p> <pre><code>time:      getCurrentTime :: IO UTCTime
+unix-time: getUnixTime    :: IO UnixTime
+time       getPOSIXTime   :: IO POSIXTime
+unix:      epochTime      :: IO EpochTime
+time:      getZonedTime   :: IO ZonedTime
+old-time:  getClockTime   :: IO ClockTime
+</code></pre> <p>I will not cover <code>ClockTime</code>, because it&rsquo;s part of a deprecated <a href="https://hackage.haskell.org/package/old-time">package</a>. Next we will start a <code>ghci</code> session to see what is the result of each function:</p> <h3><a href="https://hackage.haskell.org/package/unix-time">UnixTime</a>:</h3> <pre><code>λ: import Data.UnixTime 
+λ: t &lt;- getUnixTime &gt;&gt;= return . show . utSeconds
+λ: read t :: Int
+   1446987464
+</code></pre> <p>You can use <code>toEpochTime</code> and <code>toClockTime</code>.</p> <h3><a href="https://hackage.haskell.org/package/time">POSIXTime</a>:</h3> <pre><code>λ: import Data.Time.Clock.POSIX
+λ: t &lt;- getPOSIXTime &gt;&gt;= return . show . round
+λ: read t :: Int
+   1446987600
+</code></pre> <p>Also, <code>posixSecondsToUTCTime</code> is part of the Library.</p> <h3><a href="https://hackage.haskell.org/package/unix">EpochTime</a>:</h3> <pre><code>λ: import System.Posix.Time
+λ: t &lt;- fmap show epochTime
+λ: read t :: Int
+   1446987733
+
+λ: import Data.UnixTime 
+λ: fmap fromEpochTime epochTime
+   UnixTime {utSeconds = 1446988206, utMicroSeconds = 0}
+</code></pre> <h3><a href="https://hackage.haskell.org/package/time">UTCTime</a>:</h3> <p>Last but not least let&rsquo;s take a look at the <code>time</code> package:</p> <pre><code>λ: import Data.Time.Clock
+λ: getCurrentTime &gt;&gt;= return . show
+
+   No instance for (Show UTCTime) …
+</code></pre> <p>What is that? <code>getCurrentTime</code> has no visual representation aka can&rsquo;t be converted to a string. No, we have to import another package:</p> <pre><code>λ: import Data.Time.Clock
+λ: import Data.Time.Format
+λ: t &lt;- fmap show getCurrentTime
+λ: read t :: UTCTime
+   2015-11-08 13:28:23.095651 UTC
+</code></pre> <p>Well, that is a formated time string, but is it possible to have a simple timestamp like above. Sure:</p> <pre><code> λ: import Data.Time.Clock
+ λ: import Data.Time.Format
+ λ: t &lt;- getCurrentTime &gt;&gt;= return . formatTime defaultTimeLocale "%s"
+ λ: read t :: Int
+    1446989906
+</code></pre> <h3><a href="https://hackage.haskell.org/package/time">ZonedTime</a>:</h3> <p>All times we&rsquo;ve got are in UTC. The main advantage of the <code>time</code> package is it can handle timezones, too:</p> <pre><code>λ: import Data.Time.LocalTime 
+λ: import Data.Time.Format 
+λ: getZonedTime &gt;&gt;= return . formatTime defaultTimeLocale "%Y-%m-%d, %H:%M %Z"
+   "2015-11-08, 15:00 CET"
+</code></pre> <p>At last there is one question. How to convert a timestamp back to a formated string:</p> <pre><code>λ: import Data.Time.Clock
+λ: import Data.Time.Clock.POSIX 
+λ: import Data.Time.LocalTime 
+λ: import Data.Time.Format 
+λ: let s = read "1446991464" :: Int
+λ: let t x = (posixSecondsToUTCTime . realToFrac) x
+λ: utcToLocalZonedTime (t s) &gt;&gt;=
+     return . formatTime defaultTimeLocale "%Y-%m-%d, %H:%M %Z"
+   "2015-11-08, 15:04 CET"
+</code></pre> </section> <div style='clear:both;'></div> </article> <div id="pagination"> <table><tr> <td class='next'><a class="next" href="/blog/posts/13">Older</a></td> <td class='arch'><a class='arch' href="/blog/archives">Archives</a></td> <td class='prev'><a class="prev" href="/blog/posts/11">Newer</a></td> </tr></table> </div> </div> <footer><section class='posts'> <ul> <li><a href="/blog/2019/03/02/css-animation-101/">1. CSS Animation 101</a></li> <li><a href="/blog/2019/02/03/driving-batteries-in-parallel/">2. Driving Batteries in Parallel</a></li> <li><a href="/blog/2018/12/31/vegane-rezepte-2018/">3. Vegane Rezepte 2018</a></li> <li><a href="/blog/2018/12/24/zyklische-redundanzprufung/">4. Zyklische Redundanzprüfung (Theorie)</a></li> <li><a href="/blog/2018/12/09/just-my-two-cent/">5. Just my two cent</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2019 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>

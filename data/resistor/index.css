@@ -1,0 +1,73 @@
+* {
+  font-family: monospace;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  width: 531px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block:
+}
+
+input {
+  width: 200px;
+}
+
+div.ring {
+  position: relative;
+  top: 11px;
+  left: 95px;
+  float: left;
+  width: 40px;
+  height: 116px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+
+div#ring0 {
+  background-color: #ffffff;
+}
+
+div#ring1 {
+  background-color: #ffffff;
+}
+
+div#ring2 {
+  display: none;
+  background-color: #ffffff;
+}
+
+div#multiplier {
+  background-color: #ffffff;
+}
+
+div#tolerance {
+  margin-left: 40px;
+  margin-right: 0px;
+  background-color: #ffd700;
+}
+
+div#resistor {
+  display: block;
+  width: 531px;
+  height: 138px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  background-image: url(/data/images/resistor.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}

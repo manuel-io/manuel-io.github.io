@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>Findings from the logging - A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="2013, programming, mail, administration"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="http://manuel-io.github.io/blog/2013/09/02/findings-from-the-logging"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "jax": ["input/TeX", "output/HTML-CSS"],
+    styles: { ".MathJax_Display": { "text-align": "left" } },
+    "tex2jax": {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      TagSide: "left"
+    },
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+      linebreaks: { automatic: true }
+    }
+  });
+</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <article> <header class='post'> <h1 class="entry-title">Findings from the logging</h1> <p> <time class='entry-date' datetime='2013-09-02T13:33:00+02:00'><span class='date'>Sep, 2013-09-02 | </span> <span class='time'>Mon, 13:33 CEST</span></time> </p> </header> <section><p>After a few months having <a href="http://www.fail2ban.org">Fail2ban</a> at work I wanted to know which networks seeking for exploits on my servers most frequently. So I wrote a <a href="https://gist.github.com/elektret/6407615">program</a> to analyze the <a href="https://en.wikipedia.org/wiki/Whois">WHOIS</a> requests—generated in case of any malicious activity—over the last four months. Here are the top 25 out of 633 candidates:</p> <pre><code>$ ruby fail2ban.rb logfile | sort -rn | head -25
+
+231    CN   ALIBABA-CN-NET
+ 49    CN   ALIBABA-BJ-NET
+ 37    FR   QUADRA_DIFFUSION
+ 29    FR   OVH-PCC-596
+ 29    CN   CHINANET-SN
+ 18    FR   MOBILEMEDIACOM
+ 17    AU   TELSTRAINTERNET42-AU
+ 13    CN   CHINANET-GD
+ 11    CN   ALISOFT
+  9    CN   UNICOM-ZJ
+  8    CN   CHINANET-JS
+  7    CN   UNICOM-SD
+  7    CN   CHINANET-HE
+  5    IE   RSHVPS32
+  4    RU   JIJIKSERVER-NET
+  4    CN   CMNET
+  4    CN   CHINANET-HB
+  3    IN   UNICOM-SH
+  3    IN   TATACOMM-IN
+  3    FR   OVH_41610957
+  3    FR   AMEN-EUROPE-NETWORK
+  3    CN   CHINANET-SH
+  2    FR   OVH-PCC-646
+  2    DE   STRATO-RZG-DEDI
+  2    DE   STRATO-RZG-DED3
+</code></pre> <p>Sorted by country:</p> <pre><code>$ ruby fail2ban.rb logfile | awk '{print $2}' | sort | uniq -c | sort -rn | head -15
+
+ 61    CN
+ 11    DE
+ 10    IN
+ 10    GB
+ 10    FR
+  8    US
+  7    UA
+  7    TR
+  5    RU
+  5    NL
+  4    CZ
+  3    TW
+  3    ES
+  2    SE
+  2    PL
+</code></pre> </section> <div style='clear:both;'></div> <footer> <section class="meta"> <p> <span class="byline author vcard">Posted by <span class="fn">Manuel</span></span> </p> <p class='categories'> <a class='category' href='/blog/categories/2013/'>2013</a>, <a class='category' href='/blog/categories/administration/'>administration</a>, <a class='category' href='/blog/categories/mail/'>mail</a>, <a class='category' href='/blog/categories/programming/'>programming</a> </p> </section> <section class='pagination'> <table><tr> <th class='left'><p><a href="/blog/2013/08/09/can-lcd-testboard/" title="Previous Post: CAN LCD Testboard">&laquo; </a></p></th> <td class='left'><p><a href="/blog/2013/08/09/can-lcd-testboard/" title="Previous Post: CAN LCD Testboard">CAN LCD Testboard</a></p></td> <td class='right'><p><a href="/blog/2013/09/04/useless/" title="Next Post: Useless?">Useless?</a></p></td> <th class='right'><p><a href="/blog/2013/09/04/useless/" title="Next Post: Useless?"> &raquo;</a></p></th> </tr></table> </section> </footer> </article> <footer><section class='posts'> <ul> <li><a href="/blog/2019/03/02/css-animation-101/">1. CSS Animation 101</a></li> <li><a href="/blog/2019/02/03/driving-batteries-in-parallel/">2. Driving Batteries in Parallel</a></li> <li><a href="/blog/2018/12/31/vegane-rezepte-2018/">3. Vegane Rezepte 2018</a></li> <li><a href="/blog/2018/12/24/zyklische-redundanzprufung/">4. Zyklische Redundanzprüfung (Theorie)</a></li> <li><a href="/blog/2018/12/09/just-my-two-cent/">5. Just my two cent</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2019 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>
