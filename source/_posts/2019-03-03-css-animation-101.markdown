@@ -13,7 +13,7 @@ categories:
         frameborder="0">
 </iframe>
 
-This is an example how to interact with a Website using pure CSS.
+This is an example of how to interact with a Website using pure CSS.
 The picture is licensed under the [Creative Commons Attribution-Share
 Alike 4.0][cc] International license. You can find a copy [here][copy].
 
