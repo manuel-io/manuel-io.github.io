@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://manuel-io.github.io/blog/2019/04/14/base2/</loc>
+<lastmod>2019-04-14T15:59:39+02:00</lastmod>
+</url>
+<url>
 <loc>https://manuel-io.github.io/blog/2019/03/02/css-animation-101/</loc>
 <lastmod>2019-03-02T22:03:34+01:00</lastmod>
 </url>

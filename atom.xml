@@ -3,13 +3,23 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-03-04T22:59:27+01:00</updated>
+  <updated>2019-04-14T17:22:44+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Base ∈ {2, 10}]]></title>
+    <link href="https://manuel-io.github.io/blog/2019/04/14/base2/"/>
+    <updated>2019-04-14T15:59:39+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2019/04/14/base2</id>
+    <content type="html"><![CDATA[<img class="center 800" src="https://manuel-io.github.io/data/images/base210.svg" title="Base 2 & 10" alt="Base 2 & 10">
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS Animation 101]]></title>
@@ -882,32 +892,6 @@ angesteuert werden und ein Abbild der Logikeinheit auf einer
 Lochrasterplatine:</p>
 
 <img src="https://manuel-io.github.io/data/images/lightcan-pcb.png" title="Lichtdose" alt="Lichtdose">
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[* Mai 2017 - † Novermber 2017]]></title>
-    <link href="https://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017/"/>
-    <updated>2017-11-07T19:16:06+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2017/11/07/star-mai-2017-+-novermber-2017</id>
-    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/jerry.jpg" title="Jerry" alt="Jerry">
-
-
-<p style="text-align:center;"> Vielen Dank, dass du mir in dieser kurzen Zeit so viel Freude
-geschenkt hast. Du wirst immer in jenen Herzen bleiben, die du mit so
-viel Glück und Liebe gefüllt hast.</p>
-
-<blockquote><p>
-Wenn Tiere in unser Leben kommen, treten wir eine Reise voller
-Abenteuer, Lernprozesse und Liebe an. Die Tiere erreichen unser tiefes
-Inneres und verändern uns auf eine kaum beschreibbare Weise. Unsere
-Liebe wächst. Und wenn sie dann von uns gehen, sind wir verloren und
-verzweifelt. Mit der Zeit untersuchen wir, was geschehen ist, und
-erkennen die Bedeutung. Dann staunen wir über diese bewundernswerten
-Wesen. Was für eine Ehre erteilen sie uns, wenn sie eine Strecke
-unseres Lebensweges mit uns teilen.
-</p><address>Barbara Janelle </address></blockquote>
 
 ]]></content>
   </entry>
