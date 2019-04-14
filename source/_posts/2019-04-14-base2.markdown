@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Base ∈ {2, 10}"
+date: 2019-04-14 15:59:39 +0200
+comments: true
+categories: 
+  - 2019
+  - mathematics
+  - teaching
+  - informatics
+  - listing
+---
+{% img center 800 /data/images/base210.svg Base 2 & 10 %}
