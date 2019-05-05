@@ -3,13 +3,63 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-04-14T17:22:44+02:00</updated>
+  <updated>2019-05-05T20:57:23+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Fortsetzung]]></title>
+    <link href="https://manuel-io.github.io/blog/2019/05/05/fortsetzung/"/>
+    <updated>2019-05-05T20:10:02+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2019/05/05/fortsetzung</id>
+    <content type="html"><![CDATA[<p>Zuletzt habe ich die Addition von Dezimal- und Binärzahlen visuell
+gegenüber gestellt und gezeigt, dass beide male das gleiche Schema zur
+Anwendung kommt. Damit eine arithmetische Logikeinheit (<a href="https://de.wikipedia.org/wiki/Arithmetisch-logische_Einheit">ALU</a>, a.k. Computer) mit
+dem binären Schema umgehen kann müssen sämtliche Rechenoperationen durch binäre
+Operatoren ausgedrückt werden. In dem Fall <code>and</code>, <code>or</code> und <code>xor</code>. Diese
+Operatoren können wiederum durch elektrische Schaltelemente umgesetzt werden.</p>
+
+<p>Operatoren sind eine Abbildung von zwei binären Zahlen auf eine:
+$f: B\times B\to B\subseteq\mathbb{N}$, $(d_1, d_2)\mapsto f(d_1, d_2)$ und
+$x, y1, y2, y3, z1, z2, d1, d2, d3 \in B$</p>
+
+<p>Das genaue Verhalten für einen Operator $f$ ist in <a href="https://de.wikipedia.org/wiki/Wahrheitstabelle">Logiktabellen</a> aufgelistet.
+Wir benutzen:</p>
+
+<figure class='equation'>\begin{align}\lfloor(y_i + x)/2\rfloor &\Leftrightarrow y_i \hbox{ and } x \\
+y_i + x\,(\hbox{mod } 2) &\Leftrightarrow y_i \hbox{ xor } x\nonumber\\
+(z_1 · z_2) + z_1 + z_2\,(\hbox{mod } 2) &\Leftrightarrow z_1 \hbox{ or } z_2\nonumber\end{align}</figure>
+
+
+<p>Bei der Addition von zwei Zahlen wird zunächst immer geprüft, ob es einen
+Übertrag in den nächst höheren Stellenwert gibt. Dieser Übertrag muss bei der
+Berechnung der Stelle ggf. immer hinzuaddiert werden. Dadurch kommt es zur
+Addition von drei Zahlen (vgl. <a href="https://manuel-io.github.io/blog/2019/04/14/base2/">hier</a>). Operatoren wirken aber nur zwischen zwei
+Zahlen. Die Addition muss also in zwei Rechenoperationen geteilt werden, aber
+auch dann kann bei der Addition von zwei Zahlen ein Übertrag entstehen und
+dieser  Übertrag muss bei der nächsten Addition von zwei Zahlen hinzuaddiert
+werden. So würde es immer weiter gehen. Der Trick ist: Bei dem Rechenschritt
+$y_i + d_1 + d_2$ entsteht maximal eine Zahl die immer noch kleiner ist als die
+doppelte Zahlenbasis (in dem Fall kleiner 4)</p>
+
+<figure class='equation'>\begin{equation}max(y_i + d_1 \hbox{ und } d_2) = 3 \lt 4\,\,\hbox{mit}\,\, y_i, d_1, d_2\in \{0, 1\}, i\in\mathbb{N}\end{equation}</figure>
+
+
+<p>Es entsteht also maximal ein Übertrag. Bei der Addition von $d_1 + d_2$ oder
+$y_i + (d_1 \hbox{ und } d_2)$. Die Lösung ist also herauszufinden ob dieser Übertrag ggf. bei
+der ersten oder zweiten Addition entstanden ist. Und dafür wird der Operator
+<code>or</code> gebraucht.</p>
+
+<img class="center 800" src="https://manuel-io.github.io/data/images/base200.svg" title="Base 2" alt="Base 2">
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Base ∈ {2, 10}]]></title>
@@ -862,37 +912,6 @@ Analog-Digital-Wandlers.</p>
 <p>Da es bei meiner Anwendung nicht um hohe Präzision geht, kann ich den
 Analog-Digital-Wandlers Left-Adjusted betreiben werden und auf die
 unteren 2 bit verzichten.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lichtdose]]></title>
-    <link href="https://manuel-io.github.io/blog/2017/11/14/lichtdose/"/>
-    <updated>2017-11-14T14:05:56+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2017/11/14/lichtdose</id>
-    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/lightcan.jpg" width="200" title="Lichtdose" alt="Lichtdose">
-
-
-<p>Wieder einmal eine kleine Spielerei mit Leuchtdioden. Dieses mal ganz
-ohne Mikrocontroller, eine kleine Fingerübung um mit den Bausteinen
-<code>74HC4017</code> und <code>NE555</code> warm zu werden.</p>
-
-<p>In eine leere Blechdose werden Löcher gebohrt und Leuchtdioden in
-diesen mit Heißkleber fixiert. Eine Steuereinheit innerhalb der Dose
-sorgt für abwechselt aufleuchtende Dioden.</p>
-
-<p>Die Schaltung ist für 3V ausgelegt. Es darf aber auch eine etwas
-größere Potentialdifferenz sein. Im Zweifel die Datenblätter lesen.
-Bei 3V eignet sich eine Knopfzelle als Spannungsquelle. Etwa
-<code>CR2032</code>. Diese sollte auch noch Platzt in der Dose haben.</p>
-
-<p>Etwas dokumentiert habe ich das Projekt auch. <a href="https://manuel-io.github.io/data/images/lightcan-schematic.png">Hier
-ist ein Schema</a> wie die LED&rsquo;s
-angesteuert werden und ein Abbild der Logikeinheit auf einer
-Lochrasterplatine:</p>
-
-<img src="https://manuel-io.github.io/data/images/lightcan-pcb.png" title="Lichtdose" alt="Lichtdose">
-
 ]]></content>
   </entry>
   
