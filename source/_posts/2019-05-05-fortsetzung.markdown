@@ -14,8 +14,11 @@ Operatoren ausgedrückt werden. In dem Fall `and`, `or` und `xor`. Diese
 Operatoren können wiederum durch elektrische Schaltelemente umgesetzt werden.
 
 Operatoren sind eine Abbildung von zwei binären Zahlen auf eine:
-$f: B\times B\to B\subseteq\mathbb{N}$, $(d_1, d_2)\mapsto f(d_1, d_2)$ und
-$x, y1, y2, y3, z1, z2, d1, d2, d3 \in B$
+{% align %}
+f: B\times B\to{B} = \{0, 1\},\\
+\hbox{und }(d_1, d_2)\mapsto f(d_1, d_2),\nonumber\\
+x, y_i, z_i, d_i\in B,\,\,i\in\mathbb{N}\nonumber
+{% endalign %}
 
 Das genaue Verhalten für einen Operator $f$ ist in [Logiktabellen][table] aufgelistet.
 Wir benutzen:
@@ -29,16 +32,17 @@ y_i + x\,(\hbox{mod } 2) &\Leftrightarrow y_i \hbox{ xor } x\nonumber\\
 Bei der Addition von zwei Zahlen wird zunächst immer geprüft, ob es einen
 Übertrag in den nächst höheren Stellenwert gibt. Dieser Übertrag muss bei der
 Berechnung der Stelle ggf. immer hinzuaddiert werden. Dadurch kommt es zur
-Addition von drei Zahlen (vgl. [hier][hier]). Operatoren wirken aber nur zwischen zwei
-Zahlen. Die Addition muss also in zwei Rechenoperationen geteilt werden, aber
-auch dann kann bei der Addition von zwei Zahlen ein Übertrag entstehen und
-dieser  Übertrag muss bei der nächsten Addition von zwei Zahlen hinzuaddiert
-werden. So würde es immer weiter gehen. Der Trick ist: Bei dem Rechenschritt
-$y_i + d_1 + d_2$ entsteht maximal eine Zahl die immer noch kleiner ist als die
-doppelte Zahlenbasis (in dem Fall kleiner 4)
+Addition von drei Zahlen (vgl. [hier][hier]). Operatoren wirken aber nur
+zwischen zwei Zahlen. Die Addition muss also gemäß Assoziativgesetz in zwei
+Rechenoperationen aufgeteilt werden, aber auch dann kann bei der Addition von
+zwei Zahlen ein Übertrag entstehen und dieser  Übertrag muss bei der nächsten
+Addition von zwei Zahlen hinzuaddiert werden. So würde es immer weiter gehen.
+Der Trick ist: Bei dem Rechenschritt $y_i + d_1 + d_2$ entsteht maximal eine
+Zahl die immer noch kleiner ist als die doppelte Zahlenbasis (in dem Fall
+kleiner 4):
 
 {% equation %}
-max(y_i + d_1 \hbox{ und } d_2) = 3 < 4\,\,\hbox{mit}\,\, y_i, d_1, d_2\in \{0, 1\}, i\in\mathbb{N}
+max(y_i + d_1 + d_2) = 3 < 4
 {% endequation %}
 
 Es entsteht also maximal ein Übertrag. Bei der Addition von $d_1 + d_2$ oder
