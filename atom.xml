@@ -3,7 +3,7 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-05-05T20:57:23+02:00</updated>
+  <updated>2019-05-06T22:21:48+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
@@ -23,9 +23,12 @@ dem binären Schema umgehen kann müssen sämtliche Rechenoperationen durch bin�
 Operatoren ausgedrückt werden. In dem Fall <code>and</code>, <code>or</code> und <code>xor</code>. Diese
 Operatoren können wiederum durch elektrische Schaltelemente umgesetzt werden.</p>
 
-<p>Operatoren sind eine Abbildung von zwei binären Zahlen auf eine:
-$f: B\times B\to B\subseteq\mathbb{N}$, $(d_1, d_2)\mapsto f(d_1, d_2)$ und
-$x, y1, y2, y3, z1, z2, d1, d2, d3 \in B$</p>
+<p>Operatoren sind eine Abbildung von zwei binären Zahlen auf eine:</p>
+
+<figure class='equation'>\begin{align}f: B\times B\to{B} = \{0, 1\},\\
+\hbox{und }(d_1, d_2)\mapsto f(d_1, d_2),\nonumber\\
+x, y_i, z_i, d_i\in B,\,\,i\in\mathbb{N}\nonumber\end{align}</figure>
+
 
 <p>Das genaue Verhalten für einen Operator $f$ ist in <a href="https://de.wikipedia.org/wiki/Wahrheitstabelle">Logiktabellen</a> aufgelistet.
 Wir benutzen:</p>
@@ -38,15 +41,16 @@ y_i + x\,(\hbox{mod } 2) &\Leftrightarrow y_i \hbox{ xor } x\nonumber\\
 <p>Bei der Addition von zwei Zahlen wird zunächst immer geprüft, ob es einen
 Übertrag in den nächst höheren Stellenwert gibt. Dieser Übertrag muss bei der
 Berechnung der Stelle ggf. immer hinzuaddiert werden. Dadurch kommt es zur
-Addition von drei Zahlen (vgl. <a href="https://manuel-io.github.io/blog/2019/04/14/base2/">hier</a>). Operatoren wirken aber nur zwischen zwei
-Zahlen. Die Addition muss also in zwei Rechenoperationen geteilt werden, aber
-auch dann kann bei der Addition von zwei Zahlen ein Übertrag entstehen und
-dieser  Übertrag muss bei der nächsten Addition von zwei Zahlen hinzuaddiert
-werden. So würde es immer weiter gehen. Der Trick ist: Bei dem Rechenschritt
-$y_i + d_1 + d_2$ entsteht maximal eine Zahl die immer noch kleiner ist als die
-doppelte Zahlenbasis (in dem Fall kleiner 4)</p>
+Addition von drei Zahlen (vgl. <a href="https://manuel-io.github.io/blog/2019/04/14/base2/">hier</a>). Operatoren wirken aber nur
+zwischen zwei Zahlen. Die Addition muss also gemäß Assoziativgesetz in zwei
+Rechenoperationen aufgeteilt werden, aber auch dann kann bei der Addition von
+zwei Zahlen ein Übertrag entstehen und dieser  Übertrag muss bei der nächsten
+Addition von zwei Zahlen hinzuaddiert werden. So würde es immer weiter gehen.
+Der Trick ist: Bei dem Rechenschritt $y_i + d_1 + d_2$ entsteht maximal eine
+Zahl die immer noch kleiner ist als die doppelte Zahlenbasis (in dem Fall
+kleiner 4):</p>
 
-<figure class='equation'>\begin{equation}max(y_i + d_1 \hbox{ und } d_2) = 3 \lt 4\,\,\hbox{mit}\,\, y_i, d_1, d_2\in \{0, 1\}, i\in\mathbb{N}\end{equation}</figure>
+<figure class='equation'>\begin{equation}max(y_i + d_1 + d_2) = 3 \lt 4\end{equation}</figure>
 
 
 <p>Es entsteht also maximal ein Übertrag. Bei der Addition von $d_1 + d_2$ oder
