@@ -3,13 +3,23 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-05-06T22:36:49+02:00</updated>
+  <updated>2019-06-01T23:13:53+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Minicloud]]></title>
+    <link href="https://manuel-io.github.io/blog/2019/06/01/minicloud/"/>
+    <updated>2019-06-01T22:36:48+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2019/06/01/minicloud</id>
+    <content type="html"><![CDATA[<img class="center 650" src="https://manuel-io.github.io/data/images/minicloud.gif" title="Minicloud" alt="Minicloud">
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fortsetzung]]></title>
@@ -807,115 +817,6 @@ microcontroller.</p>
 components. A more robust and good looking design. The posibility
 to give wireless instuctions. All this this will increase the size of
 the car too.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fotowiderstand]]></title>
-    <link href="https://manuel-io.github.io/blog/2017/12/07/fotowiderstand/"/>
-    <updated>2017-12-07T22:16:06+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2017/12/07/fotowiderstand</id>
-    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/ldr.png" width="200" title="Light Dependent Resistor" alt="Light Dependent Resistor">
-
-
-<p>Ich stehe vor der Herausforderung, dass ich einen Mikrocontroller
-(<a href="http://www.atmel.com/Images/Atmel-2486-8-bit-AVR-microcontroller-ATmega8_L_datasheet.pdf">Atmega8</a>) über die umgebenen Lichtverhältnisse informieren möchte und
-dafür auch schon einen licht-abhängigen Widerstand habe (<a href="https://cdn-reichelt.de/documents/datenblatt/A500/A90xxxx%23PE.pdf">A
-906011</a>). Dieser Widerstand ändert seinen Wert in Abhängekit des
-Umgebungslichtes. Dabei bedeutet viel Licht einen kleinen
-Widerstandswert und umgekehrt wenig Licht oder gar Dunkelheit einen
-großen Widerstand. Die genauen Werte ergeben sich aus dem Datenblatt.</p>
-
-<p>Jetzt geht es um den Anschluss am Mikrocontroller. Dieser verfügt über
-einen Analog-Digital-Wandler und kann in Abhängigkeit einer
-Referenzspannung analoge Spannungswerte auf einen 10 bit großen
-nummerischen Wert abbilden (10 bit bedeutet 2<sup>10</sup> = 1024. Also ein
-Zahlenbereich von 0 bis 1023).</p>
-
-<p>Damit an dem  licht-abhängigen Widerstand eine Spannung abfällt, muss
-dieser in einfacher Weise zu einem Spannungsteiler verschaltet werde
-(siehe Abbildung).</p>
-
-<p>Formal stellt lässt sich die Situation durch zwei Formeln beschreiben.
-Die Maschenregel und das Ohmsche Gesetz:</p>
-
-<p>$ U = \oint_G E\, ds = 0 $ oder $ U – U_1 – U_2 = 0 $ oder $ U = U_1 + U_2 $</p>
-
-<figure class='equation'>\begin{equation}\label{eq:ohm}
-U = R_1 \cdot I + R_2 \cdot I
-\Leftrightarrow U = (R_1 + R_2) \cdot I
-\Leftrightarrow I = \frac{U}{R_1 + R_2}\end{equation}</figure>
-
-
-<p>$ U_2 $ ist hier die Spannung am licht-abhängigen Widerstand:</p>
-
-<p>$ U_2 = R_2 \cdot I \quad\hbox{mit}\quad I = \frac{U}{R_1 + R_2} \quad\hbox{aus (\ref{eq:ohm})} $</p>
-
-<figure class='equation'>\begin{equation}\label{eq:ldr}
-U_2 = U \cdot \frac{R_2}{R_2 + R_1}\end{equation}</figure>
-
-
-<p>Damit ist die Spannung am licht-abhängigen Widerstand gegeben. Wie
-schon in der Einleitung beschrieben ändert dieser Widerstand seinen
-Wert $ R_2 $ in Abhängigkeit des Umgebungslichtes. Dabei nimmt der Wert
-zwei Extrema an:</p>
-
-<p>$ R_i $ bei besonders viel Licht und $ R_x $ bei besonders wenig Licht.</p>
-
-<p>Ziel ist jetzt den Widerstand $ R_1 $ so zu dimensionieren, dass am
-licht-abhängigen Widerstand ein möglichst großes Spannungsspektrum
-abfällt. Dazu werden die Werte für $ R_i \hbox{ und } R_x \hbox{ für } R_2
-\hbox{ in (\ref{eq:ldr})} $ eingesetzt und die Differenzspannung weiter diskutiert.</p>
-
-<figure class='equation'>\begin{equation}\Delta U(R_1) = U \cdot \frac{R_x}{R_x + R_1} – U \cdot \frac{R_i}{R_i + R_1}\end{equation}</figure>
-
-
-<p>Jetzt wird die erste Ableitung gebildet  und gleich Null gesetzt, um
-die maximale Differenzspannung ermitteln zu können:</p>
-
-<figure class='equation'>\begin{equation}\frac{d\Delta U(R_1)}{dR_1} = U \cdot \frac{R_i}{(R_i + R_1)^2} - \frac{R_x}{(R_x + R_1)^2}\end{equation}</figure>
-
-
-<p>Weiter wird die Ableitung gleich Null gesetzt: $ \frac{d\Delta
-U(R_1)}{dR_1} \overset{!}{=} 0 $. Da ein Produkt immer Null ist, wenn
-einer der Faktoren Null ist und die Spannung $ U $ per
-Definition größer als Null ist, wird $ U $ hier nicht mehr gebraucht:</p>
-
-<figure class='equation'>\begin{equation}R_i \cdot (R_x + R_1)^2 =  R_x \cdot (R_i + R_1)^2\end{equation}</figure>
-
-
-<p>Ausmultiplizieren und $ R_1 $ ausklammern gibt weiter:</p>
-
-<figure class='equation'>\begin{equation}R_1^2 = \frac{R_i \cdot R_x^2 - R_x \cdot R_i^2}{R_x - R_i}\end{equation}</figure>
-
-
-<p>Und da $ R_x > R_i > 0 $ angenommen wird, steht unter der Wurzel immer
-etwas positives. Und auch das Ergebnis der Wurzel ist nur positiv
-sinnvoll:</p>
-
-<figure class='equation'>\begin{equation}R_1 = \sqrt{R_x \cdot \frac{R_i \cdot R_x - R_i^2}{R_x – R_i}}\end{equation}</figure>
-
-
-<p>Für meinen Fall beträgt der Widerstand bei maximalen Lichteinfall $
-3,5k\Omega $ und bei Dunkelheit $ 180k\Omega $. Damit ist für $ R_1 =
-25k\Omega $ gegeben. Die Differenzspannung beträgt $ \Delta U = 3,78 V
-$, die minimale Spannung beträgt $ U_i = 0,61 V $ und die maximale
-Spannung beträgt $ U_x = 4,39 V $.</p>
-
-<p>Im Analog-Digital-Wandler des Mikrocontrollers werden die analogen
-Werte nummerisch abgebildet:</p>
-
-<figure class='equation'>\begin{equation}ADC = \frac{U_i}{U}\cdot 1024\quad\hbox{und}\quad ADC = \frac{U_x}{U}\cdot 1024\end{equation}</figure>
-
-
-<p>Es ergibt sich ein Wertebereich von 125 bis 900 von viel Licht bis
-wenig Licht. Die Betriebsspannung von $ 5V $ für den Mikrocontroller
-entspricht bei mir auch der Referenzspannung des
-Analog-Digital-Wandlers.</p>
-
-<p>Da es bei meiner Anwendung nicht um hohe Präzision geht, kann ich den
-Analog-Digital-Wandlers Left-Adjusted betreiben werden und auf die
-unteren 2 bit verzichten.</p>
 ]]></content>
   </entry>
   
