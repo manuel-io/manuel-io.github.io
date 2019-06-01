@@ -5,6 +5,9 @@ date: 2019-05-05 20:10:02 +0200
 comments: true
 categories: 
   - 2019
+  - informatics
+  - mathematics
+  - teaching
 ---
 Zuletzt habe ich die Addition von Dezimal- und Binärzahlen visuell
 gegenüber gestellt und gezeigt, dass beide male das gleiche Schema zur
