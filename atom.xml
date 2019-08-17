@@ -3,13 +3,28 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-07-20T08:37:47+02:00</updated>
+  <updated>2019-08-17T14:13:56+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Hitchhiking to the climate summit]]></title>
+    <link href="https://manuel-io.github.io/blog/2019/08/17/hitchhiker-to-the-climate-summit/"/>
+    <updated>2019-08-17T13:22:59+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2019/08/17/hitchhiker-to-the-climate-summit</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/malizia2.png" title="Malizia II" alt="Malizia II">
+
+
+<p>Follow Team Malizia and Greta Thunberg sailing to New York. This Tracker shows
+you the live position: <a href="https://tracker.borisherrmannracing.com/">https://tracker.borisherrmannracing.com/</a>.</p>
+
+<p>Good luck. Also enjoy the journey.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Burger Time]]></title>
@@ -735,95 +750,6 @@ software using lua. But this is a story for the next article.</p>
     <updated>2018-01-28T17:06:18+01:00</updated>
     <id>https://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display</id>
     <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/7seg.png" title="Seven Segment Display" alt="Seven Segment Display">
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Reactions to Meltdown and Spectre]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre/"/>
-    <updated>2018-01-05T14:36:22+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/01/05/reactions-to-meltdown-and-spectre</id>
-    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/meltdown-and-spectre.jpg" title="Meltdown and Spectre" alt="Meltdown and Spectre">
-
-
-<p>A recent <a href="http://www.commitstrip.com/en/2018/01/04/reactions-to-meltdown-and-spectre-exploits/">illustration</a>* by <a href="http://www.commitstrip.com/">CommitStrip</a> got
-the point. Some <a href="https://meltdownattack.com/">researchers</a> discovered a huge leak in the
-hardware which is accompaning our daily life. Many products are
-effected. This is a collection of some reactions and voices until now:</p>
-
-<h3><strong> 15.11.2017 </strong></h3>
-
-<ul>
-<li><a href="https://lwn.net/Articles/738975/">Jonathan Corbet</a>: KAISER: hiding the kernel from user space</li>
-</ul>
-
-
-<h2><strong> 26.12.2017 </strong></h2>
-
-<ul>
-<li><a href="https://www.intel.com/content/www/us/en/support/articles/000025619/software.html">Intel</a>: Intel Management Engine Critical Firmware Update (Intel-SA-00086)</li>
-</ul>
-
-
-<h3><strong> 03.01.2018 </strong></h3>
-
-<ul>
-<li><a href="https://googleprojectzero.blogspot.de/2018/01/reading-privileged-memory-with-side.html">Project Zero</a>: Reading privileged memory with a side-channel</li>
-<li><a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">Mozilla Security Blog</a>: Mitigations landing for new class of timing attack</li>
-<li><a href="https://lkml.org/lkml/2018/1/3/797">Linus Torvalds</a>: Comment</li>
-</ul>
-
-
-<h3><strong> 04.01.2018 </strong></h3>
-
-<ul>
-<li><a href="https://www.tugraz.at/en/tu-graz/services/news-stories/tu-graz-news/singleview/article/schwere-sicherheitsluecke-tu-graz-forscher-zentral-beteiligt/">TU Graz</a>: Researchers discover serious security vulnerabilities</li>
-<li><a href="https://plus.google.com/+AlanCoxLinux/posts/Z6inLSq4iqH">Alan Cox</a>: Advice</li>
-<li><a href="https://reviews.llvm.org/D41723">LLVM</a>: Introduce the &ldquo;retpoline&rdquo; x86 mitigation technique</li>
-<li><a href="https://blog.sesse.net/blog/tech/2018-01-04-23-46_loose_threads_about_spectre_mitigat">Steinar H. Gunderson</a>: Loose threads about Spectre mitigation</li>
-</ul>
-
-
-<h3><strong> 05.01.2018 </strong></h3>
-
-<ul>
-<li><a href="https://cyber.wtf/2018/01/05/behind-the-scene-of-a-bug-collision/">Anders Fogh</a>: Behind the scenes of a bug collision</li>
-<li><a href="https://www.raspberrypi.org/blog/why-raspberry-pi-isnt-vulnerable-to-spectre-or-meltdown/">Raspberry Pi</a>: Why Raspberry Pi isn&rsquo;t vulnerable to Spectre or Meltdown</li>
-<li><a href="https://support.apple.com/en-us/HT208394">Apple</a>: About speculative execution vulnerabilities in ARM-based and Intel CPUs</li>
-<li><a href="https://aws.amazon.com/de/security/security-bulletins/AWS-2018-013/">Amazon</a>: Processor Speculative Execution Research Disclosure</li>
-</ul>
-
-
-<h3><strong> 06.01.2018 </strong></h3>
-
-<ul>
-<li><a href="http://kroah.com/log/blog/2018/01/06/meltdown-status/">Greg Kroah-Hartman</a>: Meltdown and Spectre Linux Kernel Status</li>
-</ul>
-
-
-<p>In addition my laptop has reached the <a href="https://download.lenovo.com/eol/">end of life</a> and is
-no longer supported by the manufacturer and it looks like there are
-many systems they have the same problem. Many people don&rsquo;t even know
-they have a problem. We all can only apply software patches if they&rsquo;re
-reaching us. Holders of most smartphones just bought a buggy device.
-The dream of multi-user-tasking devices got disruptions. Actually, the
-whole idea of memory protection based on the hardware protection mechanism
-which separates the kernel space from the userspace.</p>
-
-<p><em>If you&rsquo;re still confused by the events which are shaking the IT world so
-much and do not understand why action is required maybe the
-<a href="https://xkcd.com/1938/">XKCD</a> can help.</em></p>
-
-<p>*) Published with <a href="http://www.commitstrip.com/en/about/">friendly permissions</a> on a non-commercial blog.</p>
-
-<blockquote><p>
-Meltdown and Spectre are examples of what happens when we reason about
-security in the context of that abstraction, and then encounter minor
-discrepancies between the abstraction and reality.
-</p><address>Eben Upton </address></blockquote>
-
-
 
 ]]></content>
   </entry>
