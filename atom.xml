@@ -3,13 +3,43 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2019-08-17T14:13:56+02:00</updated>
+  <updated>2019-10-26T23:01:28+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Flask: Progressive Download &amp; Large Objects]]></title>
+    <link href="https://manuel-io.github.io/blog/2019/10/26/flask-progressive-download-and-large-objects/"/>
+    <updated>2019-10-26T21:57:41+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2019/10/26/flask-progressive-download-and-large-objects</id>
+    <content type="html"><![CDATA[<p>Often a progressive download is described as a stream but when it comes to the technical side it is important to distinguish. And we are talking about python&rsquo;s flask framework so we are talking about the capabilities of HTTP too. The feature of HTTP for using progressive download is the HTTP range request. And because it is rarely documented how to enable this feature in flask. I decided to write an article about my experiences.</p>
+
+<p>During the implementation it is good to have the  appropriate RFC document at hand (<a href="https://tools.ietf.org/html/rfc7233">RFC7233</a>).</p>
+
+<p>As far as I can say you can use the build in <a href="https://flask.palletsprojects.com/en/1.1.x/api/#flask.send_from_directory">function</a> <code>send_from_directory</code> which supports the feature.
+Let&rsquo;s try it in a curl session, requesting a server which supports HTTP range:</p>
+
+<pre><code>curl -vI -r 10-20  http://localhost:5000/files/download/e8cca36cbc06f670
+</code></pre>
+
+<p>Asking the server for a certain Range <code>Range: bytes=10-20</code> and receiving a valid answer:</p>
+
+<pre><code>HTTP/1.0 206 PARTIAL CONTENT
+Content-Type: image/jpeg
+Accept-Ranges: bytes
+Content-Range: bytes 10-20/2870224
+Content-Length: 11
+</code></pre>
+
+<p>The server supports bytes and is returning <code>11 bytes</code> of a file with <code>2870224 bytes</code> in total. This is a nice feature but how about files that do not lie in the file system. I often store files in a database. This is when you have to implement the whole procedure by yourself. But it&rsquo;s still possible and thanks to the <a href="https://www.postgresql.org/docs/10/largeobjects.html">large objects</a> feature of PostgreSQL you can fetch for a certain range of bytes from a file stored in the database.</p>
+
+<p>I&rsquo;m using this technique in a newer development version of the minicloud project. Check out my example on the <a href="https://github.com/manuel-io/minicloud/blob/f00d9c3136954929d193fbb74a683f8dea773d0c/files.py#L243-L289">Github page</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hitchhiking to the climate summit]]></title>
@@ -741,16 +771,6 @@ application with some Arduino foo. This was a bit annoying because I
 ensured in advance to have the tools <a href="https://github.com/pfalcon/esp-open-sdk">building the latest NodeMCU
 firmware</a>. Now I decided to script my own measurement
 software using lua. But this is a story for the next article.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DIY: 7-Segment Display]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display/"/>
-    <updated>2018-01-28T17:06:18+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/01/28/diy-7-segment-display</id>
-    <content type="html"><![CDATA[<img src="https://manuel-io.github.io/data/images/7seg.png" title="Seven Segment Display" alt="Seven Segment Display">
-
 ]]></content>
   </entry>
   

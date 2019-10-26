@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://manuel-io.github.io/blog/2019/10/26/flask-progressive-download-and-large-objects/</loc>
+<lastmod>2019-10-26T21:57:41+02:00</lastmod>
+</url>
+<url>
 <loc>https://manuel-io.github.io/blog/2019/08/17/hitchhiker-to-the-climate-summit/</loc>
 <lastmod>2019-08-17T13:22:59+02:00</lastmod>
 </url>
@@ -953,6 +957,9 @@
 </url>
 <url>
 <loc>https://manuel-io.github.io/blog/categories/climate/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/http/</loc>
 </url>
 <url>
 <loc>https://manuel-io.github.io/data/dat/css-animation-101.html</loc>
