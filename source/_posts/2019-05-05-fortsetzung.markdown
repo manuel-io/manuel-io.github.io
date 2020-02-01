@@ -11,7 +11,7 @@ categories:
 ---
 Zuletzt habe ich die Addition von Dezimal- und Binärzahlen visuell
 gegenüber gestellt und gezeigt, dass beide male das gleiche Schema zur
-Anwendung kommt. Damit eine arithmetische Logikeinheit ([ALU][alu], a.k. Computer) mit
+Anwendung kommt. Damit eine arithmetische Logikeinheit ([ALU][alu], aka Computer) mit
 dem binären Schema umgehen kann müssen sämtliche Rechenoperationen durch binäre
 Operatoren ausgedrückt werden. In dem Fall `and`, `or` und `xor`. Diese
 Operatoren können wiederum durch elektrische Schaltelemente umgesetzt werden.
