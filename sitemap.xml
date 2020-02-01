@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://manuel-io.github.io/blog/2020/02/01/recent-work-end-2019/</loc>
+<lastmod>2020-02-01T10:00:59+01:00</lastmod>
+</url>
+<url>
 <loc>https://manuel-io.github.io/blog/2019/10/26/flask-progressive-download-and-large-objects/</loc>
 <lastmod>2019-10-26T21:57:41+02:00</lastmod>
 </url>
@@ -960,6 +964,21 @@
 </url>
 <url>
 <loc>https://manuel-io.github.io/blog/categories/http/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/2020/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/odroid/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/lte/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/simulation/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/canvas/</loc>
 </url>
 <url>
 <loc>https://manuel-io.github.io/data/dat/css-animation-101.html</loc>
