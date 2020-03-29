@@ -24,9 +24,6 @@ das jemand einfach mit `curl`. Ist lehrreich.
     headers = { 'Content-Type': 'text/xml; charset=utf-8'
               , 'SOAPACTION': 'urn:schemas-upnp-org:service:ContentDirectory:1#Browse'
               }
-
-    result = requests.get('%s%s' % (minidlna, '/rootDesc.xml'))
-    root = parseString(result.content)
     
     def get_object_id(index):
         return '''
