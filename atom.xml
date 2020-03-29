@@ -3,7 +3,7 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-03-29T23:07:22+02:00</updated>
+  <updated>2020-03-29T23:21:36+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
@@ -30,9 +30,6 @@ minidlna = 'http://192.168.178.42:8200'
 headers = { 'Content-Type': 'text/xml; charset=utf-8'
           , 'SOAPACTION': 'urn:schemas-upnp-org:service:ContentDirectory:1#Browse'
           }
-
-result = requests.get('%s%s' % (minidlna, '/rootDesc.xml'))
-root = parseString(result.content)
 
 def get_object_id(index):
     return '''
