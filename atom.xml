@@ -3,13 +3,129 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-02-21T23:27:50+01:00</updated>
+  <updated>2020-03-29T23:07:22+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Query MiniDLNA to list media files]]></title>
+    <link href="https://manuel-io.github.io/blog/2020/03/29/query-minidlna-to-list-media-files/"/>
+    <updated>2020-03-29T22:44:46+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2020/03/29/query-minidlna-to-list-media-files</id>
+    <content type="html"><![CDATA[<p>Eine kleine Fingerübung um einen MiniDLNA Server im lokalen Netzt abzufragen.
+<a href="https://electroblock.wordpress.com/2016/02/14/upnp-dlna-analyse-per-cmdline-mit-curl/">Hier macht</a>
+das jemand einfach mit <code>curl</code>. Ist lehrreich.</p>
+
+<pre><code>#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import requests
+from xml.dom.minidom import parseString
+
+minidlna = 'http://192.168.178.42:8200'
+headers = { 'Content-Type': 'text/xml; charset=utf-8'
+          , 'SOAPACTION': 'urn:schemas-upnp-org:service:ContentDirectory:1#Browse'
+          }
+
+result = requests.get('%s%s' % (minidlna, '/rootDesc.xml'))
+root = parseString(result.content)
+
+def get_object_id(index):
+    return '''
+      &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;s:Envelope xmlns:ns0="urn:schemas-upnp-org:service:ContentDirectory:1" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+          &lt;s:Body&gt;
+            &lt;ns0:Browse&gt;
+              &lt;ObjectID&gt;%s&lt;/ObjectID&gt;
+              &lt;BrowseFlag&gt;BrowseDirectChildren&lt;/BrowseFlag&gt;
+              &lt;Filter&gt;*&lt;/Filter&gt;
+            &lt;/ns0:Browse&gt;
+          &lt;/s:Body&gt;
+        &lt;/s:Envelope&gt;
+      &lt;/xml&gt;
+    ''' % index
+
+def parse_service(service):
+    name = service.getElementsByTagName('serviceType')[0].firstChild.nodeValue
+    url = service.getElementsByTagName('controlURL')[0].firstChild.nodeValue
+    return { 'name': name
+           , 'url': url
+           }
+
+def parse_container(container):
+    index = container.getAttribute('id')
+    title = container.getElementsByTagName('dc:title')[0].firstChild.nodeValue
+    return { 'index': index
+           , 'title': title
+           }
+
+def parse_item(item):
+    index = item.getAttribute('id')
+    title = item.getElementsByTagName('dc:title')[0].firstChild.nodeValue
+    result = item.getElementsByTagName('res')[0]
+    return { 'index': index
+           , 'title': title
+           , 'size': result.getAttribute('size')
+           , 'duration': result.getAttribute('duration')
+           , 'bitrate': result.getAttribute('bitrate')
+           , 'sampling': result.getAttribute('sampleFrequency')
+           , 'channels': result.getAttribute('nrAudioChannels')
+           , 'resolution': result.getAttribute('resolution')
+           , 'url': result.firstChild.nodeValue
+           }
+
+result = requests.get('%s%s' % (minidlna, '/rootDesc.xml'))
+root = parseString(result.content)
+
+services = list(map(lambda service: parse_service(service), root.getElementsByTagName('service')))
+content = [ service for service in services if service['name'] == 'urn:schemas-upnp-org:service:ContentDirectory:1' ][0]
+request = '%s%s' % (minidlna, content['url'])
+
+result = requests.post(request, data=get_object_id('0'), headers=headers);
+root = parseString(result.content)
+body = parseString(root.getElementsByTagName('Result')[0].firstChild.nodeValue)
+
+containers = list(map(lambda container: parse_container(container), body.getElementsByTagName('container')))
+for container in containers:
+    # print(container['index'], container['title'])
+
+    result = requests.post(request, data=get_object_id(container['index']), headers=headers);
+    root = parseString(result.content)
+    body = parseString(root.getElementsByTagName('Result')[0].firstChild.nodeValue)
+    # pretty = body.toprettyxml()
+    # print(pretty)
+
+    folders = list(map(lambda container: parse_container(container), body.getElementsByTagName('container')))
+    for folder in folders:
+        # print(folder['index'], folder['title'])
+
+        result = requests.post(request, data=get_object_id(folder['index']), headers=headers);
+        root = parseString(result.content)
+        body = parseString(root.getElementsByTagName('Result')[0].firstChild.nodeValue)
+        # pretty = body.toprettyxml()
+        # print(pretty)
+
+        items = list(map(lambda item: parse_item(item), body.getElementsByTagName('item')))
+        for item in items:
+            print('Index', item['index'])
+            print('Title', item['title'])
+            print('Size', item['size'])
+            print('Duration', item['duration'])
+            print('Bitrate', item['bitrate'])
+            print('Sampling', item['sampling'])
+            print('Channels', item['channels'])
+            print('Resolution', item['resolution'])
+            print('Url', item['url'])
+            print('----')
+
+        print('----')
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Laugenbrezeln]]></title>
@@ -733,36 +849,6 @@ Umwelt nicht so viel Ausdünsten würdest.</p></blockquote>
 
 <p>So würde ich mein Erlebnis heute Morgen auf dem Weg zum Einkauf
 zusammenfassen. Ich lasse das einfach mal so stehen.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Soja Frikassee]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/05/27/soja-frikassee/"/>
-    <updated>2018-05-27T13:30:53+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/05/27/soja-frikassee</id>
-    <content type="html"><![CDATA[<p>So ein Foo (⚡⚠☠☔). Ich habe diesen Artikel schon geschrieben und
-wollte dieses Rezept möglichst vielen Menschen bekannt machen um diese
-von dem großartigen Geschmack dieses veganen Gerichtes zu überzeugen
-und dann war es einfach weg. Und um dann nochmal zu spüren wie
-schmerzlich Datenverlust sein kann, wenn man kein Backup hat, ist der
-ursprüngliche Text für diesen Artikel auch verloren.</p>
-
-<p>Die gute Nachricht: Der Text war gar nicht so wichtig und bestand nur
-aus den üblichen Floskeln. Das Rezept für das <a href="https://vkitchen.herokuapp.com/recipes/5/embedded">Frikassee</a>
-ist aus meiner Rezepte-Datenbank und kann hier einfach wieder
-eingebunden werden.</p>
-
-<p>Viel Spaß beim Kochen!</p>
-
-<iframe
-  style='width:100%;height:500px;'
-  src='https://vkitchen.herokuapp.com/recipes/5/embedded'
-  frameborder='0'>
-</iframe>
-
-
-
 ]]></content>
   </entry>
   
