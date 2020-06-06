@@ -5,6 +5,7 @@
 }
 
 html {
+  background-color: $site-bg;
   background-image: url(/style/site.png);
   background-repeat: repeat;
 }
@@ -12,10 +13,11 @@ html {
 body {
   position: absolute;
   width: $max-width;
-  background-color: $site-bg; 
+  background-color: $site-bg;
   border: 5px solid $site-border;
   margin-top: $margin;
   margin-left: $margin;
+  color: $color1;
 
   header.site > h1 {
     @extend .defaultMono;
