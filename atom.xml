@@ -3,13 +3,41 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-06-06T08:47:46+02:00</updated>
+  <updated>2020-06-06T12:36:40+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Einfach nur Leer]]></title>
+    <link href="https://manuel-io.github.io/blog/2020/06/06/einfach-nur-leer/"/>
+    <updated>2020-06-06T11:36:12+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2020/06/06/einfach-nur-leer</id>
+    <content type="html"><![CDATA[<p>Mir ist gerade mal aufgefallen, dass es hier im Blog die letzten Monate nicht
+passiert ist. Dabei ist der Plan doch wenigstes einmal im Monat ein Update zu
+geben. Mal substanzieller mal weniger.</p>
+
+<p>Dabei ist einiges passiert. Ein Killer-Virus überschwemmt die Welt, Rezo
+schlüsselt ein altes/neues Problem in einem <a href="https://youtu.be/hkncijUZGKA">Video</a> auf, für Ubuntu gibt
+es eine neue <a href="https://releases.ubuntu.com/20.04/">LTS Version</a> und … Wobei in den medialen Kanälen (News, TV,
+Podcasts, Videos) gibt es seit Monaten nur ein Thema.</p>
+
+<p>Kurz dachte Jemand der erzwungene Bewusstseinswandel durch das Virus könnte
+auch Einfluss auf andere wichtige Themen haben. Wie gehen wir mit Menschen und
+Tieren um oder wollen wir den Klimawandel vielleicht doch noch ernst nehmen.
+Sieht aber nicht so aus.</p>
+
+<p>Ganz nebenbei wird es Sommer und ich biete ein mediterranes Rezepte an:</p>
+
+<iframe style='width:100%;height:500px;' src='https://vkitchen.herokuapp.com/recipes/176/embedded?locale=de&published=false' frameborder='0'> </iframe>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Query MiniDLNA to list media files]]></title>
@@ -825,27 +853,6 @@ Seite gebastelt mit der nach veganen Rezepten gesucht werden kann:</p>
 
 <p><a href="https://vegme.herokuapp.com/">VegMe!</a>. Keine Ahnung ob das was ist. Schöne
 Bilder für ideenlose Tage sind aber dabei: <a href="https://vegme.herokuapp.com/queries?health=vegan&amp;max_cal=500&amp;q=sushi&amp;search_id=8003b097-142b-40e8-83b8-f0debcd106ba">Beispiel</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Kurze Notiz]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/06/22/kurze-notiz/"/>
-    <updated>2018-06-22T11:33:05+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/06/22/kurze-notiz</id>
-    <content type="html"><![CDATA[<blockquote><p>… und merke dir: Du bis nur am Leben um in einer Tierfabrik gemästet
-zu werden um anschließend auf einem Teller zu landen. Wenn du auf dem
-Weg zur Tierfabrik deine Nase durch die Gitterstäbe des Transportes
-steckst und die Aussicht mit frischer Luft und Sonne genießen
-kannst, dann freue dich, denn in der Tierfabrik gibt es weder
-frische Luft noch Sonne und Regen. Wir Menschen würden an den
-Bedingungen kaputt gehen, aber mache dir keine sorgen, wir versorgen
-dich gut mit Medikamenten denn kranke Tiere sind nur schwer
-verdaulich. Und noch etwas: Es wäre schön, wenn du zum Wohle der
-Umwelt nicht so viel Ausdünsten würdest.</p></blockquote>
-
-<p>So würde ich mein Erlebnis heute Morgen auf dem Weg zum Einkauf
-zusammenfassen. Ich lasse das einfach mal so stehen.</p>
 ]]></content>
   </entry>
   
