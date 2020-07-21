@@ -29,6 +29,7 @@ body {
         margin-right: $margin/2;
       }
 
+      p, ol,
       p, ul {
         @extend .defaultSans;
         margin-top: $margin/2;
@@ -38,6 +39,7 @@ body {
         padding-bottom: $padding/2;
       }
 
+      ol,
       ul {
         @extend .defaultSans;
         display: block;
@@ -46,6 +48,10 @@ body {
         margin-bottom: 0px;
         padding-bottom: $padding/2;
         margin-left: (2 * $margin);
+      }
+
+      ol {
+        list-style-type: decimal;
       }
 
       figure.img, img, video {
