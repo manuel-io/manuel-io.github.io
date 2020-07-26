@@ -3,13 +3,39 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-06-06T12:36:40+02:00</updated>
+  <updated>2020-07-26T21:51:30+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Verschwörungstheologien]]></title>
+    <link href="https://manuel-io.github.io/blog/2020/07/21/verschworungstheologien/"/>
+    <updated>2020-07-21T06:43:24+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2020/07/21/verschworungstheologien</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>Die Corona-Warn-App ist nur deshalb so ein IT-Technisches Vorzeigeprojekt um
+uns hinterher noch viel mehr frustrieren zu können.</p></li>
+<li><p>Um den Begriff Vegan in der Öffentlichkeit zu verbreiten sind Medienhäuser
+angewiesen den Namen Attila Hildmann möglichst oft zu verwenden.</p></li>
+<li><p>Breaking News: Menschen die sich jetzt schon impfen lassen dürfen trotz
+Klima-Kollaps auch noch bis 2050 SUV fahren und Schnitzel essen.</p></li>
+<li><p>Um Menschen in schwierigen Zeiten beim Geldausgeben zu helfen haben Experten
+beschlossen den Rundfunkbeitrag zu erhöhen.</p></li>
+<li><p>Internet Meldungen berichten, dass das Killer-Virus eine Erfindung ist um
+Veganern, die sich nervlich eh schon am Limit befinden müssen, auch noch das
+letzte bisschen Verstand zu nehmen.</p></li>
+<li><p>Eilmeldung: Bill Gates hat sein Betriebssystem Microsoft Windows nur
+millionenfach verkauft um im Richtigen Moment die Weltherrschaft an sich zu
+ziehen. Ein Mensch mit dem Namen Richard Stallman soll es schon lange vorher
+gewusst haben.</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Einfach nur Leer]]></title>
@@ -836,23 +862,6 @@ frameborder='0'> </iframe>
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[VegMe!]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/06/30/vegme/"/>
-    <updated>2018-06-30T13:46:31+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/06/30/vegme</id>
-    <content type="html"><![CDATA[<p>Ich habe im Netz eine Firma gefunden die das Internet nach Rezepten
-etc. absucht und irgendwie Informationen zusammenstellt: „Our goal is
-to capture the world&rsquo;s food knowledge“ (<a href="https://www.edamam.com/">https://www.edamam.com/</a>). Die
-haben eine Schnittstelle (API) die Entwickler auch mal einfach so
-benutzen können. Zwei Entwicklerinnen haben daraus mal eine
-Seite gebastelt mit der nach veganen Rezepten gesucht werden kann:</p>
-
-<p><a href="https://vegme.herokuapp.com/">VegMe!</a>. Keine Ahnung ob das was ist. Schöne
-Bilder für ideenlose Tage sind aber dabei: <a href="https://vegme.herokuapp.com/queries?health=vegan&amp;max_cal=500&amp;q=sushi&amp;search_id=8003b097-142b-40e8-83b8-f0debcd106ba">Beispiel</a>.</p>
 ]]></content>
   </entry>
   

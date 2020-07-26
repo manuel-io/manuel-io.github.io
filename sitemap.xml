@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://manuel-io.github.io/blog/2020/07/21/verschworungstheologien/</loc>
+<lastmod>2020-07-21T06:43:24+02:00</lastmod>
+</url>
+<url>
 <loc>https://manuel-io.github.io/blog/2020/06/06/einfach-nur-leer/</loc>
 <lastmod>2020-06-06T11:36:12+02:00</lastmod>
 </url>
@@ -991,6 +995,9 @@
 </url>
 <url>
 <loc>https://manuel-io.github.io/blog/categories/canvas/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/fake/</loc>
 </url>
 <url>
 <loc>https://manuel-io.github.io/data/dat/css-animation-101.html</loc>
