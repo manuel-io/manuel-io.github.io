@@ -10,7 +10,7 @@ categories:
   - vegan
 ---
 
-Mir ist gerade mal aufgefallen, dass es hier im Blog die letzten Monate nicht
+Mir ist gerade mal aufgefallen, dass hier im Blog die letzten Monate nichts
 passiert ist. Dabei ist der Plan doch wenigstes einmal im Monat ein Update zu
 geben. Mal substanzieller mal weniger.
 
