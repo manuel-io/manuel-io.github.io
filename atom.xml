@@ -3,13 +3,88 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-07-26T21:51:30+02:00</updated>
+  <updated>2020-09-06T17:41:57+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Getriebe-Übersetzung (1:96)]]></title>
+    <link href="https://manuel-io.github.io/blog/2020/09/06/getriebe-ubersetzung-1-96/"/>
+    <updated>2020-09-06T15:38:39+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2020/09/06/getriebe-ubersetzung-1-96</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/gear_ratio.png" title="Compound Gear Train" alt="Compound Gear Train">
+
+
+<p>Als Nachtrag zum damaligen <a href="https://manuel-io.github.io/blog/2017/12/25/papercraft-car/">Papercraft Car</a> möchte ich noch etwas
+bringen. Es ging damals um den Antrieb. Ich habe mich für einen
+Gleichstrom-Motor entschieden. So brauchte es kein Schaltgetriebe sondern ein
+Wechsel der Fahrtrichtung konnte durch einfache Umpolung erreicht werden. Die Umpolung macht dann
+eine H-Brücke (z.B. <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwi06bed3NTrAhWN_aQKHXmSDy0QFjAAegQIAhAB&amp;url=https%3A%2F%2Fwww.ti.com%2Flit%2Fds%2Fsymlink%2Fl293.pdf&amp;usg=AOvVaw1YcskQ0KtfiQT_cj4hg6Op">L293x</a> von Texas Instruments).</p>
+
+<p>Die Charakteristik für den DC-Motor sieht folgendermaßen aus:</p>
+
+<ul>
+<li>Leistung: $ 3W $</li>
+<li>Spannung: $ 6V $</li>
+<li>Drehzahl: $ 11520rpm $ bzw. $ 192Hz $</li>
+</ul>
+
+
+<p>Die Räder am Papercraft Car haben einen Durchmesser von $d = 45mm$ also ein Radius
+von $22.5mm$. Oder besser gesagt da es hier um Kraftübertragungen geht: Der
+Lastarm beträgt $r = 22.5mm$.</p>
+
+<p>Im Weiteren wird davon Ausgegangen, dass die gesamte Energie die in den
+DC-Motor gesteckt wird auch an der Antriebsachse zur Verfügung steht. Es ergibt
+sich dann:</p>
+
+<figure class='equation'>\begin{equation}Leistung (P) = Drehmoment (M) \cdot Drehzahl (n)\end{equation}</figure>
+
+
+<p>Für die Achse am DC-Motor ergibt sich dann ein Drehmoment:</p>
+
+<ul>
+<li>Drehmoment: $ M= 3W \cdot s/192 = 1.56 \cdot 10^{-2}Nm $</li>
+<li>Drehzahl: $ n = 192Hz $</li>
+<li>Bahngeschwindigkeit: $ v = 192Hz \cdot\pi\cdot 0.045m = 27.14m/s = 97.72km/h $</li>
+</ul>
+
+
+<p>Mit Getriebe-Übersetzung (1:96)</p>
+
+<ul>
+<li>Drehmoment: $ M = 96 \cdot 1.56 \cdot 10^{-2}Nm = 1.5Nm $</li>
+<li>Drehzahl: $ n = P/M = 3W/1.5Nm = 2Hz $</li>
+<li>Bahngeschwindigkeit: $ v = 2Hz \cdot\pi\cdot 0.045m = 0.28m/s = 1km/h $</li>
+</ul>
+
+
+<p>Wir sind durch das Getriebe also einiges langsamer geworden. Wo ist also jetzt
+der Vorteil? Aufgefallen ist vielleicht, dass die Leistung mit und ohne
+Getriebe die Gleiche geblieben ist. In der hier idealen Welt gibt es keine
+Verluste also muss die Gesamtleistung im System konstant bleiben.</p>
+
+<p>Durch das Getriebe wird ein größeres Drehmoment auf der Antriebsachse erreicht
+und da der Lastarm am Rad eine konstante Länge hat, ergibt sich für die
+Lastkraft:</p>
+
+<figure class='equation'>\begin{align}& Drehmoment (M) = Lastkraft (F) \cdot Lastarm (r) \\
+& Lastkraft (F) = Drehmoment  (M) /  Lastarm (r) \nonumber\\\end{align}</figure>
+
+
+<p>Und das Verhältnis ist:</p>
+
+<figure class='equation'>\begin{equation}\frac{0.69N}{66N}\end{equation}</figure>
+
+
+<p>Auffällig ist vielleicht das sich der Faktor $96$ hier durchzieht. Da die Zwischenergebnisse hier immer wieder
+gerundet dargestellt werden kommt es zu kleineren Abweichungen.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Verschwörungstheologien]]></title>
@@ -42,7 +117,7 @@ gewusst haben.</p></li>
     <link href="https://manuel-io.github.io/blog/2020/06/06/einfach-nur-leer/"/>
     <updated>2020-06-06T11:36:12+02:00</updated>
     <id>https://manuel-io.github.io/blog/2020/06/06/einfach-nur-leer</id>
-    <content type="html"><![CDATA[<p>Mir ist gerade mal aufgefallen, dass es hier im Blog die letzten Monate nicht
+    <content type="html"><![CDATA[<p>Mir ist gerade mal aufgefallen, dass hier im Blog die letzten Monate nichts
 passiert ist. Dabei ist der Plan doch wenigstes einmal im Monat ein Update zu
 geben. Mal substanzieller mal weniger.</p>
 
@@ -831,37 +906,6 @@ auch nur die Hälfte der Periode genommen:</p>
 <a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling/Bi-elliptischer_Transfer">Bi-elliptischen</a> Transfer erweitert werden kann und dass die
 ESA in einem Video „<a href="https://www.youtube-nocookie.com/embed/M2_NeFbFcSw">Soyuz rendezvous and docking explained</a>“ den Flug
 zur ISS mit jenem Manöver beschreibt.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Vegane Pizza Woche]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche/"/>
-    <updated>2018-08-12T11:15:26+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/08/12/vegane-pizza-woche</id>
-    <content type="html"><![CDATA[<p>Die vegane Kitchen ist gerade das einzige Project für das ich Zeit
-finde. Na klar für Kochen muss doch immer Zeit bleiben und als
-Veganer hat man in meiner Wohngegend auch gar keine andere Chance.</p>
-
-<p>Ich kann Fortschritte bezüglich meiner Rezepte-Datenbank
-berichten. Es ist jetzt möglich ein Rezept auch mit Verbindungen zu anderen
-Rezepten zu veröffentlichen und auf einer Seite anzuzeigen.
-Problematisch wird es wenn ein Rezept mit einem Rezept verbunden ist,
-dass wiederum mit einem Rezept verbunden ist. Diese Kette kann man
-beliebig weiter spinnen. Die Software erlaubt das Prinzip.</p>
-
-<p>Gute Beispiele, die jetzt gelöst sind, sind die Pizza Rezepte.
-<a href="https://vkitchen.herokuapp.com/recipes/140/embedded?locale=de">Pizza Funghi</a>, <a href="https://vkitchen.herokuapp.com/recipes/143/embedded?locale=de">Pizza Hawaii</a> und <a href="https://vkitchen.herokuapp.com/recipes/57/embedded?locale=de">Lahmacun</a>. Zwei Pizzen haben
-z.B. den gleichen Teig und die gleiche Sauce. Da bietet es sich einfach an
-ein Rezept für den Pizzateig und eines für die Pizzasauce
-anzulegen um dann die Pizzen mit Teig und Sauce zu verbinden.</p>
-
-<iframe style='width:100%;height:500px;'
-src='https://vkitchen.herokuapp.com/recipes/143/embedded?locale=de&published=false'
-frameborder='0'> </iframe>
-
-
-
 ]]></content>
   </entry>
   
