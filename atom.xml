@@ -3,13 +3,70 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-09-06T17:41:57+02:00</updated>
+  <updated>2020-09-13T12:51:25+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Zahnradgetriebe]]></title>
+    <link href="https://manuel-io.github.io/blog/2020/09/13/zahnradgetriebe/"/>
+    <updated>2020-09-13T12:57:52+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2020/09/13/zahnradgetriebe</id>
+    <content type="html"><![CDATA[<p>Als Fortsetzung zum letzten Beitrag möchte ich hier nochmal darstellen wie es
+zur Umwandlung von Drehmoment und Drehzahl kommt. Gebraucht wird hier nur das
+Hebelgesetz von Archimedes:</p>
+
+<blockquote><p>Die Krafteinwirkung an einem Drehpunkt erhöht sich proportional zu Länge des Hebels.</p></blockquote>
+
+<p>Alle Elemente sind an einem Zahnrad zur finden. Der Hebel ist der Radius vom
+Zahnrad und der Drehpunkt ist die Achse auf der das Zahnrad montiert ist.</p>
+
+<figure class='equation'>\begin{equation}M\propto F \quad\hbox{und}\quad M = r\cdot F\end{equation}</figure>
+
+
+
+
+<img class="left" src="https://manuel-io.github.io/data/images/gear_train.png" title="Gear Train" alt="Gear Train">
+
+
+<p>Ein Beispiel ist in der Abbildung zu sehen. An dem kleinen Zahnrad auf
+Achse (1) hängt ein Gewicht. Mit der Gravitationsbeschleunigung $g$
+wirkt also eine Kraft senkrecht zum Hebelarm, die eine Rotation in
+Pfeilrichtung am Drehpunkt von Achse (1) bewirkt. Nach Archimedes wird ein
+Drehmoment auf Achse (1) erzeugt.</p>
+
+<figure class='equation'>\begin{equation}F_1 = 1kg\cdot 10\frac{m}{s^2} = 10N\end{equation}</figure>
+
+
+<p>Da das kleine Zahnrad auf Achse (1) mit dem 3-mal so großen Zahnrad auf Achse
+(2) verzahnt ist, gibt es so die Kraft $F_1$ weiter. In Folge fängt auch das
+große Zahnrad an sich entgegengesetzt zu drehen und erzeugt auf der Achse (2)
+ebenfalls ein Drehmoment.</p>
+
+<p>Das große Zahnrad hat dreimal so viele Zähne und braucht dementsprechend drei
+mal länger für eine Umdrehung. Dementsprechend ist die Drehzahl auf Achse (2)
+nur noch $1/3$ von der Ursprünglichen.</p>
+
+<p>Der Hebelarm beim großen Zahnrad auf Achse (2) ist aber drei mal Länger (3r) als
+beim Kleinen auf Achse (1) und dementsprechend ist das Drehmoment bei
+gleichbleibender Kraft $F_1$ drei mal größer.</p>
+
+<p>Resultieren kann das Ergebnis an dem kleinen Zahnrad auf Achse (2) betrachtet
+werden. Dieses Zahnrad ist nur noch Abhängig von dem Drehmoment und der
+Drehzahl auf Achse (2) hat aber die gleiche Größe wie das Kleine auf Achse (1).</p>
+
+<p>Wenn das Drehmoment auf Achse (2) $3\times$ größer geworden und der Hebelarm ($r$)
+gleich geblieben ist, muss also nach Archimedes die dreifache Kraft auf den
+Drehpunkt von Achse (2) wirken.</p>
+
+<figure class='equation'>\begin{equation}F_2 = 3\cdot 1kg\cdot 10\frac{m}{s^2} = 30N\end{equation}</figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Getriebe-Übersetzung (1:96)]]></title>
@@ -22,21 +79,21 @@
 <p>Als Nachtrag zum damaligen <a href="https://manuel-io.github.io/blog/2017/12/25/papercraft-car/">Papercraft Car</a> möchte ich noch etwas
 bringen. Es ging damals um den Antrieb. Ich habe mich für einen
 Gleichstrom-Motor entschieden. So brauchte es kein Schaltgetriebe sondern ein
-Wechsel der Fahrtrichtung konnte durch einfache Umpolung erreicht werden. Die Umpolung macht dann
-eine H-Brücke (z.B. <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwi06bed3NTrAhWN_aQKHXmSDy0QFjAAegQIAhAB&amp;url=https%3A%2F%2Fwww.ti.com%2Flit%2Fds%2Fsymlink%2Fl293.pdf&amp;usg=AOvVaw1YcskQ0KtfiQT_cj4hg6Op">L293x</a> von Texas Instruments).</p>
+Wechsel der Fahrtrichtung konnte durch einfache Umpolung erreicht werden. Die
+Umpolung macht dann eine H-Brücke (z.B. <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwi06bed3NTrAhWN_aQKHXmSDy0QFjAAegQIAhAB&amp;url=https%3A%2F%2Fwww.ti.com%2Flit%2Fds%2Fsymlink%2Fl293.pdf&amp;usg=AOvVaw1YcskQ0KtfiQT_cj4hg6Op">L293x</a> von Texas Instruments).</p>
 
 <p>Die Charakteristik für den DC-Motor sieht folgendermaßen aus:</p>
 
 <ul>
 <li>Leistung: $ 3W $</li>
 <li>Spannung: $ 6V $</li>
-<li>Drehzahl: $ 11520rpm $ bzw. $ 192Hz $</li>
+<li>Drehzahl: $ 11520rpm\,\hbox{bzw.}\, 192Hz $ (Leerlaufdrehzahl)</li>
 </ul>
 
 
-<p>Die Räder am Papercraft Car haben einen Durchmesser von $d = 45mm$ also ein Radius
-von $22.5mm$. Oder besser gesagt da es hier um Kraftübertragungen geht: Der
-Lastarm beträgt $r = 22.5mm$.</p>
+<p>Die Räder am Papercraft Car haben einen Durchmesser von $d = 45mm$ also ein
+Radius von $22,5mm$. Oder besser gesagt, da es hier um Kraftübertragungen geht,
+der Lastarm beträgt $r = 22,5mm$.</p>
 
 <p>Im Weiteren wird davon Ausgegangen, dass die gesamte Energie die in den
 DC-Motor gesteckt wird auch an der Antriebsachse zur Verfügung steht. Es ergibt
@@ -48,41 +105,56 @@ sich dann:</p>
 <p>Für die Achse am DC-Motor ergibt sich dann ein Drehmoment:</p>
 
 <ul>
-<li>Drehmoment: $ M= 3W \cdot s/192 = 1.56 \cdot 10^{-2}Nm $</li>
-<li>Drehzahl: $ n = 192Hz $</li>
-<li>Bahngeschwindigkeit: $ v = 192Hz \cdot\pi\cdot 0.045m = 27.14m/s = 97.72km/h $</li>
+<li>Drehmoment: $ M_1= 3W \cdot s/192 = 1,5625 \cdot 10^{-2}Nm $</li>
+<li>Drehzahl: $ n_1 = 192Hz $</li>
+<li>Bahngeschwindigkeit: $ v_1 = \hbox{?} $</li>
 </ul>
 
 
-<p>Mit Getriebe-Übersetzung (1:96)</p>
+<figure class='equation'>\begin{equation}Bahngeschwindigkeit (v) = Drehzahl (n)\cdot Radumfang (\pi\cdot d)\end{equation}</figure>
+
+
+<p>Und damit eine Bahngeschwindigkeit:</p>
+
+<figure class='equation'>\begin{equation}v_1 = 192Hz \cdot\pi\cdot 45\cdot 10^{-3}m = 27,1434m/s \approx 97,7km/h\end{equation}</figure>
+
+
+<p>Mit Getriebe-Übersetzung (1:96): Ein Zahnradgetriebe zwischen Antriebsachse
+(driver gear) und Radachse (driven gear) ergibt die Rechnung:</p>
 
 <ul>
-<li>Drehmoment: $ M = 96 \cdot 1.56 \cdot 10^{-2}Nm = 1.5Nm $</li>
-<li>Drehzahl: $ n = P/M = 3W/1.5Nm = 2Hz $</li>
-<li>Bahngeschwindigkeit: $ v = 2Hz \cdot\pi\cdot 0.045m = 0.28m/s = 1km/h $</li>
+<li>Drehmoment: $ M_2 = 96 \cdot 1,5625 \cdot 10^{-2}Nm = 1,5Nm $</li>
+<li>Drehzahl: $ n_2 = P/M_2 = 3W/1,5Nm = 2Hz $</li>
+<li>Bahngeschwindigkeit: $ v_2 = 0,2827m/s \approx 1,02km/h $</li>
 </ul>
 
 
-<p>Wir sind durch das Getriebe also einiges langsamer geworden. Wo ist also jetzt
-der Vorteil? Aufgefallen ist vielleicht, dass die Leistung mit und ohne
-Getriebe die Gleiche geblieben ist. In der hier idealen Welt gibt es keine
-Verluste also muss die Gesamtleistung im System konstant bleiben.</p>
+<p>Die Drehzahl und damit auch die Bahngeschwindigkeit ist durch das Getriebe
+einiges langsamer geworden. Wo ist also jetzt der Vorteil? Aufgefallen ist
+vielleicht, dass die Leistung mit und ohne Getriebe die Gleiche geblieben ist.
+In der hier idealen Welt gibt es keine Verluste also muss die Gesamtleistung im
+System konstant bleiben.</p>
 
-<p>Durch das Getriebe wird ein größeres Drehmoment auf der Antriebsachse erreicht
-und da der Lastarm am Rad eine konstante Länge hat, ergibt sich für die
-Lastkraft:</p>
+<p>Durch das Getriebe wird ein größeres Drehmoment auf der Radachse erreicht und
+da der Lastarm am Rad eine konstante Länge hat, ergibt sich für die Lastkraft:</p>
 
-<figure class='equation'>\begin{align}& Drehmoment (M) = Lastkraft (F) \cdot Lastarm (r) \\
-& Lastkraft (F) = Drehmoment  (M) /  Lastarm (r) \nonumber\\\end{align}</figure>
+<figure class='equation'>\begin{equation}Drehmoment (M) = Lastkraft (F) \cdot Lastarm (r)\end{equation}</figure>
+
+
+<p>Je ein Lastkraft $F_1, F_2$:</p>
+
+<figure class='equation'>\begin{align}F_1 = M_1 / r = &1,5625\cdot 10^{-2}Nm/(22,5\cdot 10^{-3}m) \\
+F_2 = M_2 / r = &1,5Nm/(22,5\cdot 10^{-3}m) \nonumber\end{align}</figure>
 
 
 <p>Und das Verhältnis ist:</p>
 
-<figure class='equation'>\begin{equation}\frac{0.69N}{66N}\end{equation}</figure>
+<figure class='equation'>\begin{equation}\frac{F_2}{F_1} = \frac{66,67N}{0,69N}\end{equation}</figure>
 
 
-<p>Auffällig ist vielleicht das sich der Faktor $96$ hier durchzieht. Da die Zwischenergebnisse hier immer wieder
-gerundet dargestellt werden kommt es zu kleineren Abweichungen.</p>
+<p>Auffällig ist vielleicht das sich der Faktor $96$ hier durchzieht. Da die
+Zwischenergebnisse hier immer wieder gerundet dargestellt werden kommt es zu
+kleineren Abweichungen.</p>
 ]]></content>
   </entry>
   
@@ -826,86 +898,6 @@ Javascript: "Hello\nprograming\n world".split('\n').map(x =&gt; x.replace(' ', '
 src='https://vkitchen.herokuapp.com/recipes/151/embedded?locale=de&published=false'
 frameborder='0'> </iframe>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Transferzeit]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/10/06/transferzeit/"/>
-    <updated>2018-10-06T23:49:33+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/10/06/transferzeit</id>
-    <content type="html"><![CDATA[<img class="left" src="https://manuel-io.github.io/data/images/hohmann.png" width="300" title="Hohmann-Transfer" alt="Hohmann-Transfer">
-
-
-<p>Dieser Eintrag beschreibt die Zeit auf einem <a href="https://de.wikipedia.org/wiki/Hohmann-Transfer">Hohmann-Transfer</a>
-zwischen zwei Kreisbahnen um einen Zentralkörper und ist im Weiteren
-auch für einen <a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling/Bi-elliptischer_Transfer">Bi-elliptischen-Transfer</a> interessant. Die Bahn
-für den Transfer ist dabei immer eine Ellipse mit der großen Halbachse
-$a = \frac{r_1 + r_2}{2}$ Dabei ist $r_1$ Radius der inneren
-Kreisbahn und $r_2$ Radius der äußeren Bahn.</p>
-
-<p>Die Frage nach der Transferzeit $T$ auf einer Ellipse kann durch das
-3. Keplersche Gesetz beantwortet werden. Nachdem gilt: Die Periode der
-quadratischen Umlaufzeit auf einer Ellipsenbahn ist proportional zu
-der dritten Potenz der Halbachse $a$:</p>
-
-<figure class='equation'>\begin{equation}\label{eq:test}
-T^2\sim a^3\quad\Leftrightarrow\quad T^2 = c\cdot a^3,\quad c\in\mathbb{R}\end{equation}</figure>
-
-
-<p>Da die Halbachse bereits bestimmt wurde, muss hier noch der
-Proportionalitätsfaktor $c$ bestimmt werden.</p>
-
-<p>Dieser wird hier durch eine möglichst einfache Ellipse bestimmt. Die
-Ausgangskreisbahn umkreist den gleichen Zentralkörper mit der Masse $M$
-wie auch die Transfer-Ellipse somit ergibt sich die gleiche Konstante.
-Für die gilt:</p>
-
-<figure class='equation'>\begin{equation}\label{eq:kreisbahn}
-T^2\sim r^3\quad\Leftrightarrow\quad T^2 = c\cdot r^3,\quad c\in\mathbb{R}\end{equation}</figure>
-
-
-<p>Damit sich ein Körper auf einer Kreisbahn befindet müssen sich
-Zentripetalkraft und Gravitationskraft ausgleichen. Da die Vektoren
-stets in entgegengesetzte Richtung zeigen, sind hier nur die Beträge
-wichtig:</p>
-
-<figure class='equation'>\begin{equation}F_z = F_g\quad\Leftrightarrow\quad m\frac{v^2}{r} = \gamma\frac{M\cdot m}{r^2},\quad\gamma\in\mathbb{R}\end{equation}</figure>
-
-
-<p>$\gamma$ ist die Gravitationskonstante. Damit ergibt sich die
-Kreisbahngeschwindigkeit:</p>
-
-<figure class='equation'>\begin{equation}\Rightarrow\quad v = \sqrt{\frac{\gamma\cdot M}{r}}\end{equation}</figure>
-
-
-<p>Mit dem Kreisumfang $2\cdot r\cdot\pi$ für die gesamte Strecke einer
-Periode ergibt sich dann die Zeit $T$ nach $v = \frac{2\cdot
-r\cdot\pi}{T}$ mit dem gewöhnlichen Weg-Zeit-Gesetz. Die Konstante $c$
-kann resultierend in $\eqref{eq:kreisbahn}$ aufgelöst werden:</p>
-
-<figure class='equation'>\begin{equation}T^2 = \frac{4\cdot\pi^2\cdot r^3}{\gamma\cdot M}\quad\Rightarrow\qquad c = \frac{4\cdot\pi^2}{\gamma\cdot M}\end{equation}</figure>
-
-
-<p>Damit ist für die ursprüngliche Transfer-Ellipse $\eqref{eq:test}$,
-mit der großen Halbachse $a = \frac{r_2 + r_1}{2}$ und dem Wert für
-$c$, die Periode gegeben:</p>
-
-<figure class='equation'>\begin{equation}T^2 = c\cdot a^3\quad\Leftrightarrow\quad T^2 = \frac{4\cdot\pi^2}{\gamma\cdot M}\cdot \frac{(r_2 + r_1)^3}{8}\end{equation}</figure>
-
-
-<p>Da die Transfer-Ellipse nur aus einer halben Ellipse besteht, wird hier
-auch nur die Hälfte der Periode genommen:</p>
-
-<figure class='equation'>\begin{equation}T = \pi\sqrt{\frac{(r_2 + r_1)^3}{2\cdot\gamma\cdot M}} ,\quad T_{1/2} = \pi\sqrt{\frac{(r_2 + r_1)^3}{8\cdot\gamma\cdot M}}\end{equation}</figure>
-
-
-<p>Damit ist die Transferzeit $ T_{&frac12;} $ gegeben.</p>
-
-<p>Hintergrund ist, dass diese Transferzeit auch für den
-<a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling/Bi-elliptischer_Transfer">Bi-elliptischen</a> Transfer erweitert werden kann und dass die
-ESA in einem Video „<a href="https://www.youtube-nocookie.com/embed/M2_NeFbFcSw">Soyuz rendezvous and docking explained</a>“ den Flug
-zur ISS mit jenem Manöver beschreibt.</p>
 ]]></content>
   </entry>
   
