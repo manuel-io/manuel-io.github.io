@@ -79,7 +79,7 @@ W_{2,1} = W_2 - W_1 = m\cdot g\cdot\Delta h\quad\Leftrightarrow\quad\frac{W_2 - 
 Ergebnis: Δh = 146m.
 
 {% equation %}
-\hbox{Konstanten:}\quad g = 9.81\frac{m}{s^2},\quad m = 70kg
+\hbox{Konstanten:}\quad g = 9,81\frac{m}{s^2},\quad m = 70kg
 {% endequation %}
 
 [konservativ]: https://de.wikipedia.org/wiki/Konservative_Kraft
