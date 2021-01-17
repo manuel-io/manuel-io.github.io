@@ -1,4 +1,29 @@
-<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>DNSSEC &amp; TLSA (Lubuntu 14.04 LTS) - A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="2015, dnssec, dane, tlsa, unbound, dns"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="https://manuel-io.github.io/blog/2015/07/25/dnssec-and-tlsa"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>DNSSEC &amp; TLSA (Lubuntu 14.04 LTS) - A personal Blog</title>
+  <meta name="author" content="Manuel">
+  
+  <meta name="keywords" content="2015, dnssec, dane, tlsa, unbound, dns">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="apple-touch-icon" href="/style/touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png">
+  <link rel="canonical" href="https://manuel-io.github.io/blog/2015/07/25/dnssec-and-tlsa">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"> 
+  <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml">
+  <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script>
+  <script src="/javascripts/blog.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "jax": ["input/TeX", "output/HTML-CSS"],
     styles: { ".MathJax_Display": { "text-align": "left" } },
@@ -17,14 +42,200 @@
       linebreaks: { automatic: true }
     }
   });
-</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://minicloud.zahlenpresse.de" target="_blank">Minicloud</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <article> <header class='post'> <h1 class="entry-title">DNSSEC &amp; TLSA (Lubuntu 14.04 LTS)</h1> <p> <time class='entry-date' datetime='2015-07-25T16:50:23+02:00'><span class='date'>Jul, 2015-07-25 | </span> <span class='time'>Sat, 16:50 </span></time> </p> </header> <section><img class="right" src="/data/images/dnssec.png" title="DNSSEC" alt="DNSSEC"> <p>First step is to disable <code>dnsmasq</code> which is an old version (2.68) and doesn&rsquo;t support DNSSEC well. Later versions do. In <code>/etc/NetworkManager/NetworkManager.conf</code> comment <code># dns=dnsmasq</code> and restart the NetworkManager <code>sudo initctl restart network-manager</code>.</p> <img class="right" src="/data/images/dane.png" title="DANE" alt="DANE"> <p>Install unbound and configure it properly. <a href="https://unbound.net/">Unbound</a> is a validating, recursive, and caching DNS server software product:</p> <pre><code>sudo apt-get install unbound
-</code></pre> <p>See my <a href="https://gist.github.com/manuel-io/ec0de71980aba83838d3#file-unbound-conf">unbound.conf</a> or <code>man 5 unbound.conf</code>. Configure NM to use your local dns-server. If you then <code>dig com. SOA +dnssec</code> you should see the AD flag there:</p> <pre><code>$ dig @127.0.0.1 sys4.de +dnssec | egrep 'flags: ([a-z]{2}\s)*ad.*;'
+</script>
+
+</head>
+
+<body >
+  <header class='site'><h1>
+  <a href="/">
+    
+    
+    <p>A</p>
+    
+    <p> </p>
+    
+    <p>p</p>
+    
+    <p>e</p>
+    
+    <p>r</p>
+    
+    <p>s</p>
+    
+    <p>o</p>
+    
+    <p>n</p>
+    
+    <p>a</p>
+    
+    <p>l</p>
+    
+    <p> </p>
+    
+    <p>B</p>
+    
+    <p>l</p>
+    
+    <p>o</p>
+    
+    <p>g</p>
+    
+  </a>
+</h1>
+</header>
+  <div style='clear:both;'></div>
+  <nav><span><a href="/">Blog</a></span>
+<span><a href="/blog/photography">Photography</a></span>
+<span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span>
+<span><a href="https://minicloud.zahlenpresse.de" target="_blank">Minicloud</a></span>
+<span><a href="https://github.com/manuel-io" target="_blank">Github</a></span>
+<span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span>
+
+<span><a href="/blog/links">Links</a></span>
+<span><a href="/atom.xml">Feed</a></span>
+<span><a href="/blog/tags">Tags</a></span>
+<span><a href="/blog/archives">Archive</a></span>
+<span><a href="/blog/about">About</a></span>
+</nav>
+  <article>
+  
+  <header class='post'>
+    
+      <h1 class="entry-title">DNSSEC &amp; TLSA (Lubuntu 14.04 LTS)</h1>
+    
+    
+      <p>
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-25T16:50:23+02:00'><span class='date'>Jul, 2015-07-25 | </span> <span class='time'>Sat, 16:50 </span></time>
+        
+      </p>
+    
+  </header>
+
+
+<section><img class="right" src="/data/images/dnssec.png" title="DNSSEC" alt="DNSSEC">
+
+
+<p>First step is to disable <code>dnsmasq</code> which is an old version (2.68) and
+doesn&rsquo;t support DNSSEC well. Later versions do. In
+<code>/etc/NetworkManager/NetworkManager.conf</code> comment  <code># dns=dnsmasq</code> and
+restart the NetworkManager <code>sudo initctl restart network-manager</code>.</p>
+
+<img class="right" src="/data/images/dane.png" title="DANE" alt="DANE">
+
+
+<p>Install unbound and configure it properly. <a href="https://unbound.net/">Unbound</a> is a validating,
+recursive, and caching DNS server software product:</p>
+
+<pre><code>sudo apt-get install unbound
+</code></pre>
+
+<p>See my <a href="https://gist.github.com/manuel-io/ec0de71980aba83838d3#file-unbound-conf">unbound.conf</a> or <code>man 5 unbound.conf</code>.
+Configure NM to use your local dns-server. If you then <code>dig com. SOA
++dnssec</code> you should see the AD flag there:</p>
+
+<pre><code>$ dig @127.0.0.1 sys4.de +dnssec | egrep 'flags: ([a-z]{2}\s)*ad.*;'
 ;; flags: qr rd ra ad; QUERY: 1, ANSWER: 2, AUTHORITY: 3, ADDITIONAL: 3
 
 $ ldns-dane verify posteo.de 443
 89.146.220.134 dane-validated successfully
-</code></pre> <p>At last see some failures:</p> <pre><code>$ dig @127.0.0.1 sigfail.verteiltesysteme.net | grep SERVFAIL
+</code></pre>
+
+<p>At last see some failures:</p>
+
+<pre><code>$ dig @127.0.0.1 sigfail.verteiltesysteme.net | grep SERVFAIL
 $ dig @127.0.0.1 servfail.sidnlabs.nl +dnssec | grep SERVFAIL
-</code></pre> <p>Even a simple ping request should be impossible:</p> <pre><code>$ ping dnssec-failed.org
+</code></pre>
+
+<p>Even a simple ping request should be impossible:</p>
+
+<pre><code>$ ping dnssec-failed.org
 ping: unknown host dnssec-failed.org
-</code></pre> <blockquote><p>info: validation failure &lt;dnssec-failed.org. A IN>: no keys have a DS with algorithm RSASHA1 from 68.87.85.132 for key dnssec-failed.org. while building chain of trust</p></blockquote> <ul> <li>Stats: <a href="http://stats.labs.apnic.net/dnssec/DE">Use of DNSSEC Validation for Germany</a></li> <li>Browser Add-On: <a href="https://www.dnssec-validator.cz/">DNSSEC/TLSA Validator</a>.</li> <li>Online-Tools: <a href="http://dnscheck.ripe.net/">DNSCheck</a>, <a href="http://dnssec.vs.uni-due.de/">University Duisburg-Essen</a>, <a href="https://dnssectest.sidnlabs.nl/">SIDN Labs</a>, <a href="http://dnssec-debugger.verisignlabs.com">VerisignLabs</a>.</li> <li>Tutorials: <a href="https://calomel.org/unbound_dns.html">Unbound DNS</a>.</li> </ul> </section> <div style='clear:both;'></div> <footer> <section class="meta"> <p> <span class="byline author vcard">Posted by <span class="fn">Manuel</span></span> </p> <p class='categories'> <a class='category' href='/blog/categories/2015/'>2015</a>, <a class='category' href='/blog/categories/dane/'>dane</a>, <a class='category' href='/blog/categories/dns/'>dns</a>, <a class='category' href='/blog/categories/dnssec/'>dnssec</a>, <a class='category' href='/blog/categories/tlsa/'>tlsa</a>, <a class='category' href='/blog/categories/unbound/'>unbound</a> </p> </section> <section class='pagination'> <table><tr> <th class='left'><p><a href="/blog/2015/07/05/python2-imap-plus-starttls/" title="Previous Post: Python2 (IMAP+STARTTLS)">&laquo; </a></p></th> <td class='left'><p><a href="/blog/2015/07/05/python2-imap-plus-starttls/" title="Previous Post: Python2 (IMAP+STARTTLS)">Python2 (IMAP+STARTTLS)</a></p></td> <td class='right'><p><a href="/blog/2015/08/02/wikipedia-projektneuheiten-feed/" title="Next Post: Wikipedia: Projektneuheiten (Feed)">Wikipedia: Projektneuheiten (Feed)</a></p></td> <th class='right'><p><a href="/blog/2015/08/02/wikipedia-projektneuheiten-feed/" title="Next Post: Wikipedia: Projektneuheiten (Feed)"> &raquo;</a></p></th> </tr></table> </section> </footer> </article> <footer><section class='posts'> <ul> <li><a href="/blog/2020/09/13/zahnradgetriebe/">1. Zahnradgetriebe</a></li> <li><a href="/blog/2020/09/06/getriebe-ubersetzung-1-96/">2. Getriebe-Übersetzung (1:96)</a></li> <li><a href="/blog/2020/07/21/verschworungstheologien/">3. Verschwörungstheologien</a></li> <li><a href="/blog/2020/06/06/einfach-nur-leer/">4. Einfach nur Leer</a></li> <li><a href="/blog/2020/03/29/query-minidlna-to-list-media-files/">5. Query MiniDLNA to list media files</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2020 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>
+</code></pre>
+
+<blockquote><p>info: validation failure &lt;dnssec-failed.org. A IN>:
+no keys have a DS with algorithm RSASHA1 from 68.87.85.132 for key
+dnssec-failed.org. while building chain of trust</p></blockquote>
+
+<ul>
+<li>Stats: <a href="http://stats.labs.apnic.net/dnssec/DE">Use of DNSSEC Validation for Germany</a></li>
+<li>Browser Add-On: <a href="https://www.dnssec-validator.cz/">DNSSEC/TLSA Validator</a>.</li>
+<li>Online-Tools: <a href="http://dnscheck.ripe.net/">DNSCheck</a>, <a href="http://dnssec.vs.uni-due.de/">University Duisburg-Essen</a>,
+<a href="https://dnssectest.sidnlabs.nl/">SIDN Labs</a>, <a href="http://dnssec-debugger.verisignlabs.com">VerisignLabs</a>.</li>
+<li>Tutorials: <a href="https://calomel.org/unbound_dns.html">Unbound DNS</a>.</li>
+</ul>
+
+</section>
+
+<div style='clear:both;'></div>
+
+  <footer>
+    <section class="meta">
+      <p>
+        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Manuel</span></span>
+
+        <!--
+
+
+
+
+<time class='entry-date' datetime='2015-07-25T16:50:23+02:00'><span class='date'>Jul, 2015-07-25 | </span> <span class='time'>Sat, 16:50 </span></time>-->
+      </p>
+      <p class='categories'>
+
+  
+    <a class='category' href='/blog/categories/2015/'>2015</a>, <a class='category' href='/blog/categories/dane/'>dane</a>, <a class='category' href='/blog/categories/dns/'>dns</a>, <a class='category' href='/blog/categories/dnssec/'>dnssec</a>, <a class='category' href='/blog/categories/tlsa/'>tlsa</a>, <a class='category' href='/blog/categories/unbound/'>unbound</a>
+  
+
+</p>
+    </section>
+    <section class='pagination'>
+      <table><tr>
+        
+        <th class='left'><p><a href="/blog/2015/07/05/python2-imap-plus-starttls/"
+            title="Previous Post: Python2 (IMAP+STARTTLS)">&laquo; </a></p></th>
+        <td class='left'><p><a href="/blog/2015/07/05/python2-imap-plus-starttls/"
+            title="Previous Post: Python2 (IMAP+STARTTLS)">Python2 (IMAP+STARTTLS)</a></p></td>
+        
+        
+        <td class='right'><p><a href="/blog/2015/08/02/wikipedia-projektneuheiten-feed/"
+            title="Next Post: Wikipedia: Projektneuheiten (Feed)">Wikipedia: Projektneuheiten (Feed)</a></p></td>
+        <th class='right'><p><a href="/blog/2015/08/02/wikipedia-projektneuheiten-feed/"
+            title="Next Post: Wikipedia: Projektneuheiten (Feed)"> &raquo;</a></p></th>
+        
+      </tr></table>
+    </section>
+  </footer>
+</article>
+
+  <footer><section class='posts'>
+  <ul>
+  
+  <li><a href="/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/">1. Fortschritt/Ausblick 20/21</a></li>
+  
+  <li><a href="/blog/2020/09/13/zahnradgetriebe/">2. Zahnradgetriebe</a></li>
+  
+  <li><a href="/blog/2020/09/06/getriebe-ubersetzung-1-96/">3. Getriebe-Übersetzung (1:96)</a></li>
+  
+  <li><a href="/blog/2020/07/21/verschworungstheologien/">4. Verschwörungstheologien</a></li>
+  
+  <li><a href="/blog/2020/06/06/einfach-nur-leer/">5. Einfach nur Leer</a></li>
+  
+  </ul>
+</section>
+<section class='copyright'>
+  <p>
+    Copyright &copy; 2010-2021 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</section>
+</footer>
+</body>
+</html>

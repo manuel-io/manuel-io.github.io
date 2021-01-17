@@ -1,4 +1,29 @@
-<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>Fail2ban - A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="2013, administration, centos"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="https://manuel-io.github.io/blog/2013/04/01/fail2ban"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Fail2ban - A personal Blog</title>
+  <meta name="author" content="Manuel">
+  
+  <meta name="keywords" content="2013, administration, centos">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="apple-touch-icon" href="/style/touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png">
+  <link rel="canonical" href="https://manuel-io.github.io/blog/2013/04/01/fail2ban">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"> 
+  <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml">
+  <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script>
+  <script src="/javascripts/blog.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "jax": ["input/TeX", "output/HTML-CSS"],
     styles: { ".MathJax_Display": { "text-align": "left" } },
@@ -17,12 +42,208 @@
       linebreaks: { automatic: true }
     }
   });
-</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://minicloud.zahlenpresse.de" target="_blank">Minicloud</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <article> <header class='post'> <h1 class="entry-title">Fail2ban</h1> <p> <time class='entry-date' datetime='2013-04-01T01:40:00+02:00'><span class='date'>Apr, 2013-04-01 | </span> <span class='time'>Mon, 01:40 CEST</span></time> </p> </header> <section><p><a href="http://www.fail2ban.org">Fail2ban</a> ist ein wirklich nützliches Tool, aber mit CentOS kein Vergnügen. Da gibt es verschiedene Probleme mit <a href="https://github.com/fail2ban/fail2ban/issues/44">Logrotate</a> und <a href="https://bugzilla.redhat.com/show_bug.cgi?id=697223">SELinux</a>.</p> <p>Es ist also wichtig das Verhalten von Fail2ban genau zu beobachten und die Konfiguration anzupassen. Als Beispiel dient hier CentOS 6.4 und SSH.</p> <p>Erstmal ist es wichtig die Fail2ban-Logdatei zu beobachten. Wird <em>logtarget = /var/log/fail2ban</em> in <em>/etc/fail2ban/fail2ban.local</em> gesetzt, muss auch <em>/etc/logrotate.d/fail2ban</em> angepasst werden.</p> <p>Den Status des <em>fail2ban-server</em> erfährt man mit den Befehlen:</p> <pre><code>service fail2ban status
+</script>
+
+</head>
+
+<body >
+  <header class='site'><h1>
+  <a href="/">
+    
+    
+    <p>A</p>
+    
+    <p> </p>
+    
+    <p>p</p>
+    
+    <p>e</p>
+    
+    <p>r</p>
+    
+    <p>s</p>
+    
+    <p>o</p>
+    
+    <p>n</p>
+    
+    <p>a</p>
+    
+    <p>l</p>
+    
+    <p> </p>
+    
+    <p>B</p>
+    
+    <p>l</p>
+    
+    <p>o</p>
+    
+    <p>g</p>
+    
+  </a>
+</h1>
+</header>
+  <div style='clear:both;'></div>
+  <nav><span><a href="/">Blog</a></span>
+<span><a href="/blog/photography">Photography</a></span>
+<span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span>
+<span><a href="https://minicloud.zahlenpresse.de" target="_blank">Minicloud</a></span>
+<span><a href="https://github.com/manuel-io" target="_blank">Github</a></span>
+<span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span>
+
+<span><a href="/blog/links">Links</a></span>
+<span><a href="/atom.xml">Feed</a></span>
+<span><a href="/blog/tags">Tags</a></span>
+<span><a href="/blog/archives">Archive</a></span>
+<span><a href="/blog/about">About</a></span>
+</nav>
+  <article>
+  
+  <header class='post'>
+    
+      <h1 class="entry-title">Fail2ban</h1>
+    
+    
+      <p>
+        
+
+
+
+
+<time class='entry-date' datetime='2013-04-01T01:40:00+02:00'><span class='date'>Apr, 2013-04-01 | </span> <span class='time'>Mon, 01:40 CEST</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<section><p><a href="http://www.fail2ban.org">Fail2ban</a> ist ein wirklich nützliches Tool,
+aber mit CentOS kein Vergnügen. Da gibt es verschiedene Probleme mit
+<a href="https://github.com/fail2ban/fail2ban/issues/44">Logrotate</a> und <a href="https://bugzilla.redhat.com/show_bug.cgi?id=697223">SELinux</a>.</p>
+
+<p>Es ist also wichtig das Verhalten von Fail2ban genau zu beobachten
+und die Konfiguration anzupassen. Als Beispiel dient hier CentOS 6.4 und SSH.</p>
+
+<p>Erstmal ist es wichtig die Fail2ban-Logdatei zu beobachten.
+Wird <em>logtarget = /var/log/fail2ban</em> in <em>/etc/fail2ban/fail2ban.local</em> gesetzt,
+muss auch <em>/etc/logrotate.d/fail2ban</em> angepasst werden.</p>
+
+<p>Den Status des <em>fail2ban-server</em> erfährt man mit den Befehlen:</p>
+
+<pre><code>service fail2ban status
 /etc/init.d/fail2ban status
 fail2ban-client status
-</code></pre> <p>Die Regeln zum Filtern einer Logdatei können mit dem Befehl <em>fail2ban-regex</em> getestet werden:</p> <pre><code>fail2ban-regex /var/log/secure /etc/fail2ban/filter.d/sshd.conf
-</code></pre> <p>Das Sperren von Internetadressen kann mit dem <em>logger</em>-Befehl getriggert werden. Wichtig ist zu verstehen, dass auch CGI/PHP Skripte Logdateien manipulieren können. Eigentlich können alle Programme in Logdateien schreiben. Per <em>/etc/rsyslog.conf</em> können Informationen auch verteilt und empfangen werden.</p> <pre><code>logger -p authpriv.warning -t 'sshd[123]' 'Invalid user admin from 10.2.11.1'
-</code></pre> <p>Und</p> <pre><code>logger -p authpriv.warning -t 'sshd[123]' \
+</code></pre>
+
+<p>Die Regeln zum Filtern einer Logdatei können mit dem Befehl
+<em>fail2ban-regex</em> getestet werden:</p>
+
+<pre><code>fail2ban-regex /var/log/secure /etc/fail2ban/filter.d/sshd.conf
+</code></pre>
+
+<p>Das Sperren von Internetadressen kann mit dem <em>logger</em>-Befehl getriggert werden.
+Wichtig ist zu verstehen, dass auch CGI/PHP Skripte Logdateien manipulieren können.
+Eigentlich können alle Programme in Logdateien schreiben.
+Per <em>/etc/rsyslog.conf</em> können Informationen auch verteilt und empfangen werden.</p>
+
+<pre><code>logger -p authpriv.warning -t 'sshd[123]' 'Invalid user admin from 10.2.11.1'
+</code></pre>
+
+<p>Und</p>
+
+<pre><code>logger -p authpriv.warning -t 'sshd[123]' \
   'User root from 10.2.11.1 not allowed because not listed in AllowUsers'
-</code></pre> <p>Etwas unübersichtlich ist <em>fail2ban-client -d</em>. Es wird die gesamte Konfiguration angezeigt. Interessant ist z.B. welcher Befehl zum Sperren einer IP-Adresse verwendet wird.</p> <p>Welche Adressen gerade gesperrt sind, sollte in der Logdatei von <em>fail2ban</em> stehen und mit <em>iptables -L</em> übereinstimmen.</p> <p>Gesperrte IP-Adressen wieder freigegeben:</p> <pre><code>iptables -D fail2ban-SSH -s 192.168.1.1 -j DROP
-</code></pre> <p>Und dann gibt es noch die Manpages:</p> <ul> <li><a href="http://linux.die.net/man/1/fail2ban-client">fail2ban-client</a></li> <li><a href="http://linux.die.net/man/1/fail2ban-server">fail2ban-server</a></li> <li><a href="http://linux.die.net/man/1/fail2ban-regex">fail2ban-regex</a>.</li> </ul> <p>Nützliche Infos gibt es auch auf dieser <a href="http://lists.centos.org/pipermail/centos/2012-June/126860.html">Seite</a>.</p> </section> <div style='clear:both;'></div> <footer> <section class="meta"> <p> <span class="byline author vcard">Posted by <span class="fn">Manuel</span></span> </p> <p class='categories'> <a class='category' href='/blog/categories/2013/'>2013</a>, <a class='category' href='/blog/categories/administration/'>administration</a>, <a class='category' href='/blog/categories/centos/'>centos</a> </p> </section> <section class='pagination'> <table><tr> <th class='left'><p><a href="/blog/2013/03/15/homoopathie/" title="Previous Post: Homöopathie">&laquo; </a></p></th> <td class='left'><p><a href="/blog/2013/03/15/homoopathie/" title="Previous Post: Homöopathie">Homöopathie</a></p></td> <td class='right'><p><a href="/blog/2013/04/02/cram-md5/" title="Next Post: CRAM-MD5">CRAM-MD5</a></p></td> <th class='right'><p><a href="/blog/2013/04/02/cram-md5/" title="Next Post: CRAM-MD5"> &raquo;</a></p></th> </tr></table> </section> </footer> </article> <footer><section class='posts'> <ul> <li><a href="/blog/2020/09/13/zahnradgetriebe/">1. Zahnradgetriebe</a></li> <li><a href="/blog/2020/09/06/getriebe-ubersetzung-1-96/">2. Getriebe-Übersetzung (1:96)</a></li> <li><a href="/blog/2020/07/21/verschworungstheologien/">3. Verschwörungstheologien</a></li> <li><a href="/blog/2020/06/06/einfach-nur-leer/">4. Einfach nur Leer</a></li> <li><a href="/blog/2020/03/29/query-minidlna-to-list-media-files/">5. Query MiniDLNA to list media files</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2020 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>
+</code></pre>
+
+<p>Etwas unübersichtlich ist <em>fail2ban-client -d</em>.
+Es wird die gesamte Konfiguration angezeigt.
+Interessant ist z.B. welcher Befehl zum Sperren einer IP-Adresse verwendet wird.</p>
+
+<p>Welche Adressen gerade gesperrt sind, sollte in der Logdatei von <em>fail2ban</em> stehen
+und mit <em>iptables -L</em> übereinstimmen.</p>
+
+<p>Gesperrte IP-Adressen wieder freigegeben:</p>
+
+<pre><code>iptables -D fail2ban-SSH -s 192.168.1.1 -j DROP
+</code></pre>
+
+<p>Und dann gibt es noch die Manpages:</p>
+
+<ul>
+<li><a href="http://linux.die.net/man/1/fail2ban-client">fail2ban-client</a></li>
+<li><a href="http://linux.die.net/man/1/fail2ban-server">fail2ban-server</a></li>
+<li><a href="http://linux.die.net/man/1/fail2ban-regex">fail2ban-regex</a>.</li>
+</ul>
+
+
+<p>Nützliche Infos gibt es auch auf dieser <a href="http://lists.centos.org/pipermail/centos/2012-June/126860.html">Seite</a>.</p>
+</section>
+
+<div style='clear:both;'></div>
+
+  <footer>
+    <section class="meta">
+      <p>
+        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Manuel</span></span>
+
+        <!--
+
+
+
+
+<time class='entry-date' datetime='2013-04-01T01:40:00+02:00'><span class='date'>Apr, 2013-04-01 | </span> <span class='time'>Mon, 01:40 CEST</span></time>-->
+      </p>
+      <p class='categories'>
+
+  
+    <a class='category' href='/blog/categories/2013/'>2013</a>, <a class='category' href='/blog/categories/administration/'>administration</a>, <a class='category' href='/blog/categories/centos/'>centos</a>
+  
+
+</p>
+    </section>
+    <section class='pagination'>
+      <table><tr>
+        
+        <th class='left'><p><a href="/blog/2013/03/15/homoopathie/"
+            title="Previous Post: Homöopathie">&laquo; </a></p></th>
+        <td class='left'><p><a href="/blog/2013/03/15/homoopathie/"
+            title="Previous Post: Homöopathie">Homöopathie</a></p></td>
+        
+        
+        <td class='right'><p><a href="/blog/2013/04/02/cram-md5/"
+            title="Next Post: CRAM-MD5">CRAM-MD5</a></p></td>
+        <th class='right'><p><a href="/blog/2013/04/02/cram-md5/"
+            title="Next Post: CRAM-MD5"> &raquo;</a></p></th>
+        
+      </tr></table>
+    </section>
+  </footer>
+</article>
+
+  <footer><section class='posts'>
+  <ul>
+  
+  <li><a href="/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/">1. Fortschritt/Ausblick 20/21</a></li>
+  
+  <li><a href="/blog/2020/09/13/zahnradgetriebe/">2. Zahnradgetriebe</a></li>
+  
+  <li><a href="/blog/2020/09/06/getriebe-ubersetzung-1-96/">3. Getriebe-Übersetzung (1:96)</a></li>
+  
+  <li><a href="/blog/2020/07/21/verschworungstheologien/">4. Verschwörungstheologien</a></li>
+  
+  <li><a href="/blog/2020/06/06/einfach-nur-leer/">5. Einfach nur Leer</a></li>
+  
+  </ul>
+</section>
+<section class='copyright'>
+  <p>
+    Copyright &copy; 2010-2021 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  </p>
+</section>
+</footer>
+</body>
+</html>

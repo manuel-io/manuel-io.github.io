@@ -1,1 +1,43 @@
-<!DOCTYPE html> <html class='no-js'> <head> <title>Marbles: A puzzle game</title> <meta charset='utf-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'/> <meta name='HandheldFriendly' content='True'/> <meta name='MobileOptimized' content='550'/> <meta name='viewport' content='width=device-width, initial-scale=1'/> <meta name='description' content='Marble: A puzzle game'/> <meta name='keywords' content='marbles, computer, game, web, internet, puzzle'/> <script src='/javascripts/libs/jquery-1.11.2.min.js'></script> <script src='/data/marbles/lib/jcanvas.min.js'></script> <script src='/data/marbles/game/lib/main.js'></script> <link rel='canonical' href='https://manuel-io.github.io/data/marbles/'/> <link rel='stylesheet' type='text/css' href='/data/marbles/index.css'/> <link href='/favicon.png' rel='image/png'/> <link rel='alternate' type='text/html' href='/blog/2015/07/03/marbles-preview/'/> </head> <body> <div class='marbles'> <p title='Moves'><span>Moves: </span><span id='moves'></span></p> <p title='Points'><span>Points: </span><span id='points'></span></p> <div id='navigation'> <span id='leftarrow' class='navigation center'></span> <span id='toparrow' class='navigation center'></span> <span id='bottomarrow' class='navigation center'></span> <span id='rightarrow' class='navigation center'></span> </div> <canvas title='Marbles Game' id='marbles' width='420' height='330'> </canvas> <table> <tr> <td class='left'><button id='back'>Back</button></td> <td class='center'><button id='restart'>Restart</button></td> <td class='center'><button id='reset'>Reset</button></td> <td class='right'><button id='next'>Next</button></td> </tr> </table> </div> <script src='/javascripts/blog.js'></script> </body> </html>
+<!DOCTYPE html>
+<html class='no-js'>
+  <head>
+    <title>Marbles: A puzzle game</title>
+    <meta charset='utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='HandheldFriendly' content='True' />
+    <meta name='MobileOptimized' content='550' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='description' content='Marble: A puzzle game' />
+    <meta name='keywords' content='marbles, computer, game, web, internet, puzzle' />
+    <script src='/javascripts/libs/jquery-1.11.2.min.js'></script>
+    <script src='/data/marbles/lib/jcanvas.min.js'></script>
+    <script src='/data/marbles/game/lib/main.js'></script>
+    <link rel='canonical' href='https://manuel-io.github.io/data/marbles/' />
+    <link rel='stylesheet' type='text/css' href='/data/marbles/index.css' />
+    <link href='/favicon.png' rel='image/png' />
+    <link rel='alternate' type='text/html' href='/blog/2015/07/03/marbles-preview/' />
+  </head>
+  <body>
+    <div class='marbles'>
+      <p title='Moves'><span>Moves: </span><span id='moves'></span></p>
+      <p title='Points'><span>Points: </span><span id='points'></span></p>
+      <div id='navigation'>
+        <span id='leftarrow' class='navigation center'></span>
+        <span id='toparrow' class='navigation center'></span>
+        <span id='bottomarrow' class='navigation center'></span>
+        <span id='rightarrow' class='navigation center'></span>
+      </div>
+      <canvas title='Marbles Game' id='marbles' width='420' height='330'>
+      </canvas>
+      <table>
+        <tr>
+          <td class='left'><button id='back'>Back</button></td>
+          <td class='center'><button id='restart'>Restart</button></td>
+          <td class='center'><button id='reset'>Reset</button></td>
+          <td class='right'><button id='next'>Next</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src='/javascripts/blog.js'></script>
+  </body>
+</html>

@@ -3,13 +3,97 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2020-09-13T12:51:25+02:00</updated>
+  <updated>2021-01-17T12:01:32+01:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Fortschritt/Ausblick 20/21]]></title>
+    <link href="https://manuel-io.github.io/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/"/>
+    <updated>2021-01-17T00:30:00+01:00</updated>
+    <id>https://manuel-io.github.io/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21</id>
+    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/way2021.jpg" title="Feldweg ins Ungewisse" alt="Feldweg ins Ungewisse">
+
+
+<p>Da dachte der Mensch zuletzt noch er wäre das einzige valide Virus auf der Erde
+und dann kommt so ein junger Spross daher und bietet ordentlich Paroli.
+Während das eine Virus seine Streitkräfte Biontech, Moderna, Curevac,
+AstraZeneca, Johnson &amp; Johnson und wie sie alle heißen mobilisiert, antwortet
+der Gegner einfach mit neuen Mutationen. Das Ziel ist wie bei jedem Streit am
+Ende auf der Gewinnerseite zu stehen um wie zuvor normal weiter machen zu
+können. Und wie bei jedem andauernden Streit geht es irgendwann nicht mehr um
+Ursachen sondern um den Streit selbst.</p>
+
+<p>Was sonst noch im letzten Jahr war:</p>
+
+<h3>Breitband:</h3>
+
+<img class="left 300" src="https://manuel-io.github.io/data/images/glasfaser.jpg" title="Glasfaser" alt="Glasfaser">
+
+
+<p>Im letzten Jahr wurde hier auf dem Land Glasfaser verbuddelt. Die Zeit der
+Telefonmasten die hier noch vieler Orts noch zu sehen sind und bestimmt,
+eigentlich nur noch <a href="https://de.wikipedia.org/wiki/SIP-Telefon">SIP</a>
+transportieren, ist vorbei. Zu viel möchte ich noch gar nicht schreiben und
+erstmal viel testen, aber die Rahmendaten sind schon sehr erfreulich. Die 2
+MBit/s, von denen weniger als 1 MBit/s ankamen sind jetzt für den gleichen
+Preis in 25 facher Geschwindigkeit zu haben. Und auch mit dem Regionalzuschlag,
+mit dem sich der Netzbetreiber das Ganze noch vergolden lassen hat, ist dann
+vorbei. Da gibt es wirklich <a href="https://wendland-net.de/post/seit-wochen-ohne-festnetz-telefon-chaos-bei-der-telekom-11520">gruselige
+Geschichten</a>.
+Zuletzt gab es noch die Hoffnung Elon Musk mit seinem <a href="https://www.starlink.com/">Internet über
+Satelliten</a> würde die Sache retten, aber dann kam
+die <a href="https://www.ngn-tele.com/">NGN Telecom</a>. →  Später mehr.</p>
+
+<h3>Minicloud:</h3>
+
+<p>Da ist zunächst die Minicloud. Eine Python3-Webapp basierend auf dem Flask
+Framework um Dateien und Informationen zwischen verschieden Geräten
+auszutauschen. Darüber hinaus kann die App auch mit einem DLNA-Server verbunden
+werden und so Audio und Video im lokalen Netz finden und wiedergeben. Für mich
+ist die Applikation im lokalen Netzwerk schon sehr nützlich geworden. Die Frage
+ist noch wie ich die Konfigurations-Möglichkeiten und Dokumentation noch
+verbessern kann um die App allgemein zugänglicher zu machen. Eigentlich wollte
+ich schon im letzten Jahr eine Release veröffentlichen, aber dafür gibt es
+einfach noch zu viele Todos auf der Liste. →
+<a href="https://github.com/manuel-io/minicloud">https://github.com/manuel-io/minicloud</a></p>
+
+<h3>Kitchen App:</h3>
+
+<p>Ich habe irgendwann mal angefangen meine Rezepte in einer digitalen Datenbank
+abzuspeichern. Um neue Rezepte hinzuzufügen und auszulesen gibt es die
+Ruby-Applikation basierend auf dem  Ruby on Rails Framework, allgemein ist das
+System für mich auch noch sehr hilfreich, ich habe aber aufgehört die
+Datenbasis zu pflegen und so wurden inzwischen viele Rezepte verändert, aber
+nicht auf den aktuellen Stand gebracht. Was das Rails-Framework angeht bin ich
+der Meinung, dass das mir inzwischen einfach zu groß geworden ist und mit zu
+vielen Abhängigkeiten kommt. Das macht es nicht einfach den Programmiercode auf
+dem aktuellen Stand zu halten. Die Programmiersprache Ruby, Objektorientiert
+und mit vielen funktionellen Elementen, finde ich gar nicht so schlecht.  Also
+hier würde es dann weitergehen wenn die Minicloud einen Release Status erreicht
+hat.  →
+<a href="https://github.com/manuel-io/kitchen">https://github.com/manuel-io/kitchen</a></p>
+
+<h3>City4Sim:</h3>
+
+<img class="center" src="https://manuel-io.github.io/data/images/sl200.jpg" title="MAN SL200" alt="MAN SL200">
+
+
+<p>Eine Applikation basierend auf Javascript. Viel ist hier noch nicht passiert
+bis auf eine Karte in einer isometrische Projektion auf der Tiles dargestellt
+werden können. Hier versuche ich auch immer wieder neue Ansätze: Zuerst <a href="https://github.com/manuel-io/openCTS/tree/master">C++
+und SDL2</a>, später mit
+<a href="https://github.com/manuel-io/openCTS/tree/canvas">Javascript und Canvas</a> und
+dann mit Haskell und SDL2. Ich würde gerne viel mehr mit Haskell machen, aber
+merke dann, dass meine Denkweise noch zu viel in die Richtung iterativer,
+imperativer und prozeduraler Programmierung geht. Später mehr. →
+<a href="https://city4sim.zahlenpresse.de/">https://city4sim.zahlenpresse.de/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Zahnradgetriebe]]></title>
@@ -886,18 +970,6 @@ Python:     ' '.join([line.strip() for line in "Hello\nprograming\n world".split
 Haskell:    Data.Text.unpack $ Data.Text.unwords $ map(Data.Text.strip) $ Data.Text.lines $ Data.Text.pack "Hello\nprograming\n world"
 Javascript: "Hello\nprograming\n world".split('\n').map(x =&gt; x.replace(' ', '')).join(' ')
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dürüm (vegan)]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/10/23/durum-vegan/"/>
-    <updated>2018-10-23T17:54:23+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/10/23/durum-vegan</id>
-    <content type="html"><![CDATA[<iframe style='width:100%;height:500px;'
-src='https://vkitchen.herokuapp.com/recipes/151/embedded?locale=de&published=false'
-frameborder='0'> </iframe>
-
 ]]></content>
   </entry>
   
