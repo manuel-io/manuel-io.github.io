@@ -26,7 +26,7 @@ Was sonst noch im letzten Jahr war:
 {% img left 300 /data/images/glasfaser.jpg Glasfaser %}
 
 Im letzten Jahr wurde hier auf dem Land Glasfaser verbuddelt. Die Zeit der
-Telefonmasten die hier noch vieler Orts noch zu sehen sind und bestimmt,
+Telefonmasten die hier noch vieler Orts zu sehen sind und bestimmt,
 eigentlich nur noch [SIP](https://de.wikipedia.org/wiki/SIP-Telefon)
 transportieren, ist vorbei. Zu viel möchte ich noch gar nicht schreiben und
 erstmal viel testen, aber die Rahmendaten sind schon sehr erfreulich. Die 2
@@ -61,7 +61,7 @@ System für mich auch noch sehr hilfreich, ich habe aber aufgehört die
 Datenbasis zu pflegen und so wurden inzwischen viele Rezepte verändert, aber
 nicht auf den aktuellen Stand gebracht. Was das Rails-Framework angeht bin ich
 der Meinung, dass das mir inzwischen einfach zu groß geworden ist und mit zu
-vielen Abhängigkeiten kommt. Das macht es nicht einfach den Programmiercode auf
+vielen Abhängigkeiten kommt. Dass macht es nicht einfach den Programmiercode auf
 dem aktuellen Stand zu halten. Die Programmiersprache Ruby, Objektorientiert
 und mit vielen funktionellen Elementen, finde ich gar nicht so schlecht.  Also
 hier würde es dann weitergehen wenn die Minicloud einen Release Status erreicht
