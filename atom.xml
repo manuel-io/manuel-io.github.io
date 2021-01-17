@@ -3,7 +3,7 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2021-01-17T12:01:32+01:00</updated>
+  <updated>2021-01-17T12:44:53+01:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
@@ -36,7 +36,7 @@ Ursachen sondern um den Streit selbst.</p>
 
 
 <p>Im letzten Jahr wurde hier auf dem Land Glasfaser verbuddelt. Die Zeit der
-Telefonmasten die hier noch vieler Orts noch zu sehen sind und bestimmt,
+Telefonmasten die hier noch vieler Orts zu sehen sind und bestimmt,
 eigentlich nur noch <a href="https://de.wikipedia.org/wiki/SIP-Telefon">SIP</a>
 transportieren, ist vorbei. Zu viel möchte ich noch gar nicht schreiben und
 erstmal viel testen, aber die Rahmendaten sind schon sehr erfreulich. Die 2
@@ -71,7 +71,7 @@ System für mich auch noch sehr hilfreich, ich habe aber aufgehört die
 Datenbasis zu pflegen und so wurden inzwischen viele Rezepte verändert, aber
 nicht auf den aktuellen Stand gebracht. Was das Rails-Framework angeht bin ich
 der Meinung, dass das mir inzwischen einfach zu groß geworden ist und mit zu
-vielen Abhängigkeiten kommt. Das macht es nicht einfach den Programmiercode auf
+vielen Abhängigkeiten kommt. Dass macht es nicht einfach den Programmiercode auf
 dem aktuellen Stand zu halten. Die Programmiersprache Ruby, Objektorientiert
 und mit vielen funktionellen Elementen, finde ich gar nicht so schlecht.  Also
 hier würde es dann weitergehen wenn die Minicloud einen Release Status erreicht
