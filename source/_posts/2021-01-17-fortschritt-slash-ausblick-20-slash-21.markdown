@@ -63,7 +63,7 @@ nicht auf den aktuellen Stand gebracht. Was das Rails-Framework angeht bin ich
 der Meinung, dass das mir inzwischen einfach zu groß geworden ist und mit zu
 vielen Abhängigkeiten kommt. Dass macht es nicht einfach den Programmiercode auf
 dem aktuellen Stand zu halten. Die Programmiersprache Ruby, Objektorientiert
-und mit vielen funktionellen Elementen, finde ich gar nicht so schlecht.  Also
+und mit vielen funktionalen Elementen, finde ich gar nicht so schlecht. Also
 hier würde es dann weitergehen wenn die Minicloud einen Release Status erreicht
 hat.  →
 [https://github.com/manuel-io/kitchen](https://github.com/manuel-io/kitchen)
