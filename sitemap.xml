@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://manuel-io.github.io/blog/2021/01/23/a-2-dimensional-data-structure/</loc>
+<lastmod>2021-01-23T14:38:11+01:00</lastmod>
+</url>
+<url>
 <loc>https://manuel-io.github.io/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/</loc>
 <lastmod>2021-01-17T00:30:00+01:00</lastmod>
 </url>
@@ -1013,6 +1017,9 @@
 </url>
 <url>
 <loc>https://manuel-io.github.io/blog/categories/2021/</loc>
+</url>
+<url>
+<loc>https://manuel-io.github.io/blog/categories/memory/</loc>
 </url>
 <url>
 <loc>https://manuel-io.github.io/data/dat/css-animation-101.html</loc>

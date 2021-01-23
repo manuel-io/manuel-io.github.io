@@ -3,13 +3,96 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2021-01-17T12:44:53+01:00</updated>
+  <updated>2021-01-23T16:11:56+01:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[A two dimensional data structure]]></title>
+    <link href="https://manuel-io.github.io/blog/2021/01/23/a-2-dimensional-data-structure/"/>
+    <updated>2021-01-23T14:38:11+01:00</updated>
+    <id>https://manuel-io.github.io/blog/2021/01/23/a-2-dimensional-data-structure</id>
+    <content type="html"><![CDATA[<p>How does a 2 dimensional data structure look like in different programming
+languages. Using the C-Language you have to allocate the required memory by
+youself.</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdint.h&gt;
+</code></pre>
+
+<p>Think of a map with x and y but keep in mind that the memory of a computer is
+still a one-dimensional linear thing. In addition each point of the map (x,y)
+requires some memory for the payload.</p>
+
+<pre><code>/* Payload */
+struct tile {
+  uint8_t id;
+  uint8_t type;
+};
+
+int
+main(int argc, char **argv) {
+</code></pre>
+
+<p>In this example we use a map with an equal size of width and height.</p>
+
+<pre><code>  struct tile *tiles = NULL;
+  uint8_t width = 12, height = 12;
+</code></pre>
+
+<p>Thus the total line memory is <code>sizeof(payload) * width * height</code>. Next each
+point can be accessed with <code>offset + (y * height) + x</code>. Where offset is the
+return value of the POSIX C function <code>malloc</code>. Modern computers have a memory
+management unit, which is operated and controlled by the operating system. In
+this case malloc returns the start address of the granted memory area.</p>
+
+<pre><code>  tiles = (struct tile *)malloc(sizeof(struct tile) * width * height);
+
+  if (tiles == NULL) {
+    printf("Memory allocation failed\n");
+    return 1;
+  }
+</code></pre>
+
+<p>We initialize the allocated memory area with our example payload. Thanks to
+pointer arithmetic we no longer have to care about the size of the payload.</p>
+
+<pre><code>  /* Initialization */
+  for (uint8_t y = 0; y &lt; height; y++) {
+    for (uint8_t x = 0; x &lt; width; x++) {
+      (tiles + (y * height) + x)-&gt;id = y * height + x;
+      (tiles + (y * height) + x)-&gt;type = 0;
+    }
+  }
+
+  /* Print */
+  for (uint8_t y = 0; y &lt; height; y++) {
+    for (uint8_t x = 0; x &lt; width; x++) {
+      printf("%d:\t(%d,%d)\t0x%lx\n", (tiles + (y * height) + x)-&gt;id, x, y, (uintptr_t)(tiles + (y * height) + x));
+    }
+  }
+</code></pre>
+
+<p>The size of a tile (example payload) should be 2 Bytes and the total reserved
+memory area 12 * 12 * 2 = 288 Bytes. The offset address can&rsquo;t be predicted at
+this point. Note: Due to unpredictable compiler optimizations, deviations may
+occur. See <a href="https://gist.github.com/manuel-io/bbc5e7b0e899a5c13672b1e3d72bb0d0">https://gist.github.com/manuel-io/bbc5e7b0e899a5c13672b1e3d72bb0d0</a>.</p>
+
+<pre><code>  printf("\nSize of a tile: %ld bytes\n", sizeof(struct tile));
+  printf("Offset address 0x%lx\n", (uintptr_t)tiles);
+  printf("Reserved memory: %ld bytes\n", sizeof(struct tile) * width * height);
+
+  free(tiles);
+  return 0;
+}
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fortschritt/Ausblick 20/21]]></title>
@@ -73,7 +156,7 @@ nicht auf den aktuellen Stand gebracht. Was das Rails-Framework angeht bin ich
 der Meinung, dass das mir inzwischen einfach zu groß geworden ist und mit zu
 vielen Abhängigkeiten kommt. Dass macht es nicht einfach den Programmiercode auf
 dem aktuellen Stand zu halten. Die Programmiersprache Ruby, Objektorientiert
-und mit vielen funktionellen Elementen, finde ich gar nicht so schlecht.  Also
+und mit vielen funktionalen Elementen, finde ich gar nicht so schlecht. Also
 hier würde es dann weitergehen wenn die Minicloud einen Release Status erreicht
 hat.  →
 <a href="https://github.com/manuel-io/kitchen">https://github.com/manuel-io/kitchen</a></p>
@@ -868,107 +951,6 @@ some functional features. Like others:</p>
 Javascript: [a =&gt; a+10, a =&gt; a*10, a =&gt; a-5].reduce((a, i) =&gt; i(a), 23)
 Haskell:    foldl (\x y -&gt; y(x)) 23 [(+10), (*10), (+(-5))]
 Racket:     (foldl (λ (b a) (b a)) 23 (list (λ (a) (+ a 10)) (λ (a) (* a 10)) (λ (a) (- a 5))))
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[List operations]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/10/27/list-operations/"/>
-    <updated>2018-10-27T15:41:08+02:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/10/27/list-operations</id>
-    <content type="html"><![CDATA[<p>Apply a function to each member of a list:</p>
-
-<pre><code>Ruby:       [1,2,3].map { |x| x * 2 }
-Python:     map(lambda x: x * 2, [1,2,3])
-Haskell:    map (*2) [1,2,3]
-Javascript: [1,2,3,4].map(x =&gt; x * 2)
-Racket:     (map (λ (x) (* x 2)) (list 1 2 3))
-</code></pre>
-
-<p>Flatten a list of multiple sublists:</p>
-
-<pre><code>Ruby;       [[1,2,3],[4,5,6],[7,8,9]].flatten
-Python:     [item for list in [[1,2,3],[4,5,6],[7,8,9]] for item in list]
-Haskell:    concat [[1,2,3],[4,5,6],[7,8,9]]
-Javascript: [].concat(...[[1,2,3],[4,5,6],[7,8,9]])
-</code></pre>
-
-<p>Multiply all members of a list:</p>
-
-<pre><code>Ruby:       [1,2,3,4].reduce(1,:*)
-Python:     reduce((lambda x, y: x * y), [1,2,3,4], 1)
-Haskell:    foldl (*) 1 [1,2,3,4]
-Javascript: [1,2,3,4].reduce((accu, item) =&gt; accu * item, 1)
-Racket:     (foldl * 1 (list 1 2 3 4))
-</code></pre>
-
-<p>Filter all even members from a list:</p>
-
-<pre><code>Ruby:       [0,1,2,3,4,5,6,7,8,9].select &amp;:even?
-Python:     filter(lambda x: not x % 2, [0,1,2,3,4,5,6,7,8,9])
-Haskell:    filter (even) [0,1,2,3,4,5,6,7,8,9]
-Javascript: [0,1,2,3,4,5,6,7,8,9].filter(x =&gt; x % 2 == 0)
-Racket:     (filter even? (list 0 1 2 3 4 5 6 7 8 9))
-</code></pre>
-
-<p>Sort a list ascending:</p>
-
-<pre><code>Ruby:       [5,9,0,1,3,2,4,8,6,7].sort
-Python:     sorted([5,9,0,1,3,2,4,8,6,7])
-Haskell:    Data.List.sort [5,9,0,1,3,2,4,8,6,7]
-Javascript: [5,9,0,1,3,2,4,8,6,7].sort()
-Racket:     (sort (list 5 9 0 1 3 2 4 8 6 7) &lt;)
-</code></pre>
-
-<p>Element is member of the list:</p>
-
-<pre><code>Ruby:       [0,1,2,3,4,5,6,7,8,9].include? 5
-Python:     5 in [0,1,2,3,4,5,6,7,8,9]
-Haskell:    5 `elem` [0,1,2,3,4,5,6,7,8,9]
-Javascript: [0,1,2,3,4,5,6,7,8,9].includes(5)
-Racket:     (if [member 5 (list 0 1 2 3 4 5 6 7 8 9)] #t #f)
-</code></pre>
-
-<p>List of numbers between 100 and 200:</p>
-
-<pre><code>Ruby:       (100..200).to_a
-Python:     range(100,200 + 1)
-Haskell:    [100..200]
-Javascript: Array(100 + 1).fill(100).map((e,i) =&gt; e + i)
-</code></pre>
-
-<p>Two lists and return a list of corresponding pairs:</p>
-
-<pre><code>Ruby:       [1,2,3,4,5].zip([5,4,3,2,1])
-Python:     zip([1,2,3,4,5], [5,4,3,2,1])
-Haskell:    zip [1,2,3,4,5] [5,4,3,2,1]
-</code></pre>
-
-<p>Minimum and Maximum of a list:</p>
-
-<pre><code>Ruby:       [:min, :max].map { |m| [5,2,6,2,1,7,3].method(m).call }
-Python:     [m([5,2,6,2,1,7,3]) for m in [min, max]]
-Haskell:    [m [5,2,6,2,1,7,3] | m &lt;- [minimum, maximum]]
-Javascript: [Math.min, Math.max].map(m =&gt; m.apply(null, [5,2,6,2,1,7,3]))
-Racket:     (map (λ (f) (apply f (list 5 2 6 2 1 7 3))) (list min max))
-</code></pre>
-
-<p>Print each member of a list:</p>
-
-<pre><code>Ruby:       [1,2,3,4,5].each { |v| puts v }
-Python:     print '\n'.join(str(p) for p in [1,2,3,4,5])
-Haskell:    mapM_ (putStrLn . show) [1,2,3,4,5]
-Javascript: [1,2,3,4,5].forEach(x =&gt; console.log(x))
-Racket:     (map (λ (x) (println (number-&gt;string x))) (list 1 2 3 4 5))
-</code></pre>
-
-<p>Multiple lines to one single line string:</p>
-
-<pre><code>Ruby:       "Hello\nprograming\n world".lines.map(&amp;:strip).join ' '
-Python:     ' '.join([line.strip() for line in "Hello\nprograming\n world".splitlines()])
-Haskell:    Data.Text.unpack $ Data.Text.unwords $ map(Data.Text.strip) $ Data.Text.lines $ Data.Text.pack "Hello\nprograming\n world"
-Javascript: "Hello\nprograming\n world".split('\n').map(x =&gt; x.replace(' ', '')).join(' ')
 </code></pre>
 ]]></content>
   </entry>
