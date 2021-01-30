@@ -37,7 +37,7 @@ In this example we use a map with an equal size of width and height.
       uint8_t width = 12, height = 12;
 
 Thus the total line memory is `sizeof(payload) * width * height`. Next each
-point can be accessed with `offset + (y * height) + x`. Where offset is the
+point can be accessed with `offset + (y * width) + x`. Where offset is the
 return value of the POSIX C function `malloc`. Modern computers have a memory
 management unit, which is operated and controlled by the operating system. In
 this case malloc returns the start address of the granted memory area.
@@ -55,15 +55,16 @@ pointer arithmetic we no longer have to care about the size of the payload.
       /* Initialization */
       for (uint8_t y = 0; y < height; y++) {
         for (uint8_t x = 0; x < width; x++) {
-          (tiles + (y * height) + x)->id = y * height + x;
-          (tiles + (y * height) + x)->type = 0;
+          /* Pointer Arithmetic: (tiles + (y * width * sizeof(struct tile)) + (x * sizeof(struct tile))) */
+          (tiles + (y * width) + x)->id = y * width + x;
+          (tiles + (y * width) + x)->type = 0;
         }
       }
 
       /* Print */
       for (uint8_t y = 0; y < height; y++) {
         for (uint8_t x = 0; x < width; x++) {
-          printf("%d:\t(%d,%d)\t0x%lx\n", (tiles + (y * height) + x)->id, x, y, (uintptr_t)(tiles + (y * height) + x));
+          printf("%d:\t(%d,%d)\t0x%lx\n", (tiles + (y * width) + x)->id, x, y, (uintptr_t)(tiles + (y * width) + x));
         }
       }
 
