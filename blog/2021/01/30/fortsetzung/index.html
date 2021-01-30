@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--> <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]--> <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html manifest="cache.manifest" class="no-js" lang="en"><!--<![endif]--> <head> <meta charset="utf-8"> <title>Fortsetzung (I) - A personal Blog</title> <meta name="author" content="Manuel"> <meta name="keywords" content="2021, programming, memory, x86"> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="apple-touch-icon" href="/style/touch-icon.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/style/touch-icon.png"> <link rel="canonical" href="https://manuel-io.github.io/blog/2021/01/30/fortsetzung"> <link rel="shortcut icon" type="image/png" href="/favicon.png"> <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"> <link href="/atom.xml" rel="alternate" title="A personal Blog" type="application/atom+xml"> <script src="/javascripts/libs/jquery-1.11.2.min.js" type="text/javascript"></script> <script src="/javascripts/blog.js" type="text/javascript"></script> <script type="text/javascript" src="/javascripts/mathjax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script> <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "jax": ["input/TeX", "output/HTML-CSS"],
+    styles: { ".MathJax_Display": { "text-align": "left" } },
+    "tex2jax": {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      TagSide: "left"
+    },
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+      linebreaks: { automatic: true }
+    }
+  });
+</script> </head> <body> <header class='site'><h1> <a href="/"> <p>A</p> <p> </p> <p>p</p> <p>e</p> <p>r</p> <p>s</p> <p>o</p> <p>n</p> <p>a</p> <p>l</p> <p> </p> <p>B</p> <p>l</p> <p>o</p> <p>g</p> </a> </h1> </header> <div style='clear:both;'></div> <nav><span><a href="/">Blog</a></span> <span><a href="/blog/photography">Photography</a></span> <span><a href="http://vkitchen.herokuapp.com" target="_blank">Kitchen</a></span> <span><a href="https://minicloud.zahlenpresse.de" target="_blank">Minicloud</a></span> <span><a href="https://github.com/manuel-io" target="_blank">Github</a></span> <span><a href="https://de.wikipedia.org/wiki/Benutzer:Manuel_Bieling" target="_blank">Wikipedia</a></span> <span><a href="/blog/links">Links</a></span> <span><a href="/atom.xml">Feed</a></span> <span><a href="/blog/tags">Tags</a></span> <span><a href="/blog/archives">Archive</a></span> <span><a href="/blog/about">About</a></span> </nav> <article> <header class='post'> <h1 class="entry-title">Fortsetzung (I)</h1> <p> <time class='entry-date' datetime='2021-01-30T05:18:11+01:00'><span class='date'>Jan, 2021-01-30 | </span> <span class='time'>Sat, 05:18 </span></time> </p> </header> <section><p>Im letzten Beispiel habe ich mal dargestellt wie eine zweidimensionale Datenstruktur im Speicher abgebildet werden kann und dazu die Programmiersprache C benutzt. Jetzt könnte es Einwende geben z.B. „Ich habe ein Programmierbuch gelesen und darin wird von Arrays mit eckigen Klammern geredet, dass macht die Sache doch viel anschaulicher“. Dass ist hier im Beispiel natürlich auch möglich. Ein Datenpaket im Speicher würde dann mit <code>tiles[y][x]</code> angesprochen werden können. Das kostet aber 96 Bytes mehr.</p> <img class="center" src="/data/images/mem2d.png" title="Memory Map 2D Array" alt="Memory Map 2D Array"> <pre><code>struct tile **tiles = NULL;
+uint8_t width = 12, height = 12;
+struct tile *base = NULL;
+</code></pre> <p>Im letzten Beispiel haben wir für 12 Reihen und 12 Spalten mit einer Nutzlast von 2 Bytes insgesamt 288 Bytes alloziert. Jetzt wollen wir jede Reihe einzeln ansprechen <code>tiles[y]</code> und dafür muss die Speicheradresse von jeder Reihe nochmal gespeichert werden. Auf einem 64 Bit Computer besteht eine Speicheradresse gewöhnlich aus 8 Bytes und da es 12 Reihen sind ergibt sich ein Wert von 96:</p> <pre><code>tiles = (struct tile **)malloc((width * height * sizeof(struct tile)) + (height * sizeof(struct tile *)));
+</code></pre> <p>Den von <code>malloc</code> erhaltenen Speicher teilen wir anschließend auf. Im unteren Bereich (Lower) speichern wir für jede Reihe mit y ∈ {0, 1, 2, …, 11} die Speicheradresse.</p> <p>Im oberen Bereich (Upper) wird wie im letzten Beispiel die zweidimensionale Datenstruktur abgebildet. Hier muss nur bedacht werden, dass nicht direkt die offset Adresse von <code>malloc</code> verwendet werden kann. Damit wir im oberen Speicherbereich landen müssen hier noch 96 Bytes dazu addiert werden (Data base):</p> <pre><code>/*
+When writing in pointer arithmetic (tiles + height), is actually:
+(tiles + height * sizeof(struct tile *))
+*/
+base = (struct tile *)(tiles + height);
+</code></pre> <p>Im Weiteren wird dann noch eine zusätzliche Initialisierung gebraucht. Der ersten Adresse im Speicher (Offset address) muss z.B. als Wert die Adresse (0x55947d9e7300) der ersten Reihe im Speicher zugewiesen werden und so dann auch für die Reihen 2, 3, 4 usw:</p> <pre><code>for (uint8_t y = 0; y &lt; height; y++) {
+  /*
+  Pointer Arithmetic: (tiles + y) is equal to (tiles + (y * sizeof(struct tile *)))
+  and (base + (width * y) to (base + (y * width * sizeof(struct tile)))
+  */
+  *(tiles + y) = (struct tile *)(base + (width * y));
+  printf("0x%lx\n", (uintptr_t)(tiles + y));
+}
+</code></pre> <p>Das war&rsquo;s. Jetzt können wir wie zuvor vorgehen und das zweidimensionale Array verwenden:</p> <pre><code>/* Initialization II */
+for (uint8_t y = 0; y &lt; height; y++) {
+  for (uint8_t x = 0; x &lt; width; x++) {
+    tiles[y][x].id = y * height + x;
+    tiles[y][x].type = 0;
+  }
+}
+</code></pre> <p>Für weitere technische Erklärungen verweise ich auf den <a href="https://gist.github.com/manuel-io/bbc5e7b0e899a5c13672b1e3d72bb0d0#file-mem2d-c">Quelltext</a> des Beispiels.</p> </section> <div style='clear:both;'></div> <footer> <section class="meta"> <p> <span class="byline author vcard">Posted by <span class="fn">Manuel</span></span> </p> <p class='categories'> <a class='category' href='/blog/categories/2021/'>2021</a>, <a class='category' href='/blog/categories/memory/'>memory</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/x86/'>x86</a> </p> </section> <section class='pagination'> <table><tr> <th class='left'><p><a href="/blog/2021/01/23/a-2-dimensional-data-structure/" title="Previous Post: A two dimensional data structure">&laquo; </a></p></th> <td class='left'><p><a href="/blog/2021/01/23/a-2-dimensional-data-structure/" title="Previous Post: A two dimensional data structure">A two dimensional data structure</a></p></td> <td class='right'></td> <th class='right'></th> </tr></table> </section> </footer> </article> <footer><section class='posts'> <ul> <li><a href="/blog/2021/01/30/fortsetzung/">1. Fortsetzung (I)</a></li> <li><a href="/blog/2021/01/23/a-2-dimensional-data-structure/">2. A two dimensional data structure</a></li> <li><a href="/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/">3. Fortschritt/Ausblick 20/21</a></li> <li><a href="/blog/2020/09/13/zahnradgetriebe/">4. Zahnradgetriebe</a></li> <li><a href="/blog/2020/09/06/getriebe-ubersetzung-1-96/">5. Getriebe-Übersetzung (1:96)</a></li> </ul> </section> <section class='copyright'> <p> Copyright &copy; 2010-2021 | Manuel | <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> </p> </section> </footer> </body> </html>

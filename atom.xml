@@ -3,13 +3,95 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2021-01-23T16:11:56+01:00</updated>
+  <updated>2021-01-30T05:28:26+01:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Fortsetzung (I)]]></title>
+    <link href="https://manuel-io.github.io/blog/2021/01/30/fortsetzung/"/>
+    <updated>2021-01-30T05:18:11+01:00</updated>
+    <id>https://manuel-io.github.io/blog/2021/01/30/fortsetzung</id>
+    <content type="html"><![CDATA[<p>Im letzten Beispiel habe ich mal dargestellt wie eine zweidimensionale
+Datenstruktur im Speicher abgebildet werden kann und dazu die
+Programmiersprache C benutzt. Jetzt könnte es Einwende geben z.B. „Ich habe ein
+Programmierbuch gelesen und darin wird von Arrays mit eckigen Klammern geredet,
+dass macht die Sache doch viel anschaulicher“. Dass ist hier im Beispiel
+natürlich auch möglich. Ein Datenpaket im Speicher würde dann mit <code>tiles[y][x]</code>
+angesprochen werden können. Das kostet aber 96 Bytes mehr.</p>
+
+<img class="center" src="https://manuel-io.github.io/data/images/mem2d.png" title="Memory Map 2D Array" alt="Memory Map 2D Array">
+
+
+<pre><code>struct tile **tiles = NULL;
+uint8_t width = 12, height = 12;
+struct tile *base = NULL;
+</code></pre>
+
+<p>Im letzten Beispiel haben wir für 12 Reihen und 12 Spalten mit einer Nutzlast
+von 2 Bytes insgesamt 288 Bytes alloziert. Jetzt wollen wir jede Reihe einzeln
+ansprechen <code>tiles[y]</code> und dafür muss die Speicheradresse von jeder Reihe
+nochmal gespeichert werden. Auf einem 64 Bit Computer besteht eine Speicheradresse
+gewöhnlich aus 8 Bytes und da es 12 Reihen sind ergibt sich ein Wert von 96:</p>
+
+<pre><code>tiles = (struct tile **)malloc((width * height * sizeof(struct tile)) + (height * sizeof(struct tile *)));
+</code></pre>
+
+<p>Den von <code>malloc</code> erhaltenen Speicher teilen wir anschließend
+auf. Im unteren Bereich (Lower) speichern wir für jede Reihe
+mit y ∈ {0, 1, 2, …, 11} die Speicheradresse.</p>
+
+<p>Im oberen Bereich (Upper) wird wie im letzten Beispiel die
+zweidimensionale Datenstruktur abgebildet. Hier muss nur
+bedacht werden, dass nicht direkt die offset Adresse von
+<code>malloc</code> verwendet werden kann. Damit wir im oberen
+Speicherbereich landen müssen hier noch 96 Bytes dazu addiert
+werden (Data base):</p>
+
+<pre><code>/*
+When writing in pointer arithmetic (tiles + height), is actually:
+(tiles + height * sizeof(struct tile *))
+*/
+base = (struct tile *)(tiles + height);
+</code></pre>
+
+<p>Im Weiteren wird dann noch eine zusätzliche Initialisierung
+gebraucht. Der ersten Adresse im Speicher (Offset address)
+muss z.B. als Wert die Adresse (0x55947d9e7300) der ersten
+Reihe im Speicher zugewiesen werden und so dann auch für die
+Reihen 2, 3, 4 usw:</p>
+
+<pre><code>for (uint8_t y = 0; y &lt; height; y++) {
+  /*
+  Pointer Arithmetic: (tiles + y) is equal to (tiles + (y * sizeof(struct tile *)))
+  and (base + (width * y) to (base + (y * width * sizeof(struct tile)))
+  */
+  *(tiles + y) = (struct tile *)(base + (width * y));
+  printf("0x%lx\n", (uintptr_t)(tiles + y));
+}
+</code></pre>
+
+<p>Das war&rsquo;s. Jetzt können wir wie zuvor vorgehen und das
+zweidimensionale Array verwenden:</p>
+
+<pre><code>/* Initialization II */
+for (uint8_t y = 0; y &lt; height; y++) {
+  for (uint8_t x = 0; x &lt; width; x++) {
+    tiles[y][x].id = y * height + x;
+    tiles[y][x].type = 0;
+  }
+}
+</code></pre>
+
+<p>Für weitere technische Erklärungen verweise ich auf den
+<a href="https://gist.github.com/manuel-io/bbc5e7b0e899a5c13672b1e3d72bb0d0#file-mem2d-c">Quelltext</a>
+des Beispiels.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A two dimensional data structure]]></title>
@@ -46,7 +128,7 @@ main(int argc, char **argv) {
 </code></pre>
 
 <p>Thus the total line memory is <code>sizeof(payload) * width * height</code>. Next each
-point can be accessed with <code>offset + (y * height) + x</code>. Where offset is the
+point can be accessed with <code>offset + (y * width) + x</code>. Where offset is the
 return value of the POSIX C function <code>malloc</code>. Modern computers have a memory
 management unit, which is operated and controlled by the operating system. In
 this case malloc returns the start address of the granted memory area.</p>
@@ -65,15 +147,16 @@ pointer arithmetic we no longer have to care about the size of the payload.</p>
 <pre><code>  /* Initialization */
   for (uint8_t y = 0; y &lt; height; y++) {
     for (uint8_t x = 0; x &lt; width; x++) {
-      (tiles + (y * height) + x)-&gt;id = y * height + x;
-      (tiles + (y * height) + x)-&gt;type = 0;
+      /* Pointer Arithmetic: (tiles + (y * width * sizeof(struct tile)) + (x * sizeof(struct tile))) */
+      (tiles + (y * width) + x)-&gt;id = y * width + x;
+      (tiles + (y * width) + x)-&gt;type = 0;
     }
   }
 
   /* Print */
   for (uint8_t y = 0; y &lt; height; y++) {
     for (uint8_t x = 0; x &lt; width; x++) {
-      printf("%d:\t(%d,%d)\t0x%lx\n", (tiles + (y * height) + x)-&gt;id, x, y, (uintptr_t)(tiles + (y * height) + x));
+      printf("%d:\t(%d,%d)\t0x%lx\n", (tiles + (y * width) + x)-&gt;id, x, y, (uintptr_t)(tiles + (y * width) + x));
     }
   }
 </code></pre>
@@ -923,35 +1006,6 @@ Operatoren. Es sei $ a,b,c\in\mathbb{Z_2}$ und $ x,y,z\in\mathbb{Z} $:</p>
 
 <p>Und macht das Verfahren dadurch praktikabel. Ein <a href="https://resources.mpi-inf.mpg.de/departments/d1/teaching/ss10/MFI2/kap31.pdf">PDF</a> vom MPI-INF hat
 eine Erklärung. Einen guten Einstieg bietet auch die <a href="https://de.wikipedia.org/wiki/Zyklische_Redundanzpr%C3%BCfung">Wikipedia</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Just my two cent]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/12/09/just-my-two-cent/"/>
-    <updated>2018-12-09T12:58:29+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/12/09/just-my-two-cent</id>
-    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/twocent.png" title="Just my two cent" alt="Just my two cent">
-
-
-<p>Recently, I saw an example of how to solve <a href="https://twitter.com/hukl/status/1065670048407306243">a problem in different
-programming languages</a>.
-The title was: &ldquo;In Erlang, the Ruby code example would look like
-this&rdquo;. Actually, I don&rsquo;t know how the ruby code example looks like to solve the
-same problem, however from the point of what it does I can guess:</p>
-
-<pre><code>[-&gt; a {a+10}, -&gt; a {a*10}, -&gt; a {a-5}].reduce(23) {|a, b| b.call a}
-</code></pre>
-
-<p>Right? No, Ruby is a fundamental object oriented programming language
-and the example would probably look different. But also, Ruby has
-some functional features. Like others:</p>
-
-<pre><code>Phython:    reduce(lambda x, y: y(x), [lambda a: a+10, lambda a: a*10, lambda a: a-5], 23)
-Javascript: [a =&gt; a+10, a =&gt; a*10, a =&gt; a-5].reduce((a, i) =&gt; i(a), 23)
-Haskell:    foldl (\x y -&gt; y(x)) 23 [(+10), (*10), (+(-5))]
-Racket:     (foldl (λ (b a) (b a)) 23 (list (λ (a) (+ a 10)) (λ (a) (* a 10)) (λ (a) (- a 5))))
-</code></pre>
 ]]></content>
   </entry>
   
