@@ -1,0 +1,88 @@
+html, body, header, main, footer, section, nav, aside, div
+h1, h2, h3, h4, h5, h6, p, span, img {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 315px;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:  30px 1fr 30px;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  grid-area: header
+}
+
+footer {
+  grid-area: footer
+}
+
+main {
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+}
+
+main > div {
+  position: relative;
+  width: 452.548339959px;
+  height: 452.548339959px;
+  overflow: hidden;
+  border: 1px solid #cecece;
+}
+
+section {
+  position: absolute;
+  top: 66.2741699795px;
+  transform-origin: center center;
+  left: 0;
+  right: 0;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 1s ease-out;
+}
+
+section.active {
+  border-width: 5px;
+}
+
+section.aside {
+  margin-left: -160px;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  main > div {
+    width: 268.700576851px;
+    height: 268.700576851px;
+  }
+
+  section {
+    top: 39.3502884254px;
+    width: 190px;
+    height: 190px;
+  }
+}
