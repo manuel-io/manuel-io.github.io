@@ -3,13 +3,56 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2021-01-30T05:28:26+01:00</updated>
+  <updated>2021-03-20T14:12:59+01:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Themenwechsel]]></title>
+    <link href="https://manuel-io.github.io/blog/2021/03/20/kurz-mal-etwas-anderes/"/>
+    <updated>2021-03-20T12:36:06+01:00</updated>
+    <id>https://manuel-io.github.io/blog/2021/03/20/kurz-mal-etwas-anderes</id>
+    <content type="html"><![CDATA[<p>Ich habe ja schon <a href="https://manuel-io.github.io/blog/2021/01/17/fortschritt-slash-ausblick-20-slash-21/">geschrieben</a>, dass die Kitchen App auch mal erneuert
+werden kann und da meine Projekte hier auch immer etwas Experimentelles haben,
+was mit dem neuesten Javascript und CSS Gedöns so möglich ist, soll es auf
+jeden Fall spielerischer und interaktiver werden. Dafür bastle ich schon an neuen
+Elementen. Wie zum Beispiel hier:</p>
+
+<iframe id="iframe3242" src="https://manuel-io.github.io/data/vkitchen/overview.html" style="width:100%;height:520px" frameborder="0">
+</iframe>
+
+
+
+
+<script>
+  let iframe = document.getElementById('iframe3242');
+  if (iframe.offsetWidth < 500) iframe.style.height = '340px';
+  else iframe.style.height = '520px';
+</script>
+
+
+<pre><code>let images =  document.querySelectorAll('main &gt; div &gt; section &gt; img');
+let list = new Array();
+
+images.forEach((image) =&gt; {
+  let promise = new Promise((resolve, reject) =&gt; {
+    image.onload = (e) =&gt; resolve('okay');
+    image.src = image.dataset.src;
+  });
+
+  list.push(promise);
+});
+
+Promise.all(list).then((values) =&gt; {
+  ...
+});
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fortsetzung (I)]]></title>
@@ -878,134 +921,6 @@ Alike 4.0</a> International license. You can find a copy <a href="https://common
 <p>Ich habe angefangen möglichst viele Rezepte zu Dokumentieren und
 in meiner <a href="https://vkitchen.herokuapp.com/">Rezepte-Datenbank</a> zu speichern. Ist 2018 schon recht
 voll geworden ;-).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Zyklische Redundanzprüfung (Theorie)]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung/"/>
-    <updated>2018-12-24T01:12:36+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/12/24/zyklische-redundanzprufung</id>
-    <content type="html"><![CDATA[<p>Hier geht es um Vektorrechnung. Dazu habe ich ja schon hier und da
-etwas gehabt: Komplexe Zahlen, Polynome, Vektorintegral. Jetzt geht es
-um Bitvektoren. Also nehmen wir hier als Beispiel eine Zahlenfolge aus
-4 Bit 1101. Mit 4 Bit können $ 2^{4} $ Zahlen/Zustände abgebildet
-werden (hier 16 Zahlen).</p>
-
-<p>Diese Zahlenfolge $ v_i $ mit $ v_i \in {0,1} $ wird jetzt als Vektor in
-dezimalen Zahlen abgebildet. Also als Polynom $ f $ mit Definition von Addition
-und Multiplikation.  Die Summe der Koeffizienten entspricht dem Wert der
-Bitfolge. Hier: $ 13 $.</p>
-
-<figure class='equation'>\begin{equation}f(x) = \sum_{i = 0}^{i-1} v_i\cdot 2^i\cdot x^i = 8x^3 + 4x^2 + 1\end{equation}</figure>
-
-
-<p>$ f $ sind die Daten, die zwischen Sender und Empfänger ausgetauscht
-werden sollen.</p>
-
-<p>Das Generatorpolynom $ g $ ist konstant und wird vom Sender verwendet um die
-Prüfsumme von den Daten abzuleiten. Der Empfänger benutzt das
-Polynom zu Fehlererkennung der empfangenen Daten.</p>
-
-<figure class='equation'>\begin{equation}g(x) = x^3 + x^2 + x\quad\hbox{mit}\quad grad(g) \leq grad(f)\end{equation}</figure>
-
-
-<p>Mit einem Trägerpolynom $ t(x) $ sollen Daten und Prüfsumme in einem
-Paket übertragen werden. Dazu werden Daten, die mit $ f $ abgebildet
-werden, durch Multiplikation mit $ x^{n} $ im oberen Bereich plaziert,
-im unteren Bereich ist Platz für die Prüfsumme der Daten, die durch
-addition angehängt wird. Die Prüfsumme hat maximal die Größe des
-Generatorpolynoms wodurch der Wert von $ n= grad(g) $ bestimmt ist.</p>
-
-<figure class='equation'>\begin{equation}f^*(x) = (t\circ f)(x) = f(x)\cdot x^{n} = (8x^3 + 4x^2 + 1)\cdot x^3 = 8x^6 + 4x^5 + x^3\end{equation}</figure>
-
-
-<p>Wie die Prüfsumme gebildet wird und anschließend mit den Daten transportiert
-wird soll hier theoretisch disskutiert werden: Die Annahme ist, dass das
-Polynom $ f^* $ in einen ganzrationalen Anteil und einen echt
-gebrochenrationalen Anteil zerlegt werden kann:</p>
-
-<figure class='equation'>\begin{equation}\label{eq:div}
-  f^*(x) = q(x)\cdot g(x) + r(x)\quad\Leftrightarrow\quad\frac{f^*(x)}{g(x)} = q(x) + \frac{r(x)}{g(x)}\end{equation}</figure>
-
-
-<p>Es gilt dann zunächst $ grad(r) &lt; grad(f) $. Durch iterierte Anwendung von
-\eqref{eq:div} kann der Rest immer wieder Zerlegt werden bis $ grad(r) &lt; grad(g) $ gilt.
-Bekannt ist das Verfahren unter dem Namen: Polynomdivision.</p>
-
-<figure class='equation'>\begin{equation}q(x)\cdot g(x) + r(x) = q(x)\cdot g(x) + (q_1(x)\cdot g(x) + r_1(x)) = ...\end{equation}</figure>
-
-
-<p>Der verbleibende Anteil $ r(x) $ mit $ grad(r) &lt; grad(g) = n $ bildet die
-Prüfsumme. Der Träger $ t $ aus $ f^* $ und $ r $  wird durch
-Umformung aufgelöst:</p>
-
-<figure class='equation'>\begin{equation}t(x) = f^*(x) - r(x) = f(x)\cdot x^n - r(x) = q(x)\cdot g(x)\end{equation}</figure>
-
-
-<p>Polynomdivision: Die Daten $ f^* $ werden durch das Generatorpolynom sukzessive
-geteilt. Das verbleibende Restpolynom bildet die Prüfsumme ab:</p>
-
-<figure class='equation'>\begin{align}& 8x^6 + 4x^5 + x^3 : x^3 + x^2 + x= 8x^3 - 4x^2 + 9 \\
-& -(8x^6 + 8x^5 + 8x^4) \nonumber\\
-\hline
-& - 4x^5 - 8x^4 + x^3 \nonumber\\
-& -(- 4x^5 - 4x^4 - 4x^3) \nonumber\\
-\hline
-& -4x^4 + 5x^3 \nonumber\\
-& -(- 4x^4 - 4x^3 - 4x^2) \nonumber\\
-\hline
-& 9x^3 + 4x^2 \nonumber\\ 
-& -(9x^3 + 9x^2 + 9x) \nonumber\\
-\hline
-& - 5x^2 - 9x \nonumber\\\end{align}</figure>
-
-
-<p>Das Polynom aus Daten und Prüfsumme $ f^*(x) - r(x) $ hat entsprechend
-folgendes aussehen:</p>
-
-<figure class='equation'>\begin{equation}t(x) = f(x)\cdot x^n - r(x) = 8x^6 + 4x^5 + x^3 + 5x^2 + 9x\end{equation}</figure>
-
-
-<p>Polynomdivision: Die Daten $ t $ werden übertragen. Das
-Polynom vom Empfänger erneut durch das Generatorpolynom $ g $ geteilt. Es
-sollte sich dann kein Rest mehr ergeben und die Übertragung war
-erfolgreich.</p>
-
-<figure class='equation'>\begin{align}& 8x^6 + 4x^5 +x^3 + 5x^2 + 9x : x^3 + x^2 + x = 8x^3 - 4x^2 - 4x + 9 \\
-& -(8x^6 + 8x^5 + 8x^4) \nonumber\\
-\hline
-& - 4x^5 - 8x^4 + x^3 + 5x^2 + 9x \nonumber\\
-& -(- 4x^5 - 4x^4 - 4x^3) \nonumber\\
-\hline
-& - 4x^4 + 5x^3 + 5x^2 + 9x \nonumber\\
-& -(- 4x^4 - 4x^3 - 4x^2) \nonumber\\
-\hline
-& 9x^3 + 9x^2 + 9x \nonumber\\
-& -(9x3 + 9x^2 + 9x) \nonumber\\
-\hline
-& 0 \nonumber\\\end{align}</figure>
-
-
-<p>Um die eigentlichen Daten $ f $ aus dem Träger zu extrahieren, muss dieses durch
-das Polynom $ x^{n} $ mit $ n = grad(g) $ sukzessive geteilt werden:</p>
-
-<figure class='equation'>\begin{equation}8x^6 + 4x^5 +x^3 + 5x^2 + 9x : x^3 = 8x^3 + 4x^2 + 1 + Rest\end{equation}</figure>
-
-
-<p>Der Rest ist in dem Fall uninteressant. Nur der ganzrationale Anteil spiegelt
-die Daten wieder.</p>
-
-<p>Wie das Verfahren in der Praxis konkret aussieht, dann im Polynomring $ \mathbb{Z_2]}[x] $,
-wird hier nicht Thematisiert. Es vereinfacht sich aber einiges mit binären
-Operatoren. Es sei $ a,b,c\in\mathbb{Z_2}$ und $ x,y,z\in\mathbb{Z} $:</p>
-
-<figure class='equation'>\begin{align}& a\hbox{ xor }b = c\quad\Leftrightarrow\qquad x + y \equiv z \mod 2\\
-& a\hbox{ and }b = c\quad\Leftrightarrow\qquad x\cdot y \equiv z\mod 2 \nonumber\\\end{align}</figure>
-
-
-<p>Und macht das Verfahren dadurch praktikabel. Ein <a href="https://resources.mpi-inf.mpg.de/departments/d1/teaching/ss10/MFI2/kap31.pdf">PDF</a> vom MPI-INF hat
-eine Erklärung. Einen guten Einstieg bietet auch die <a href="https://de.wikipedia.org/wiki/Zyklische_Redundanzpr%C3%BCfung">Wikipedia</a>.</p>
 ]]></content>
   </entry>
   

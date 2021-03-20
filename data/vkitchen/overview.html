@@ -1,0 +1,55 @@
+<!Doctype html> <html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Kitchen</title> <link rel="stylesheet" type="text/css" media="all" href="static/styles/overview.css"> </head> <body> <header></header> <main> <div> <section> <img ondragstart="return false;" data-src="static/testing/image1.jpg"> </section> <section> <img ondragstart="return false;" data-src="static/testing/image2.jpg"> </section> <section> <img ondragstart="return false;" data-src="static/testing/image3.jpg"> </section> <section> <img ondragstart="return false;" data-src="static/testing/image4.jpg"> </section> <section> <img ondragstart="return false;" data-src="static/testing/image5.jpg"> </section> <section> <img ondragstart="return false;" data-src="static/testing/image6.jpg"> </section> </main> </div> <footer></footer> </body> <script>
+    window.onload = (e) => {
+      let images =  document.querySelectorAll('main > div > section > img');
+      let list = new Array();
+
+      images.forEach((image) => {
+        let promise = new Promise((resolve, reject) => {
+          image.onload = (e) => resolve('okay');
+          image.src = image.dataset.src;
+        });
+
+        list.push(promise);
+      });
+
+      Promise.all(list).then((values) => {
+        let rotate = -10;
+        let sections = document.querySelectorAll('main > div > section');
+        let length = sections.length;
+  
+        sections.forEach((section, index) => {
+          section.style.transform = `rotate(${rotate + index * rotate}deg)`;
+          section.classList.add(`r${index}`);
+          section.style.zIndex = `${length + (length - index)}`;
+          section.classList.add('stack');
+  
+          section.onmouseup = (e) => {
+            let stack = document.querySelectorAll('main > div > section.stack');
+            let aside = document.querySelectorAll('main > div > section.aside').length;
+  
+            let start = (stack.length === 0) ? length + length : Number.NEGATIVE_INFINITY;
+            let ontop = [...stack].reduce((acc, cur) => {
+              let z = parseInt(cur.style.zIndex);
+              return (z > acc) ? z : acc; 
+            }, start);
+  
+            if (section.classList.contains('stack')) {
+              if (parseInt(section.style.zIndex) !== ontop) {
+                section.style.zIndex = `${ontop + 1}`;
+  
+              } else {
+                section.classList.remove('stack');
+                section.classList.add('aside');
+                section.style.zIndex = `${1 + length + (aside - length)}`;
+              }
+  
+            } else {
+              section.classList.remove('aside');
+              section.classList.add('stack');
+              section.style.zIndex = `${ontop + 1}`;
+            }
+          };
+        });
+      });
+    };
+  </script> </html>
