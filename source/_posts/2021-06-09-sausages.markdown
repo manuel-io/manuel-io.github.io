@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Sausages"
+date: 2021-06-09 00:13:00 +0200
+comments: true
+categories: 
+  - 2021
+  - kitchen
+  - vegan
+  - meta
+---
+
+{% img left 320 /data/images/sausages.jpg Beyond Sausages %}
+
+Neulich habe ich bei den Öffentlichen den Artikel „Wer am Veggie-Boom verdient“
+[gefunden][veggiebom] und ich erlaube mit das Zitat: „Der Markt für vegetarisches und
+veganes Essen wächst rasant - wahrscheinlich noch viele Jahre lang.“  - Was für
+ein Satz. Man möchte den Autor gar bemitleiden, dass das Ende von dem sog.
+„Veggie-Boom“ sich doch noch in die Länge zieht.
+
+Aber es offenbart leider auch die Denkweise dieses Autors, die so einen naiven
+Satz zulässt („OK Boomer“). Es ist ein bissen so wie vor über 30 Jahre nach
+Vernetzung der Computer das Neuland zu entdecken.
+
+Die gute Nachricht ist vielleicht, dass der Beruf des „Metzgers“ doch noch eine
+Zukunft hat und mit etwas Umschulung können bereits Gelernte ihre pflanzliche
+Gewürzmischung (Muskat, Salz, Piment, im Artikel leider keine Details) auch auf
+pflanzliches Protein anwenden.
+
+Wie viele pflanzliche Produkte es inzwischen gibt, ist enorm. Ich habe mir mal
+überlegt wie würde so ein gewöhnlicher Supermarkt aussehen, wenn alle
+Lebensmittel die etwas mit tierischen Produkten zu tun haben entfernt werde
+würden, jetzt ist mehr die Überlegung was wäre wenn neben jedem Produkt mit
+tierischen Zutaten eine pflanzliche Alternative stehen würde. Und ich behaupte
+mal von der Produktauswahl wäre das möglich.
+
+Die Supermärkte hätten gar nicht den Platz. Meine Prognose wäre in dem Fall es
+wird einfach Supermärkte geben die mehr auf pflanzliche Alternativen setzen
+und in dem Sinne dann auch legacy Märkte.
+
+Jetzt habe ich gehört, dass es für eine Aktion in Köln eine [Burger King
+Filiale][plantbased] für ein paar Tage auf komplett auf „fleischlos“ umgestellt
+wurde. Neben den positiven Effekt Leute einfach mal mit etwas Neuem zu
+konfrontieren, ist dass natürlich auch eine Demonstration was so machbar ist.
+
+Leider wird das Ganze als Plant Based* („reclaim your wording“) bezeichnet
+obwohl es trotzdem auch Produkte mit tierischen Inhaltsstoffen gibt. Schade. Da
+wurde leider vergessen ein μ weiter zu denken. Es soll sogar eine vegane Mayo
+geben. Vielleicht sogar „The Seriously Good Vegan Mayo“ von Heinz (wieder keine
+Details).
+
+Auch bei mir sind „mal wieder“ ein paar Produkte aus der Kategorie „beyond
+meat“ angekommen. Und nach dem Motto „good vibes only“ verweise ich hier nur
+auf die Schemeckenden. Wobei ich dazu auch sagen muss, dass ich zuletzt positiv
+auf den [Vegane Mühlen Burger][muhlenburger] [verwiesen habe][burgertime] und
+der einfach nicht mehr zu bekommen ist.
+
+&#x2a; Die Überseztung von „Plant Based“ mit "wir packen da mal ein bisschen
+Pflanze rein" halte ich („as a layman“) einfach für falsch. Etwa so als wenn
+man „May not“ mit „Braucht nicht“ übersetzen würde. Man... man... man, gut das
+wir hier nicht über [Pflanzenmilch][pflanzenmilch] reden.
+
+[veggiebom]: https://www.tagesschau.de/wirtschaft/unternehmen/vegetarische-lebenmittel-markt-boom-101.html
+[burgertime]: blog/2019/06/18/burger-time/
+[muhlenburger]: https://www.ruegenwalder.de/produkte/vegane-muehlen-burger-typ-rind
+[plantbased]: https://youtu.be/qRxPBuYnqHM
+[pflanzenmilch]: https://de.wikipedia.org/wiki/Milchersatz#Bezeichnung

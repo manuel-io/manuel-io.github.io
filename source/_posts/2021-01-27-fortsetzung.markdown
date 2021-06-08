@@ -69,7 +69,7 @@ zweidimensionale Array verwenden:
     /* Initialization II */
     for (uint8_t y = 0; y < height; y++) {
       for (uint8_t x = 0; x < width; x++) {
-        tiles[y][x].id = y * height + x;
+        tiles[y][x].id = y * width + x;
         tiles[y][x].type = 0;
       }
     }

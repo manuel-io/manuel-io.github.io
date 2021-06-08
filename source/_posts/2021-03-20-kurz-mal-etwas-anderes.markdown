@@ -24,16 +24,13 @@ Elementen. Wie zum Beispiel hier:
   else iframe.style.height = '520px';
 </script>
 
-    let images =  document.querySelectorAll('main > div > section > img');
-    let list = new Array();
+    let images =  document.querySelectorAll('img');
 
-    images.forEach((image) => {
-      let promise = new Promise((resolve, reject) => {
+    let list = Array.from(images).map((image) => {
+      return new Promise((resolve, reject) => {
         image.onload = (e) => resolve('okay');
         image.src = image.dataset.src;
       });
-
-      list.push(promise);
     });
 
     Promise.all(list).then((values) => {
