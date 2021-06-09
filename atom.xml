@@ -3,13 +3,71 @@
   <title><![CDATA[A personal Blog]]></title>
   <link href="https://manuel-io.github.io/atom.xml" rel="self"/>
   <link href="https://manuel-io.github.io/"/>
-  <updated>2021-03-20T14:12:59+01:00</updated>
+  <updated>2021-06-09T01:59:50+02:00</updated>
   <id>https://manuel-io.github.io/</id>
   <author>
     <name><![CDATA[Manuel]]></name>
     <email><![CDATA[m.a.n.u.e.l@posteo.net]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Sausages]]></title>
+    <link href="https://manuel-io.github.io/blog/2021/06/09/sausages/"/>
+    <updated>2021-06-09T00:13:00+02:00</updated>
+    <id>https://manuel-io.github.io/blog/2021/06/09/sausages</id>
+    <content type="html"><![CDATA[<img class="left 320" src="https://manuel-io.github.io/data/images/sausages.jpg" title="Beyond Sausages" alt="Beyond Sausages">
+
+
+<p>Neulich habe ich bei den Öffentlichen den Artikel „Wer am Veggie-Boom verdient“
+<a href="https://www.tagesschau.de/wirtschaft/unternehmen/vegetarische-lebenmittel-markt-boom-101.html">gefunden</a> und ich erlaube mit das Zitat: „Der Markt für vegetarisches und
+veganes Essen wächst rasant - wahrscheinlich noch viele Jahre lang.“  - Was für
+ein Satz. Man möchte den Autor gar bemitleiden, dass das Ende von dem sog.
+„Veggie-Boom“ sich doch noch in die Länge zieht.</p>
+
+<p>Aber es offenbart leider auch die Denkweise dieses Autors, die so einen naiven
+Satz zulässt („OK Boomer“). Es ist ein bissen so wie vor über 30 Jahre nach
+Vernetzung der Computer das Neuland zu entdecken.</p>
+
+<p>Die gute Nachricht ist vielleicht, dass der Beruf des „Metzgers“ doch noch eine
+Zukunft hat und mit etwas Umschulung können bereits Gelernte ihre pflanzliche
+Gewürzmischung (Muskat, Salz, Piment, im Artikel leider keine Details) auch auf
+pflanzliches Protein anwenden.</p>
+
+<p>Wie viele pflanzliche Produkte es inzwischen gibt, ist enorm. Ich habe mir mal
+überlegt wie würde so ein gewöhnlicher Supermarkt aussehen, wenn alle
+Lebensmittel die etwas mit tierischen Produkten zu tun haben entfernt werde
+würden, jetzt ist mehr die Überlegung was wäre wenn neben jedem Produkt mit
+tierischen Zutaten eine pflanzliche Alternative stehen würde. Und ich behaupte
+mal von der Produktauswahl wäre das möglich.</p>
+
+<p>Die Supermärkte hätten gar nicht den Platz. Meine Prognose wäre in dem Fall es
+wird einfach Supermärkte geben die mehr auf pflanzliche Alternativen setzen
+und in dem Sinne dann auch legacy Märkte.</p>
+
+<p>Jetzt habe ich gehört, dass es für eine Aktion in Köln eine <a href="https://youtu.be/qRxPBuYnqHM">Burger King
+Filiale</a> für ein paar Tage auf komplett auf „fleischlos“ umgestellt
+wurde. Neben den positiven Effekt Leute einfach mal mit etwas Neuem zu
+konfrontieren, ist dass natürlich auch eine Demonstration was so machbar ist.</p>
+
+<p>Leider wird das Ganze als Plant Based* („reclaim your wording“) bezeichnet
+obwohl es trotzdem auch Produkte mit tierischen Inhaltsstoffen gibt. Schade. Da
+wurde leider vergessen ein μ weiter zu denken. Es soll sogar eine vegane Mayo
+geben. Vielleicht sogar „The Seriously Good Vegan Mayo“ von Heinz (wieder keine
+Details).</p>
+
+<p>Auch bei mir sind „mal wieder“ ein paar Produkte aus der Kategorie „beyond
+meat“ angekommen. Und nach dem Motto „good vibes only“ verweise ich hier nur
+auf die Schemeckenden. Wobei ich dazu auch sagen muss, dass ich zuletzt positiv
+auf den <a href="https://www.ruegenwalder.de/produkte/vegane-muehlen-burger-typ-rind">Vegane Mühlen Burger</a> <a href="blog/2019/06/18/burger-time/">verwiesen habe</a> und
+der einfach nicht mehr zu bekommen ist.</p>
+
+<p>&#x2a; Die Überseztung von „Plant Based“ mit &ldquo;wir packen da mal ein bisschen
+Pflanze rein&rdquo; halte ich („as a layman“) einfach für falsch. Etwa so als wenn
+man „May not“ mit „Braucht nicht“ übersetzen würde. Man&hellip; man&hellip; man, gut das
+wir hier nicht über <a href="https://de.wikipedia.org/wiki/Milchersatz#Bezeichnung">Pflanzenmilch</a> reden.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Themenwechsel]]></title>
@@ -35,16 +93,13 @@ Elementen. Wie zum Beispiel hier:</p>
 </script>
 
 
-<pre><code>let images =  document.querySelectorAll('main &gt; div &gt; section &gt; img');
-let list = new Array();
+<pre><code>let images =  document.querySelectorAll('img');
 
-images.forEach((image) =&gt; {
-  let promise = new Promise((resolve, reject) =&gt; {
+let list = Array.from(images).map((image) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
     image.onload = (e) =&gt; resolve('okay');
     image.src = image.dataset.src;
   });
-
-  list.push(promise);
 });
 
 Promise.all(list).then((values) =&gt; {
@@ -124,7 +179,7 @@ zweidimensionale Array verwenden:</p>
 <pre><code>/* Initialization II */
 for (uint8_t y = 0; y &lt; height; y++) {
   for (uint8_t x = 0; x &lt; width; x++) {
-    tiles[y][x].id = y * height + x;
+    tiles[y][x].id = y * width + x;
     tiles[y][x].type = 0;
   }
 }
@@ -907,20 +962,6 @@ Alike 4.0</a> International license. You can find a copy <a href="https://common
 
 
 <p><a href="http://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+0.07470175003104325+50+5+43%0A370+304+64+384+64+1+0%0Ar+384+64+384+128+0+190%0A162+384+128+384+224+2+default-led+1+0+0+0.02%0Ag+384+256+384+288+0%0Ap+304+64+304+256+1+0%0Aw+304+256+384+256+0%0Aw+384+224+384+256+0%0Ap+464+128+464+256+1+0%0Aw+464+128+384+128+0%0Aw+464+256+384+256+0%0Aw+256+64+304+64+0%0Aw+256+128+256+64+0%0A370+160+128+256+128+1+0%0Ap+80+160+160+160+1+0%0Ad+80+128+160+128+2+1N4004%0Aw+160+160+160+128+0%0Aw+80+160+80+128+0%0AR+80+128+16+128+0+0+40+6.1+0+0+0.5%0AR+80+192+16+192+0+0+40+6.2+0+0+0.5%0Ad+80+192+160+192+2+1N4004%0A370+160+192+256+192+1+0%0Ap+80+224+160+224+1+0%0Aw+80+224+80+192+0%0Aw+160+224+160+192+0%0Aw+256+192+256+128+0%0AR+80+256+16+256+0+0+40+6.3+0+0+0.5%0Ad+80+256+160+256+2+1N4004%0A370+160+256+256+256+1+0%0Ap+80+288+160+288+1+0%0Aw+80+288+80+256+0%0Aw+160+288+160+256+0%0Aw+256+256+256+192+0%0Ap+80+96+160+96+1+0%0Ad+80+64+160+64+2+1N4004%0A370+160+64+256+64+1+0%0AR+80+64+16+64+0+0+40+6+0+0+0.5%0Aw+80+96+80+64+0%0Aw+160+96+160+64+0%0Ap+80+32+160+32+1+0%0Ad+80+0+160+0+2+1N4004%0AR+80+0+16+0+0+0+40+5.6+0+0+0.5%0A370+160+0+256+0+1+0%0Aw+80+32+80+0+0%0Aw+160+32+160+16+0%0Aw+160+16+160+0+0%0Aw+256+0+256+64+0%0Ap+80+-32+160+-32+1+0%0Ad+80+-64+160+-64+2+1N4004%0AR+80+-64+16+-64+0+0+40+5.3+0+0+0.5%0A370+160+-64+256+-64+1+0%0Aw+80+-32+80+-64+0%0Aw+160+-32+160+-64+0%0Aw+256+-64+256+0+0%0A">Simulated Circuit</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Vegane Rezepte 2018]]></title>
-    <link href="https://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018/"/>
-    <updated>2018-12-31T22:54:44+01:00</updated>
-    <id>https://manuel-io.github.io/blog/2018/12/31/vegane-rezepte-2018</id>
-    <content type="html"><![CDATA[<img class="center" src="https://manuel-io.github.io/data/images/recipes.jpg" title="Recipes" alt="Recipes">
-
-
-<p>Ich habe angefangen möglichst viele Rezepte zu Dokumentieren und
-in meiner <a href="https://vkitchen.herokuapp.com/">Rezepte-Datenbank</a> zu speichern. Ist 2018 schon recht
-voll geworden ;-).</p>
 ]]></content>
   </entry>
   
