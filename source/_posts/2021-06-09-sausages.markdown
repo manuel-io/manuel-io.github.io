@@ -19,8 +19,8 @@ ein Satz. Man möchte den Autor gar bemitleiden, dass das Ende von dem sog.
 „Veggie-Boom“ sich doch noch in die Länge zieht.
 
 Aber es offenbart leider auch die Denkweise dieses Autors, die so einen naiven
-Satz zulässt („OK Boomer“). Es ist ein bissen so wie vor über 30 Jahre nach
-Vernetzung der Computer das Neuland zu entdecken.
+Satz zulässt („OK Boomer“). Es ist ein bissen so wie vor über 30 Jahre, nach
+Vernetzung der Computer, das Neuland zu entdecken.
 
 Die gute Nachricht ist vielleicht, dass der Beruf des „Metzgers“ doch noch eine
 Zukunft hat und mit etwas Umschulung können bereits Gelernte ihre pflanzliche
@@ -39,12 +39,12 @@ wird einfach Supermärkte geben die mehr auf pflanzliche Alternativen setzen
 und in dem Sinne dann auch legacy Märkte.
 
 Jetzt habe ich gehört, dass es für eine Aktion in Köln eine [Burger King
-Filiale][plantbased] für ein paar Tage auf komplett auf „fleischlos“ umgestellt
+Filiale][plantbased] für ein paar Tage auf komplett „fleischlos“ umgestellt
 wurde. Neben den positiven Effekt Leute einfach mal mit etwas Neuem zu
 konfrontieren, ist dass natürlich auch eine Demonstration was so machbar ist.
 
-Leider wird das Ganze als Plant Based* („reclaim your wording“) bezeichnet
-obwohl es trotzdem auch Produkte mit tierischen Inhaltsstoffen gibt. Schade. Da
+Leider wird das Ganze als Plant Based* („reclaim your wording back“) bezeichnet
+obwohl es trotzdem auch Produkte mit tierischen Inhaltsstoffen gibt. Schade, da
 wurde leider vergessen ein μ weiter zu denken. Es soll sogar eine vegane Mayo
 geben. Vielleicht sogar „The Seriously Good Vegan Mayo“ von Heinz (wieder keine
 Details).
@@ -55,10 +55,10 @@ auf die Schemeckenden. Wobei ich dazu auch sagen muss, dass ich zuletzt positiv
 auf den [Vegane Mühlen Burger][muhlenburger] [verwiesen habe][burgertime] und
 der einfach nicht mehr zu bekommen ist.
 
-&#x2a; Die Überseztung von „Plant Based“ mit "wir packen da mal ein bisschen
-Pflanze rein" halte ich („as a layman“) einfach für falsch. Etwa so als wenn
-man „May not“ mit „Braucht nicht“ übersetzen würde. Man... man... man, gut das
-wir hier nicht über [Pflanzenmilch][pflanzenmilch] reden.
+&#x2a; Die Überseztung von „Plant Based“ mit "wir packen da mal als Basis ein
+bisschen Pflanze rein" halte ich einfach für falsch. Etwa so
+als wenn man „May not“ mit „Muss nicht/Braucht nicht“ übersetzen würde. Man...
+man... man, gut das wir hier nicht über [Pflanzenmilch][pflanzenmilch] reden.
 
 [veggiebom]: https://www.tagesschau.de/wirtschaft/unternehmen/vegetarische-lebenmittel-markt-boom-101.html
 [burgertime]: blog/2019/06/18/burger-time/
